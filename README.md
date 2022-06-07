@@ -1,5 +1,6 @@
 # User Stories
     
+    as
 ## Cadastro de novos usuarios (roles: administrador, cliente)
 
 ## Controle de cadastro de produtos
