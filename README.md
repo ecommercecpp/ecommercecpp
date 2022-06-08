@@ -11,6 +11,8 @@
     
 ### Cadastro de novos usuarios (roles: administrador, cliente) | [@EduScf](https://github.com/EduScf)
 
+Como administrador da plataforma, desejo um sistema seguro, rápido e fácil de cadastro. Para isso, quero que seja possível ser cadastrado como cliente, tendo acesso a sua conta que fornecerá dados pessoais e um histórico de compras, ou como administrador, que será possível modificar e consultar os produtos da loja. Sendo que independentemente da categoria, para criação do cadastro deverá ser fornecido o nome completo, CPF, RG e CEP de onde a pessoa mora. Prezando a segurança do banco de dados para que todas as informações fornecidas pelo cliente fiquem em segurança.
+
 ### Controle de cadastro de produtos | [@aquila1004](https://github.com/aquila1004)
 
 Como administrador, quero separar os produtor por categorias no momento da escolha. Dessa forma, o próximo passo vai ser fazer uma boa descrição do produto através do seu controle no momento do cadastro. Todos os produtos deverão ter as seguintes informações cedidas no momento de seu cadastro. Sendo assim, deverão possuir foto do produto, peso, tamanho e sua nota fiscal. Além disso, o vendedor necessita de ceder informações pessoais no momento do cadastro como, seu CPF, RG e o local que ele mora por meio do seu CEP.
