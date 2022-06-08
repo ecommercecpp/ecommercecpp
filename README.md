@@ -73,3 +73,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
+
+
+## 🔗 Links Úteis
+
+[Histórias de usuários com exemplos e um template](https://www.atlassian.com/br/agile/project-management/user-stories)
