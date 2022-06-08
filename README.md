@@ -19,6 +19,8 @@
 
 ### Cadastro de vendas | [@srgoogle23](https://github.com/srgoogle23)
 
+Como Administrador, quero ver em vendas os produtos ( e suas variações ) selecionados pelo cliente, assim como os principais dados do cliente, como nome, e-mail, CPF, dados de endereço, método de entrega selecionado, método de pagamento selecionado pelo cliente. Para que baseado nessas informações, consiga saber se o pedido (venda) já foi pago, está em andamento, já foi aprovado ou se já posso enviar pro cliente o pedido, conforme o método de entrega e dados de endereço informados.
+
 ### Emissão de nota fiscal | [@srgoogle23](https://github.com/srgoogle23)
 
 
