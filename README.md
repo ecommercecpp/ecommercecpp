@@ -24,6 +24,8 @@ Como administrador, quero a possibilidade de cadastrar dois tipos de produtos (p
 
 ### Cadastro de métodos de entrega | [@FelippeVelosoMarinho](https://github.com/FelippeVelosoMarinho)
 
+Como cliente, quero um cadastro de métodos de entrega onde seja possível definir os tipos de entrega, e que haja o calculo do frete conforme a região do endereço indicado. Sendo minimante necessária todas as formas de envio pertecentes aos Correios. É de grande importância um sistema de rastreamento na entrega do produto e o auto preenchimento dos dados de endereço ao ser digitado o CEP. Sendo assim, maneiras de obter uma melhor experiência de usuário, e que haja maior transparência durante o processo da compra.
+
 ### Cadastro de vendas | [@srgoogle23](https://github.com/srgoogle23)
 
 Como Administrador, quero ver em vendas os produtos ( e suas variações ) selecionados pelo cliente, assim como os principais dados do cliente, como nome, e-mail, CPF, dados de endereço, método de entrega selecionado, método de pagamento selecionado pelo cliente. Para que baseado nessas informações, consiga saber se o pedido (venda) já foi pago, está em andamento, já foi aprovado ou se já posso enviar pro cliente o pedido, conforme o método de entrega e dados de endereço informados.
