@@ -23,6 +23,7 @@ Como Administrador, quero ver em vendas os produtos ( e suas variações ) selec
 
 ### Emissão de nota fiscal | [@srgoogle23](https://github.com/srgoogle23)
 
+Como administrador, quero a possibilidade de, após a venda ser efetivada, antes de realizar o envio para o cliente, conseguir emitir uma nota fiscal para o cliente, com os dados dos produtos inclusos na compra, dados de pagamento, dados do cliente e dados de entrega para o cliente, mesclando tudo em uma nota fiscal informativa para o cliente, de modo que consiga anexar isso ao pedido como documentação, para eventuais questionamentos.
 
 ## 🤝 Colaboradores
 
