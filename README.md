@@ -1,6 +1,5 @@
 # User Stories
     
-    as
 ## Cadastro de novos usuarios (roles: administrador, cliente)
 
 ## Controle de cadastro de produtos
@@ -10,3 +9,5 @@
 ## Cadastro de métodos de entrega
 
 ## Cadastro de vendas
+
+## Emissão de nota fiscal
