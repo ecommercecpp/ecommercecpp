@@ -15,6 +15,8 @@
 
 ### Controle de cadastro de variações de produtos (produto simples e produto variável) | [@CaioHosken](https://github.com/CaioHosken)
 
+Como administrador, quero a possibilidade de cadastrar dois tipos de produtos (produto simples e produto variável). O produto simples é único, e por isso cadastrado com apenas seu tamanho, cor e quantidade, por não possuir nenhum outro item do do mesmo modelo porém cor ou tamanho diferente, não é preciso separá-lo. Já o produto variável é cadastrado e separado com diferentes tamanhos e cores disponíveis no estoque. Tudo isso para que o cliente saiba quantas unidades temos de cada item, separados por tamanhos, cores e outras espicifidades.
+
 ### Cadastro de métodos de entrega | [@FelippeVelosoMarinho](https://github.com/FelippeVelosoMarinho)
 
 ### Cadastro de vendas | [@srgoogle23](https://github.com/srgoogle23)
