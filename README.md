@@ -7,7 +7,7 @@
 
 > O EcommerceCPP é uma abstração de um sistema de e-commerce.
 
-## User Stories
+## ☕ User Stories
     
 ### Cadastro de novos usuarios (roles: administrador, cliente) | [@EduScf](https://github.com/EduScf)
 
