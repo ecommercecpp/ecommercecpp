@@ -13,6 +13,9 @@
 
 ### Controle de cadastro de produtos | [@aquila1004](https://github.com/aquila1004)
 
+Como administrador, quero separar os produtor por categorias no momento da escolha. Dessa forma, o próximo passo vai ser fazer uma boa descrição do produto através do seu controle no momento do cadastro. Todos os produtos deverão ter as seguintes informações cedidas no momento de seu cadastro. Sendo assim, deverão possuir foto do produto, peso, tamanho e sua nota fiscal. Além disso, o vendedor necessita de ceder informações pessoais no momento do cadastro como, seu CPF, RG e o local que ele mora por meio do seu CEP.
+
+
 ### Controle de cadastro de variações de produtos (produto simples e produto variável) | [@CaioHosken](https://github.com/CaioHosken)
 
 Como administrador, quero a possibilidade de cadastrar dois tipos de produtos (produto simples e produto variável). O produto simples é único, e por isso cadastrado com apenas seu tamanho, cor e quantidade, por não possuir nenhum outro item do do mesmo modelo porém cor ou tamanho diferente, não é preciso separá-lo. Já o produto variável é cadastrado e separado com diferentes tamanhos e cores disponíveis no estoque. Tudo isso para que o cliente saiba quantas unidades temos de cada item, separados por tamanhos, cores e outras espicifidades.
