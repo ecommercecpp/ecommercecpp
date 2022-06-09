@@ -11,4 +11,4 @@ class Atributos
 		map<string, string> getListaAtributos(string nomeAtributo);
 		void setAtributo(string nomeAtributo);
 		void adicionarAtributo(string nomeAtributo, map<string, string> niveis);
-}
+};
