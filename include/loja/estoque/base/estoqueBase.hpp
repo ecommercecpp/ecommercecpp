@@ -5,7 +5,12 @@
 
 class EstoqueBase {
 	protected:
-		std::map<int, Produtos> estoque;
+		std::map<int, Produto> estoque;
+	public:
+		void adicionar(Produto produto);
+		void remover(int id);
+		Produto* buscar(int id);
+		std::map<int, Produto>* getEstoque();
 };
 
 #endif
