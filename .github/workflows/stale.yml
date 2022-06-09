@@ -1,0 +1,24 @@
+name: 'Manipulador de issues e pull requests obsoletos'
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@main
+        id: stale
+        with:
+          stale-issue-message: 'Este issue está desatualizado porque está aberto há 2 dias sem atividades. Caso não haja nenhuma atualização em até 24h, o mesmo será automáticamente fechado.'
+          stale-pr-message: 'Este pull está desatualizado porque está aberto há 2 dias sem atividades. Caso não haja nenhuma atualização em até 24h, o mesmo será automáticamente fechado.'
+          close-issue-message: Esse issue foi fechado automaticamente porque está desatualizado por mais de 3 dias.
+          close-pr-message: Esse pull request foi fechado automaticamente porque está desatualizado por mais de 3 dias.
+          stale-issue-label: 'OBSOLETO'
+          stale-pr-label: 'OBSOLETO'
+          days-before-stale: 2
+          days-before-close: 1
+          exempt-issue-labels: 'DOCUMENTAÇÃO'
+      - name: Print outputs
+        run: echo ${{ join(steps.stale.outputs.*, ',') }}
