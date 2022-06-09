@@ -15,7 +15,7 @@ Como administrador da plataforma, desejo um sistema seguro, rápido e fácil de 
 
 ### Controle de cadastro de produtos | [@aquila1004](https://github.com/aquila1004)
 
-Como administrador, quero separar os produtor por categorias no momento da escolha. Dessa forma, o próximo passo vai ser fazer uma boa descrição do produto através do seu controle no momento do cadastro. Todos os produtos deverão ter as seguintes informações cedidas no momento de seu cadastro. Sendo assim, deverão possuir foto do produto, peso, tamanho e sua nota fiscal. Além disso, o vendedor necessita de ceder informações pessoais no momento do cadastro como, seu CPF, RG e o local que ele mora por meio do seu CEP.
+Como administrador, quero separar os produtor por categorias no momento da escolha. Dessa forma, o próximo passo vai ser fazer uma boa descrição do produto através do seu controle no momento do cadastro. Todos os produtos deverão ter as seguintes informações cedidas no momento de seu cadastro. Sendo assim, deverão possuir foto do produto, peso, tamanho e sua nota fiscal.
 
 
 ### Controle de cadastro de variações de produtos (produto simples e produto variável) | [@CaioHosken](https://github.com/CaioHosken)
