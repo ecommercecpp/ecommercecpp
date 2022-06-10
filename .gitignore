@@ -38,4 +38,4 @@
 *.app
 
 # main
-./main
+main
