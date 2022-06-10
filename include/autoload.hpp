@@ -12,8 +12,8 @@
 #include "./usuarios/endereco/endereco.hpp"
 
 // include de produtos
-#include "./produtos/produto.hpp"
 #include "./produtos/atributos/atributos.hpp"
+#include "./produtos/produto.hpp"
 
 // include de vendas
 #include "./vendas/venda.hpp"

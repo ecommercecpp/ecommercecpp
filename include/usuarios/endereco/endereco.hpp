@@ -3,7 +3,8 @@
 
 #include "../../autoload.hpp"
 
-class Endereco{
+class Endereco
+{
     private:
         std::string rua;
         int numero;
@@ -14,19 +15,19 @@ class Endereco{
         std::string estado; 
     public:
         std::string getRua();
-        void setRua(std::string rua);
         int getNumero();
-        void setNumero(int numero);
         std::string getComplemento();
-        void setComplemento(std::string complemento);
         int getCep();
-        void setCep(int cep);
         std::string getBairro();
-        void setBairro(std::string bairro);
         std::string getCidade();
-        void setCidade(std::string cidade);
         std::string getEstado();
-        void setEstado(std::string estado); 
+        void setRua(std::string rua);
+        void setNumero(int numero);
+        void setComplemento(std::string complemento);
+        void setCep(int cep);    
+        void setBairro(std::string bairro);
+        void setCidade(std::string cidade);
+        void setEstado(std::string estado);
 };
 
 #endif
