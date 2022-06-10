@@ -26,4 +26,4 @@ distcheck:
 	$(RM) -r $(BUILDDIR)/*
 
 test:
-	./$(TARGET) --test endereco && echo "OK" || echo "NOK"
+	./$(TARGET) --test endereco && echo "OK" || exit "Erro!";
