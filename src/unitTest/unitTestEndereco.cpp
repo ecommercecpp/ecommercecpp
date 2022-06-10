@@ -1,5 +1,9 @@
 #include "../../include/autoload.hpp"
 
+/**
+ * @brief Teste unitário para a classe Endereco
+ * 
+ */
 void UnitTestEndereco::run()
 {
 	try {
@@ -33,7 +37,7 @@ void UnitTestEndereco::run()
 		{
 			throw std::runtime_error("The vector is not empty");
 		}
-		
+
 		// pass the test
 		pass();
 	}
