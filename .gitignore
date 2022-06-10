@@ -1,8 +1,8 @@
 # vscode
-./.vscode/*
+.vscode/*
 
 # build
-./build/*
+build/*
 
 # Prerequisites
 *.d
