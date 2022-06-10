@@ -14,6 +14,8 @@ class Endereco
         std::string cidade;
         std::string estado; 
     public:
+        Endereco();
+        Endereco(std::string rua, int numero, std::string complemento, int cep, std::string bairro, std::string cidade, std::string estado);
         std::string getRua();
         int getNumero();
         std::string getComplemento();

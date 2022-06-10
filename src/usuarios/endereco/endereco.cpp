@@ -1,6 +1,43 @@
 #include "../../../include/autoload.hpp"
 
 /**
+ * @brief Construct a new Endereco:: Endereco object
+ * 
+ */
+Endereco::Endereco()
+{
+	this->rua = "";
+	this->numero = 0;
+	this->complemento = "";
+	this->cep = 0;
+	this->bairro = "";
+	this->cidade = "";
+	this->estado = "";
+}
+
+/**
+ * @brief Construct a new Endereco:: Endereco object
+ * 
+ * @param rua 
+ * @param numero 
+ * @param complemento 
+ * @param cep 
+ * @param bairro 
+ * @param cidade 
+ * @param estado 
+ */
+Endereco::Endereco(std::string rua, int numero, std::string complemento, int cep, std::string bairro, std::string cidade, std::string estado)
+{
+	this->rua = rua;
+	this->numero = numero;
+	this->complemento = complemento;
+	this->cep = cep;
+	this->bairro = bairro;
+	this->cidade = cidade;
+	this->estado = estado;
+}
+
+/**
  * @brief Retorna a rua do endereço
  * 
  * @return std::string 

@@ -1,6 +1,7 @@
 #ifndef _AUTOLOAD_HPP_
 #define _AUTOLOAD_HPP_
 
+#include <vector>
 #include <map>
 #include <string>
 #include <iostream>
@@ -22,5 +23,9 @@
 // include da loja
 #include "./loja/estoque/base/estoqueBase.hpp"
 #include "./loja/loja.hpp"
+
+//include de testes
+#include "./unitTest/unitTest.hpp"
+#include "./unitTest/unitTestEndereco.hpp"
 
 #endif
