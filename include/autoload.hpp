@@ -7,10 +7,10 @@
 #include <iostream>
 
 // include de usuarios
+#include "./usuarios/endereco/endereco.hpp"
 #include "./usuarios/usuario.hpp"
 #include "./usuarios/tipos/cliente.hpp"
 #include "./usuarios/tipos/administrador.hpp"
-#include "./usuarios/endereco/endereco.hpp"
 
 // include de produtos
 #include "./produtos/atributos/atributos.hpp"
