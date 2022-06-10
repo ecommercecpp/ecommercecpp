@@ -1,6 +1,5 @@
 #include "../../include/autoload.hpp"
 
-
 void UnitTestEndereco::run()
 {
 	try {
@@ -34,11 +33,13 @@ void UnitTestEndereco::run()
 		{
 			throw std::runtime_error("The vector is not empty");
 		}
-
-		std::cout << "UnitTestEndereco:" << std::endl;
+		
+		// pass the test
+		pass();
 	}
 	catch ( std::exception &e )
 	{
-		throw std::runtime_error("UnitTestEndereco: ERRO: " + std::string(e.what()));
+		// fail the test
+		fail(std::string(e.what()));
 	}
 }
