@@ -34,7 +34,7 @@ void UnitTestEndereco::run()
 		{
 			throw std::runtime_error("The vector is not empty");
 		}
-throw std::runtime_error("The vector is not empty");
+
 		std::cout << "UnitTestEndereco:" << std::endl;
 	}
 	catch ( std::exception &e )
