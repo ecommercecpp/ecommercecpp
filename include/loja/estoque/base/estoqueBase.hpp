@@ -1,7 +1,7 @@
 #ifndef _ESTOQUE_BASE_HPP_
 #define _ESTOQUE_BASE_HPP_
 
-#include "../../autoload.hpp"
+#include "../../../autoload.hpp"
 
 class EstoqueBase {
 	protected:
