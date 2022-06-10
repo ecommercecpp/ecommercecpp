@@ -19,4 +19,8 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 clean:
 	$(RM) -r $(BUILDDIR)/* $(TARGET)
 
-.PHONY: clean
+check:
+	./$(TARGET)
+
+distcheck:
+	$(RM) -r $(BUILDDIR)/*
