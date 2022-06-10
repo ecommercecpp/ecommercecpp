@@ -4,10 +4,6 @@
 
 #include "../autoload.hpp"
 
-#include <string>
-
-#include "./atributos/atributos.hpp"
-
 class Produto {
  public:
 
