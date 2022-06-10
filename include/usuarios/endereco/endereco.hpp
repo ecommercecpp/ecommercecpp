@@ -1,17 +1,18 @@
 #ifndef _ENDERECO_HPP_
 #define _ENDERECO_HPP_
-#include <string>
+
+#include "../../autoload.hpp"
+
 class Endereco{
     private:
-        std::string rua; // obriagtorio
-        int numero; // obrigatorio
-        std::string complemento; // opcional
-        int cep; // obrigatorio
-        std::string bairro; // obrigatorio
-        std::string cidade; // obrigatorio
-        std::string estado; // obrigatorio
+        std::string rua;
+        int numero;
+        std::string complemento; 
+        int cep; 
+        std::string bairro; 
+        std::string cidade;
+        std::string estado; 
     public:
-    ///get e set para todos os atributos
         std::string getRua();
         void setRua(std::string rua);
         int getNumero();

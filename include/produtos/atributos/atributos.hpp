@@ -1,14 +1,19 @@
-#include <map>
+#ifndef _ATRIBUTOS_HPP_
+#define _ATRIBUTOS_HPP_
+
+#include "../../autoload.hpp"
 
 class Atributos
 {
 	private:
-		map<string, map<string, string>> ListaAtributos;
+		std::map<std::string, std::map<std::string, std::string>> ListaAtributos;
 	public:
 		Atributos();
-		map<string, map<string, string>> getListaAtributos();
+		std::map<std::string, std::map<std::string, std::string>> getListaAtributos();
 		void setListaAtributos();
-		map<string, string> getListaAtributos(string nomeAtributo);
-		void setAtributo(string nomeAtributo);
-		void adicionarAtributo(string nomeAtributo, map<string, string> niveis);
+		std::map<std::string, std::string> getListaAtributos(std::string nomeAtributo);
+		void setAtributo(std::string nomeAtributo);
+		void adicionarAtributo(std::string nomeAtributo, std::map<std::string, std::string> niveis);
 };
+
+#endif
