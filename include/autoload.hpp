@@ -3,5 +3,6 @@
 
 #include "../../produtos/produto.hpp"
 #include <map>
+#include <string>
 
 #endif
