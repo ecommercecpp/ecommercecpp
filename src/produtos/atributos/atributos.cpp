@@ -7,7 +7,7 @@
 
 std::map<std::string, std::map<std::string, std::string>> Atributos::getListaAtributos(){
     return this->ListaAtributos;
-}
+}// ok 
 
 void Atributos::setListaAtributos(){// Perguntar o que é pra ser feito aqui
     this->ListaAtributos = getListaAtributos();
@@ -16,11 +16,11 @@ void Atributos::setListaAtributos(){// Perguntar o que é pra ser feito aqui
 std::map<std::string, std::string> Atributos::getListaAtributos(std::string nomeAtributo){
     //retornar anome do atributo na lista
     return nomeAtributo;
-}
+}// ok
 
 void Atributos::setAtributo(std::string nomeAtributo){
-    this->nomeAtributo = nomeAtributo;
-}
+    setAtributo = nomeAtributo;
+}// ok
 
 void Atributos::adicionarAtributo(std::string nomeAtributo, std::map<std::string, std::string> niveis){
     //adicionar atributos de nome,niveis no mapa de listaAtributos
