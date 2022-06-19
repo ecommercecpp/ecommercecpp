@@ -26,6 +26,6 @@ void Atributos::adicionarAtributo(std::string nomeAtributo, std::map<std::string
     //adicionar atributos de nome,niveis no mapa de listaAtributos
     std::map<std::string, std::map<std::string, std::string>>::iterator it;
     for (auto it = this->ListaAtributos.begin(); it != this->ListaAtributos.end(); ++it) {
-        this->ListaAtributos.insert(std::pair<std::string, std::map<std::string, std::string>>(nomeArquivo, niveis));
+        this->ListaAtributos.insert(std::pair<std::string, std::map<std::string, std::string>>(getListaAtributos(nomeAtributo), niveis));
     }
 }
