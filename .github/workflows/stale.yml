@@ -18,7 +18,7 @@ jobs:
           stale-issue-label: 'OBSOLETO'
           stale-pr-label: 'OBSOLETO'
           days-before-stale: 2
-          days-before-close: 1
+          days-before-close: 7
           exempt-issue-labels: 'DOCUMENTAÇÃO'
       - name: Print outputs
         run: echo ${{ join(steps.stale.outputs.*, ',') }}
