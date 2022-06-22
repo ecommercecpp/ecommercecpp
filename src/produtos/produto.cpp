@@ -1,103 +1,109 @@
 #include "../../include/autoload.hpp"
 
 /**
- * @brief Construtor para a Classe Produto
+ * @brief Construct a new Produto:: Produto object
  * 
- * @param int id, string nome, string descricao, int qtd
- * 
+ * @param id 
+ * @param nome 
+ * @param descricao 
+ * @param qtd 
  */
-
-Produto::Produto(unsigned int id, std::string nome, std::string descricao, double qtd){
-    this->_id = id;
-    this->_nome = nome;
-    this->_descricao = descricao;
-    this->_qtd = qtd;
+Produto::Produto(unsigned int id, std::string nome, std::string descricao, double qtd)
+{
+    this->id = id;
+    this->nome = nome;
+    this->descricao = descricao;
+    this->qtd = qtd;
 }
 
 /**
- * @brief Construtor default para a Classe Produto
- * 
- */
-
-Produto::Produto(){
-    this->_id = 0;
-    this->_nome = "";
-    this->_descricao = "";
-    this->_qtd = 0;
-}
-
-/**
- * @brief retorna o id
- *
- * @return _id  
- */
-
-unsigned int Produto::getId(){
-    return this->_id;
-}
-
-/**
- * @brief retorna o nome
- *
- * @return _nome 
- */
-
-std::string Produto::getNome(){
-    return this->_nome;
-}
-
-/**
- * @brief retorna a descricao
- *
- * @return _descricao  
- */
-
-std::string Produto::getDescricao(){
-    return this->_descricao;
-}
-
-/**
- * @brief retorna a quantidade
- *
- * @return _qtd  
- */
-
-double Produto::getQtd(){
-    return this->_qtd;
-}
-
-/**
- * @brief seta o Id do produto
+ * @brief Construct a new Produto:: Produto object
  * 
  */
-
-void Produto::setId(unsigned int id){
-    this->_id = id;
+Produto::Produto()
+{
+    this->id = 0;
+    this->nome = "";
+    this->descricao = "";
+    this->qtd = 0;
 }
 
 /**
- * @brief seta o nome do do produto
+ * @brief Retorna o id
  * 
+ * @return unsigned int 
  */
-
-void Produto::setNome(std::string nome){
-    this->_nome = nome;
+unsigned int Produto::getId()
+{
+    return this->id;
 }
 
 /**
- * @brief seta a descrição do produto
+ * @brief Retorna o nome
  * 
+ * @return std::string
  */
+std::string Produto::getNome()
+{
+    return this->nome;
+}
 
-void Produto::setDescricao(std::string descricao){
+/**
+ * @brief Retorna a descricao
+ * 
+ * @return std::string
+ */
+std::string Produto::getDescricao()
+{
+    return this->descricao;
+}
+
+/**
+ * @brief Retorna a quantidade
+ * 
+ * @return double
+ */
+double Produto::getQtd()
+{
+    return this->qtd;
+}
+
+/**
+ * @brief Seta o id
+ * 
+ * @param id
+ */
+void Produto::setId(unsigned int id)
+{
+    this->id = id;
+}
+
+/**
+ * @brief Seta o nome
+ * 
+ * @param nome
+ */
+void Produto::setNome(std::string nome)
+{
+    this->nome = nome;
+}
+
+/**
+ * @brief Seta a descricao
+ * 
+ * @param descricao
+ */
+void Produto::setDescricao(std::string descricao)
+{
     this->descricao = descricao;
 }
 
 /**
- * @brief seta a quantidade do produto
+ * @brief Seta a quantidade
  * 
+ * @param qtd
  */
-
-void Produto::setQtd(double qtd){
-    this->_qtd = qtd;
+void Produto::setQtd(double qtd)
+{
+    this->qtd = qtd;
 }
