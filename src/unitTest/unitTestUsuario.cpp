@@ -21,12 +21,16 @@ void UnitTestUsuario::run()
         //remove o vetor
         usuarios.clear();
         // thrown an error if the vector is not empty
-        if(usuarios.size() != 0){
+        if(usuarios.size() != 0)
+        {
             throw std::runtime_error("The vector is not empty");
         }
+
         // pass the test
         pass();
-        catch(std::exception &e){
+        }
+        catch ( std::exception &e )
+        {
             // fail the test
             fail(std::string(e.what()));
         }
