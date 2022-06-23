@@ -160,7 +160,7 @@ void Endereco::setBairro(std::string bairro)
 /*
  * @brief Seta a cidade do endereço
  * 
- * @param cidade 
+ * @param std::string cidade 
  */
 void Endereco::setCidade(std::string cidade)
 {
@@ -170,9 +170,14 @@ void Endereco::setCidade(std::string cidade)
 /*
  * @brief Seta o estado do endereço
  * 
- * @param estado 
+ * @param std::string estado 
  */
+
 void Endereco::setEstado(std::string estado)
 {
 	this->estado = estado;
 }
+
+
+
+
