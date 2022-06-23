@@ -4,16 +4,18 @@
  * @brief Teste unitário para a classe Atributos
  * 
  */
-void UnitTestEndereco::run()
+void UnitTestAtributos::run()
 {
 	try {
-		// cria um vector de 100 atributos aleatórios
+		// cria um vector de 100 atributos aleatorios
 		std::vector<Atributos*> atributos;
 		for (int i = 0; i < 100; i++)
 		{
 			Atributos *atributo = new Atributos();
+			atributo->adicionarAtributo("nome" + std::to_string(i), {"nome" + std::to_string(i), "nome" + std::to_string(i)});
 			atributos.push_back(atributo);
-		}
+		}	
+			
 
 		// remove os endereços
 		for (int i = 0; i < 100; i++)
