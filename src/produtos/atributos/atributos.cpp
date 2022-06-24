@@ -26,7 +26,8 @@ std::map<std::string, std::string> Atributos::getListaAtributos(std::string nome
 void Atributos::adicionarAtributo(std::string nomeAtributo, std::map<std::string, std::string> niveis){
     //adicionar atributos de nome,niveis no mapa de listaAtributos
     std::map<std::string, std::map<std::string, std::string>>::iterator it;
-    for (auto it = istaAtributos.begin(); it != ListaAtributos.end(); ++it) {
+    it.insert({ nomeAtributo, niveis });
+    //for (auto it = istaAtributos.begin(); it != ListaAtributos.end(); ++it) {
         //ListaAtributos.insert({std::pair<std::string, std::map<std::string, std::string>>(getListaAtributos(nomeAtributo), niveis)});
-    }//Não sei exatamente como inserir o atributo no map ;-;
+    //}//Não sei exatamente como inserir o atributo no map ;-;
 }
