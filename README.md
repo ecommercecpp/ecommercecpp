@@ -1,6 +1,8 @@
 # User Stories
-    
+<<<<<<< Updated upstream
     as
+=======
+>>>>>>> Stashed change
 ## Cadastro de novos usuarios (roles: administrador, cliente)
 
 ## Controle de cadastro de produtos
