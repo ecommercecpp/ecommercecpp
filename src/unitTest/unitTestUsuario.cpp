@@ -6,11 +6,15 @@ void UnitTestUsuario::run()
         // criar um vetor de 100 usuários aleatórios
         std::vector<Usuario*> usuarios;
         for(int i = 0; i < 100; i++){
+
+        
             Usuario *usuario = new Usuario(
-                "Nome " + std::to_string(i),
-                "Sobrenome " + std::to_string(i),
+               "Nome " + std::to_string(i),
+                i,
                 "Email " + std::to_string(i),
+                Endereco("Rua " + std::to_string(i), i, "Complemento " + std::to_string(i), i, "Bairro " + std::to_string(i), "Cidade " + std::to_string(i), "Estado " + std::to_string(i)),
                 "Senha " + std::to_string(i)
+
             );
             usuarios.push_back(usuario);
         }
@@ -34,7 +38,5 @@ void UnitTestUsuario::run()
             // fail the test
             fail(std::string(e.what()));
         }
-    }
-    
-    
 }
+
