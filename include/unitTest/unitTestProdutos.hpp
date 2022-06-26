@@ -13,7 +13,7 @@ string maiuscula(string s)
     return s;
 }
 
-int contarPalavras(const string& frase) {
+/*int contarPalavras(const string& frase) {
   int quantidadePalavras = 0;
 	char caracterAnterior = ' ';
 
@@ -26,6 +26,31 @@ int contarPalavras(const string& frase) {
 	});
 
 	return quantidadePalavras;
+}*/
+
+void UnitTestId::run()//nao pode retornar um caracter vazio e nao pode ser igual hah algum nome já registrado
+{
+	try
+	{
+		bool teste = false;
+		if(Produto::getId() /*SeforRepetido*/){
+			throw std::runtime_error("Voce não pode ter 0 de quantidade!\n");
+			teste = true;
+		}
+		if(teste == true)
+		{
+			throw std::runtime_error("a variável 'teste' não é true");
+		}
+		pass();
+	}
+	catch ( std::exception &e )
+	{
+		int aux;
+		//percorre todos os Ids e define um que nao foi registrado
+		//cin>>aux;
+		Produto::setId(aux);
+		fail(std::string(e.what()));
+	}
 }
 
 void UnitTestNome::run()//nao pode retornar um caracter vazio e nao pode ser igual hah algum nome já registrado
@@ -83,7 +108,7 @@ void UnitTestNome::run()//nao pode retornar um caracter vazio e nao pode ser igu
 		fail(std::string(e.what()));
 	}
 }
-void UnitTestQuantidade::run()//nao pode retornar um caracter vazio e nao pode ser igual hah algum nome já registrado
+void UnitTestQtd::run()//nao pode retornar um caracter vazio e nao pode ser igual hah algum nome já registrado
 {
 	try
 	{
