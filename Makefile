@@ -28,3 +28,4 @@ distcheck:
 test:
 	./$(TARGET) --test endereco && echo "OK" || exit "Erro!";
 	./$(TARGET) --test usuario && echo "OK" || exit "Erro!";
+	./$(TARGET) --test produtos && echo "OK" || exit "Erro!";
