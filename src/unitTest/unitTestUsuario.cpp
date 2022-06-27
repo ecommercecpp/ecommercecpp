@@ -1,5 +1,9 @@
 #include "../../include/autoload.hpp"
 
+/**
+ * @brief Teste unitário para a classe Usuario
+ * 
+ */
 void UnitTestUsuario::run()
 {
     try{
