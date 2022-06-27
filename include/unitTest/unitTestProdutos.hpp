@@ -13,54 +13,14 @@ string maiuscula(string s)
     return s;
 }
 
-/*int contarPalavras(const string& frase) {
-  int quantidadePalavras = 0;
-	char caracterAnterior = ' ';
-
-	for_each(frase.begin(), frase.end(), [&](const char& caracterAtual) {
-
-		if(!isalpha(caracterAnterior) && isalpha(caracterAtual))
-			quantidadePalavras++;
-
-		caracterAnterior = caracterAtual;
-	});
-
-	return quantidadePalavras;
-}*/
-
-void UnitTestId::run()//nao pode retornar um caracter vazio e nao pode ser igual hah algum nome já registrado
-{
-	try
-	{
-		bool teste = false;
-		if(Produto::getId() /*SeforRepetido*/){
-			throw std::runtime_error("Voce não pode ter 0 de quantidade!\n");
-			teste = true;
-		}
-		if(teste == true)
-		{
-			throw std::runtime_error("a variável 'teste' não é true");
-		}
-		pass();
-	}
-	catch ( std::exception &e )
-	{
-		int aux;
-		//percorre todos os Ids e define um que nao foi registrado
-		//cin>>aux;
-		Produto::setId(aux);
-		fail(std::string(e.what()));
-	}
-}
+//void UnitTestNome::run(){} -> considerei desnecessário porque mesmo apagando um id, todos os ids vão ser +1 do registrado anteriormente
 
 void UnitTestNome::run()//nao pode retornar um caracter vazio e nao pode ser igual hah algum nome já registrado
 {
 	try
 	{
 		bool teste = false;
-   		// seu código normal
-		// ...
-		// aqui, caso um valor não for true, lança um erro:
+
 		//se o nome digitado tiver mais de 20 caracteres
 		if(std::strlen(Produto::getNome()) >= 20){
 			teste = true;
