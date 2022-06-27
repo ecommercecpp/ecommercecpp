@@ -6,7 +6,7 @@
 //testar sets e gets - Id, nome, descricao e quantidade
 
 //deixa as letras maiusculas
-string maiuscula(string s)
+std::string maiuscula(string s)
 {
     std::transform(s.begin(), s.end(), s.begin(),
                    [](unsigned char c){ return std::toupper(c); });
@@ -15,14 +15,14 @@ string maiuscula(string s)
 
 //void UnitTestNome::run(){} -> considerei desnecessário porque mesmo apagando um id, todos os ids vão ser +1 do registrado anteriormente
 
-void UnitTestNome::run()//nao pode retornar um caracter vazio e nao pode ser igual hah algum nome já registrado
+void UnitTestNome::run()
 {
 	try
 	{
 		bool teste = false;
 
 		//se o nome digitado tiver mais de 20 caracteres
-		if(std::strlen(Produto::getNome()) >= 20){
+		if(std::length(Produto::getNome()) >= 20){
 			teste = true;
 			throw std::runtime_error("Digite um nome com no máximo 20 caracteres\n");
 		}
@@ -59,7 +59,7 @@ void UnitTestNome::run()//nao pode retornar um caracter vazio e nao pode ser igu
 		//std::string aux;
 		//limitar para 20 letras
 		char nome[20];
-		int i = strlen(nome);
+		int i = length(nome);
 		while (i >= 20){
 			throw std::runtime_error("Digite um nome com no máximo 20 caracteres");
 		}
@@ -101,7 +101,7 @@ void UnitTestDescricao::run()
 			teste = true;
 		}
 		//limitar descricao ah 300 caracteres
-		if(std::strlen(Produto::getDescricao()) >= 300){
+		if(std::length(Produto::getDescricao()) >= 300){
 			throw std::runtime_error("Voce ultrapassou o máximo de 300 caracteres!\n");
 			teste = true;
 		}
@@ -114,7 +114,7 @@ void UnitTestDescricao::run()
 	catch ( std::exception &e )
 	{
 		char nome[300];
-		int i = strlen(nome);
+		int i = length(nome);
 		while (i >= 300){
 			throw std::runtime_error("Voce ultrapassou o máximo de 300 caracteres!\n");
 		}
