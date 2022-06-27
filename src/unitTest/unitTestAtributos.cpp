@@ -12,7 +12,7 @@ void UnitTestAtributos::run()
 		for (int i = 0; i < 100; i++)
 		{
 			Atributos* atributo = new Atributos();
-			atributo->adicionarAtributo("atributo" + std::to_string(i), { {"nivel" + std::to_string(i), "valor" + std::to_string(i)}, {"nivel" + std::to_string(i), "valor2" + std::to_string(i)} });
+			atributo->adicionarAtributo("atributo" + std::to_string(i), { {"nivel" + std::to_string(i), "valor" + std::to_string(i)}, {"nivel2" + std::to_string(i), "valor2" + std::to_string(i)} });
 			atributos.push_back(atributo);
 		}	
 		
