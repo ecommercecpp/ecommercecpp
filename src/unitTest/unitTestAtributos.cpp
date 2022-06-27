@@ -11,11 +11,14 @@ void UnitTestAtributos::run()
 		std::vector<Atributos*> atributos;
 		for (int i = 0; i < 100; i++)
 		{
-			Atributos *atributo = new Atributos();
-			atributo->adicionarAtributo("nome" + std::to_string(i), {"nome" + std::to_string(i), "nome" + std::to_string(i)});
+			Atributos* atributo = new Atributos();
+			atributo->adicionarAtributo("atributo" + std::to_string(i), { {"nivel" + std::to_string(i), "valor" + std::to_string(i)}, {"nivel" + std::to_string(i), "valor2" + std::to_string(i)} });
 			atributos.push_back(atributo);
 		}	
-			
+		
+		// verifica se o primeiro atributo tem o nome "atributo0"
+		if (atributos[0]->getListaAtributos("atributo0")["nivel0"] != "valor0")
+			throw std::runtime_error("Erro ao testar o atributo 0");
 
 		// remove os endereços
 		for (int i = 0; i < 100; i++)
