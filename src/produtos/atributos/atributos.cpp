@@ -1,6 +1,15 @@
 #include "../../../include/autoload.hpp"
 
 /**
+ * @brief Construct a new Atributos:: Atributos object
+ * 
+ */
+Atributos::Atributos()
+{
+    ListaAtributos = std::map<std::string, std::map<std::string, std::string>>();
+}
+
+/**
  * @brief Retorna a lista de atributos do produto
  * 
  * @return std::map<std::string, std::map<std::string, std::string>> 
