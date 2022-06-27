@@ -1,6 +1,7 @@
 #ifndef _AUTOLOAD_HPP_
 #define _AUTOLOAD_HPP_
 
+#include <bits/stdc++.h>
 #include <vector>
 #include <map>
 #include <string>

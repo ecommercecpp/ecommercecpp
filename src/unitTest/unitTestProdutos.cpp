@@ -1,6 +1,4 @@
-#include "../../autoload.hpp"
-
-//testar sets e gets - Id, nome, descricao e quantidade
+#include "../../include/autoload.hpp"
 
 //deixa as letras maiusculas
 std::string maiuscula(std::string s)
