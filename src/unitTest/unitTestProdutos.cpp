@@ -1,9 +1,6 @@
 #include "../../include/autoload.hpp"
 
-/**
- * @brief Teste unitário para a classe Produtos
- * 
- */
+using namespace std;
 
 //deixa as letras maiusculas
 std::string maiuscula(std::string s)
@@ -19,10 +16,10 @@ void UnitTestNome::run()
 {
 	try
 	{
-		bool teste = false;
+		//bool teste = false;
 
 		//se o nome digitado tiver mais de 20 caracteres
-		if(std::length(Produto::getNome()) >= 20){
+		if(length(Produto::getNome()) >= 20){
 			teste = true;
 			throw std::runtime_error("Digite um nome com no máximo 20 caracteres\n");
 		}
@@ -30,26 +27,23 @@ void UnitTestNome::run()
 		bool caracter = true;
 		if(caracter == true){
 			char nome[99] = maiuscula(Produto::getNome());
-			for (i = 0; nome[i] != '\0'; i++) { 
+			for (int i = 0; nome[i] != '\0'; i++) { 
 					if (nome[i] < 'A' || nome[i] > 'Z') { //lógica mais adequada
 						break; //encerra o laço, não tem porque continuar, achou algo que não muda mais
 					}
 				}
 				if (nome[i] != '\0'){caracter = false;} //se não chegou ao fim			
 				throw std::runtime_error("Voce não pode digitar um nome com caracteres especiais(" ",/,*,$,#,%)\n");
-				teste = true;
+				//teste = true;
 		}		
 		if(Produto::getNome() == ""){
 			throw std::runtime_error("Voce precisa digitar um nome!\n");
-			teste = true;
+			//teste = true;
 		}
-		//como consultar nomes que jah existem no banco?
-		//se existir um nome pass() senao erro
-
-		if(teste == true)
+		/*if(teste == true)
 		{
 			throw std::runtime_error("a variável 'teste' não é true");
-		}
+		}*/
 
 		// caso passar em todos os testes, use pass(); para passar o teste
 		pass();
@@ -64,15 +58,15 @@ void UnitTestQtd::run()//nao pode retornar um caracter vazio e nao pode ser igua
 {
 	try
 	{
-		bool teste = false;
+		//bool teste = false;
 		if(Produto::getQtd() == 0){
 			throw std::runtime_error("Voce não pode ter 0 de quantidade!\n");
-			teste = true;
+			//teste = true;
 		}
-		if(teste == true)
+		/*if(teste == true)
 		{
 			throw std::runtime_error("a variável 'teste' não é true");
-		}
+		}*/
 		pass();
 	}
 	catch ( std::exception &e )
@@ -85,29 +79,24 @@ void UnitTestDescricao::run()
 {
 	try
 	{
-		bool teste = false;
+		//bool teste = false;
 		if(Produto::getDescricao() == ""){
 			throw std::runtime_error("Digite uma descrição!\n");
-			teste = true;
+			//teste = true;
 		}
 		//limitar descricao ah 300 caracteres
-		if(std::length(Produto::getDescricao()) >= 300){
+		if(length(Produto::getDescricao()) >= 300){
 			throw std::runtime_error("Voce ultrapassou o máximo de 300 caracteres!\n");
-			teste = true;
+			//teste = true;
 		}
-		if(teste == true)
+		/*if(teste == true)
 		{
 			throw std::runtime_error("a variável 'teste' não é true");
-		}
+		}*/
 		pass();
 	}
 	catch ( std::exception &e )
 	{
-		char nome[300];
-		int i = std::length(nome);
-		while (i >= 300){
-			throw std::runtime_error("Voce ultrapassou o máximo de 300 caracteres!\n");
-		}
 		//falha no teste
 		fail(std::string(e.what()));
 	}
