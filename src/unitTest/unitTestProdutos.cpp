@@ -17,27 +17,45 @@ void UnitTestProdutos::run()
             produtos.push_back(produto);
         }
 
-		// testa todos os gets
+		// testa todos os gets de Nome e Descricao
 		for (int i = 0; i < 100; i++)
 		{
-			if (produtos[i]->getId() != i)
-				throw std::runtime_error("Erro ao testar o set do ID");
 			if (produtos[i]->getNome() != "Nome " + std::to_string(i))
 				throw std::runtime_error("Erro ao testar o set do Nome");
 			if (produtos[i]->getDescricao() != "Descricao " + std::to_string(i))
 				throw std::runtime_error("Erro ao testar o set da descricao");				
-			if (produtos[i]->getQtd() != i)
-				throw std::runtime_error("Erro ao testar o set da Qtd");
 		}
 
-		// testa todos os sets
+		// testa todos os gets
+		for (unsigned int i = 0; i < 100; i++)
+		{
+			if (produtos[i]->getId() != i)
+				throw std::runtime_error("Erro ao testar o set do ID");
+		}	
+		// testa todos os gets
+		for (double i = 0; i < 100; i++)
+		{
+			if (produtos[i]->getQtd() != i)
+				throw std::runtime_error("Erro ao testar o set da Qtd");
+		}			
+
+
+		// testa os sets de nome e descricao
 		for (int i = 0; i < 100; i++)
 		{
-			produtos[i]->setId(i);
 			produtos[i]->setNome("Nome " + std::to_string(i));
 			produtos[i]->setDescricao("Descricao " + std::to_string(i));
-			produtos[i]->setQtd(i);
+		}
+		// testa os sets do id
+		for (unsigned int i = 0; i < 100; i++)
+		{
+			produtos[i]->setId(i);
 		}	
+		// testa os sets da Qtd
+		for (double i = 0; i < 100; i++)
+		{
+			produtos[i]->setQtd(i);
+		}					
 
 		// remove os endereços
 		for (int i = 0; i < 100; i++)
