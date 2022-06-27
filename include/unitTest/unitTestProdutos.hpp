@@ -3,19 +3,7 @@
 
 #include "../autoload.hpp"
 
-class UnitTestNome : public UnitTest
-{
-    public:
-        void run() override;
-};
-
-class UnitTestQtd : public UnitTest
-{
-    public:
-        void run() override;
-};
-
-class UnitTestDescricao : public UnitTest
+class UnitTestProdutos : public UnitTest
 {
     public:
         void run() override;
