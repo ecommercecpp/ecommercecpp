@@ -34,6 +34,37 @@ Como Administrador, quero ver em vendas os produtos ( e suas variações ) selec
 
 Como administrador, quero a possibilidade de, após a venda ser efetivada, antes de realizar o envio para o cliente, conseguir emitir uma nota fiscal para o cliente, com os dados dos produtos inclusos na compra, dados de pagamento, dados do cliente e dados de entrega para o cliente, mesclando tudo em uma nota fiscal informativa para o cliente, de modo que consiga anexar isso ao pedido como documentação, para eventuais questionamentos.
 
+## Começando 🚀
+
+Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
+
+### Pré-requisitos
+
+- Ter um compilador c++ instalado.
+- Ter o cmake instalado.
+- Ter o git instalado.
+
+### Instalação
+
+1. Clone o repositório.
+   ```sh
+   git clone https://github.com/ecommercecpp/ecommercecpp.git
+   ```
+2. Entre no diretório do repositório.
+    ```sh
+    cd ecommercecpp
+    ```
+3. Execute o comando `make` para gerar o projeto.
+    ```sh
+    make
+    ```
+
+4. (opcional) Execute o comando `make test` para testar o projeto.
+    ```sh
+    make test
+    ```
+
+
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
