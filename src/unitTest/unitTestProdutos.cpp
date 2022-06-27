@@ -51,15 +51,7 @@ void UnitTestNome::run()
 	}
 	catch ( std::exception &e )
 	{
-		//std::string aux;
-		//limitar para 20 letras
-		char nome[20];
-		int i = std::length(nome);
-		while (i >= 20){
-			throw std::runtime_error("Digite um nome com no máximo 20 caracteres");
-		}
-		std::cin>>aux;
-		Produto::setNome(aux);
+		//falha no teste
 		fail(std::string(e.what()));
 	}
 }
@@ -80,9 +72,7 @@ void UnitTestQtd::run()//nao pode retornar um caracter vazio e nao pode ser igua
 	}
 	catch ( std::exception &e )
 	{
-		double aux;
-		std::cin>>aux;
-		Produto::setQtd(aux);
+		//falha no teste
 		fail(std::string(e.what()));
 	}
 }
@@ -113,9 +103,7 @@ void UnitTestDescricao::run()
 		while (i >= 300){
 			throw std::runtime_error("Voce ultrapassou o máximo de 300 caracteres!\n");
 		}
-		std::string aux;
-		std::cin>>aux;
-		Produto::setDescricao(aux);
+		//falha no teste
 		fail(std::string(e.what()));
 	}
 }
