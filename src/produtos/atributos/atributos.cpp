@@ -1,6 +1,5 @@
 #include "../../../include/autoload.hpp"
 
-
 std::map<std::string, std::map<std::string, std::string>> Atributos::getListaAtributos(){
     return this->ListaAtributos;
 }// ok 
