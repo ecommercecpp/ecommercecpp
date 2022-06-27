@@ -28,7 +28,7 @@
 //include de testes
 #include "./unitTest/unitTest.hpp"
 #include "./unitTest/unitTestEndereco.hpp"
+#include "./unitTest/unitTestAtributos.hpp"
 #include "./unitTest/unitTestUsuario.hpp"
-#include "./unitTest/unitTestProdutos.hpp"
 
 #endif
