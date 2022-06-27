@@ -21,6 +21,12 @@ int main(int argc, char *argv[])
 				UnitTestEndereco unitTestEndereco;
 				unitTestEndereco.run();
 			}
+
+			if (std::string(argv[2]) == "usuario")
+			{
+				UnitTestUsuario unitTestUsuario;
+				unitTestUsuario.run();
+			}
 		}
 		
 	}

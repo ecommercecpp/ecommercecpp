@@ -10,9 +10,7 @@ class Atributos
 	public:
 		Atributos();
 		std::map<std::string, std::map<std::string, std::string>> getListaAtributos();
-		void setListaAtributos();
 		std::map<std::string, std::string> getListaAtributos(std::string nomeAtributo);
-		void setAtributo(std::string nomeAtributo);
 		void adicionarAtributo(std::string nomeAtributo, std::map<std::string, std::string> niveis);
 };
 
