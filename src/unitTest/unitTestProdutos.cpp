@@ -1,5 +1,8 @@
 #include "../../include/autoload.hpp"
-
+/**
+ * @brief Teste unitário para a classe Produtos
+ * 
+ */
 void UnitTestProdutos::run()
 {
 	try
@@ -9,10 +12,10 @@ void UnitTestProdutos::run()
         for(int i = 0; i < 100; i++)
 		{
             Produto *produto = new Produto(
-			   "Id " + i,	
+			   i,	
                "Nome " + std::to_string(i),
 			   "Descricao " + std::to_string(i),
-			   "Qtd " + i
+			   i
             );
             produtos.push_back(produto);
         }
