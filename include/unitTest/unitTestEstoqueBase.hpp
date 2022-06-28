@@ -3,7 +3,7 @@
 
 #include "../autoload.hpp"
 
-class UnitTestEndereco : public UnitTest
+class UnitTestEstoqueBase : public UnitTest
 {
 	public:
 		void run() override;
