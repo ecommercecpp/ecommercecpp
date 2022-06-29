@@ -16,7 +16,8 @@ void UnitTestEstoqueBase::run()
 		
 		for(int i = 1; i < 51; i++)
 		{
-			estoqueX->EstoqueBase::adicionar(Produto(i, "nomeProduto", "descricao qualquer", i));
+			Produto prod = Produto(i, "nomeProduto", "descricao qualquer", i);
+			estoqueX->EstoqueBase::adicionar(prod);
 		}
 
 		// busca todos produtos
