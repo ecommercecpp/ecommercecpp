@@ -1,4 +1,5 @@
 #include "../../include/autoload.hpp"
+
 /**
  * @brief Teste unitário para a classe Produtos
  * 
@@ -41,7 +42,6 @@ void UnitTestProdutos::run()
 			if (produtos[i]->getQtd() != i)
 				throw std::runtime_error("Erro ao testar o set da Qtd");
 		}			
-
 
 		// testa os sets de nome e descricao
 		for (int i = 0; i < 100; i++)
