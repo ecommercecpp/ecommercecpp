@@ -1,0 +1,72 @@
+\hypertarget{class_unit_test}{}\doxysection{Referência à classe Unit\+Test}
+\label{class_unit_test}\index{UnitTest@{UnitTest}}
+Diagrama de heranças da classe Unit\+Test\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.647059cm]{class_unit_test}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unit_test_a678aec989d895eaee2d35d99adc790ac}\label{class_unit_test_a678aec989d895eaee2d35d99adc790ac}} 
+void \mbox{\hyperlink{class_unit_test_a678aec989d895eaee2d35d99adc790ac}{pass}} ()
+\begin{DoxyCompactList}\small\item\em Passa o teste unitário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unit_test_a30ce5f632e4351e731c05e104501445e}{fail}} (std\+::string error)
+\begin{DoxyCompactList}\small\item\em Rejeita o teste unitário. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unit_test_a85c0860e4679c0e53b8c0cc661391499}\label{class_unit_test_a85c0860e4679c0e53b8c0cc661391499}} 
+virtual void {\bfseries run} ()=0
+\item 
+\mbox{\Hypertarget{class_unit_test_afa0bdd3e2ac33cd52e697406339a2edf}\label{class_unit_test_afa0bdd3e2ac33cd52e697406339a2edf}} 
+\mbox{\hyperlink{class_unit_test_afa0bdd3e2ac33cd52e697406339a2edf}{$\sim$\+Unit\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Unit Test\+:\+: Unit Test object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unit_test_ae4943f6f31fc6b4af39fed598feb1bdf}{throw\+Error}} (std\+::string error)
+\begin{DoxyCompactList}\small\item\em Lança uma exceção de erro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unit_test_a1c38365ac2a3b240045a93b521cc294a}\label{class_unit_test_a1c38365ac2a3b240045a93b521cc294a}} 
+bool {\bfseries passed} = false
+\item 
+\mbox{\Hypertarget{class_unit_test_a163423575d9e045a0caf4fa8b22d6204}\label{class_unit_test_a163423575d9e045a0caf4fa8b22d6204}} 
+std\+::string {\bfseries error}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{class_unit_test_a30ce5f632e4351e731c05e104501445e}\label{class_unit_test_a30ce5f632e4351e731c05e104501445e}} 
+\index{UnitTest@{UnitTest}!fail@{fail}}
+\index{fail@{fail}!UnitTest@{UnitTest}}
+\doxysubsubsection{\texorpdfstring{fail()}{fail()}}
+{\footnotesize\ttfamily void Unit\+Test\+::fail (\begin{DoxyParamCaption}\item[{std\+::string}]{error }\end{DoxyParamCaption})}
+
+
+
+Rejeita o teste unitário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em error} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unit_test_ae4943f6f31fc6b4af39fed598feb1bdf}\label{class_unit_test_ae4943f6f31fc6b4af39fed598feb1bdf}} 
+\index{UnitTest@{UnitTest}!throwError@{throwError}}
+\index{throwError@{throwError}!UnitTest@{UnitTest}}
+\doxysubsubsection{\texorpdfstring{throwError()}{throwError()}}
+{\footnotesize\ttfamily void Unit\+Test\+::throw\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{error }\end{DoxyParamCaption})}
+
+
+
+Lança uma exceção de erro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em error} & \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/unit\+Test/unit\+Test.\+hpp\item 
+src/unit\+Test/unit\+Test.\+cpp\end{DoxyCompactItemize}

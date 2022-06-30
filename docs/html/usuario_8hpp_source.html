@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ecommerce C++: Código-Fonte de include/usuarios/usuario.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="103675273?s=200&v=4"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Ecommerce C++
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho Prático PDS2 | UFMG</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_6249e8650142e89c21b0943d9880dacc.html">usuarios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">usuario.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef USUARIO_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define USUARIO_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../autoload.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_usuario.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_usuario.html">Usuario</a>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        std::string nome;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">int</span> cpf;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::string email;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_endereco.html">Endereco</a> endereco;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::string senha;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::string <a class="code" href="class_usuario.html#a9fd39b37a8f38cfd990aba2234de9ea0">getNome</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_usuario.html#a4d8c4bd150ea98c34bad85e72219d9ef">getCpf</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::string <a class="code" href="class_usuario.html#ab47f811619c0f6e26d43f11393f2b143">getEmail</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_endereco.html">Endereco</a> <a class="code" href="class_usuario.html#aac4c2061ef3903791f87f1147aecd7ad">getEndereco</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::string <a class="code" href="class_usuario.html#afe5b8e2b50dcf24b109357fda3716f7f">getSenha</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#ab6a6a430d055449a8e9d6c06253a272e">setNome</a>(std::string nome);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#a7658f41712561696ce50dff8fa4a5b80">setCpf</a>(<span class="keywordtype">int</span> cpf);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#aa46b53a37afb4aa3f7f6a5a1b3fe8528">setEmail</a>(std::string email);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#a161c7f10047bccf70937f7bcb69b2314">setEndereco</a>(<a class="code" href="class_endereco.html">Endereco</a> endereco);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#a28efaec1398906b6f43b12877bf59db7">setSenha</a>(std::string senha);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_usuario.html#a385e31b1500b5334c695374713ae4d21">Usuario</a>(std::string nome, <span class="keywordtype">int</span> cpf, std::string email, <a class="code" href="class_endereco.html">Endereco</a> endereco, std::string senha);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_endereco_html"><div class="ttname"><a href="class_endereco.html">Endereco</a></div><div class="ttdef"><b>Definition:</b> endereco.hpp:7</div></div>
+<div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition:</b> usuario.hpp:6</div></div>
+<div class="ttc" id="aclass_usuario_html_a161c7f10047bccf70937f7bcb69b2314"><div class="ttname"><a href="class_usuario.html#a161c7f10047bccf70937f7bcb69b2314">Usuario::setEndereco</a></div><div class="ttdeci">void setEndereco(Endereco endereco)</div><div class="ttdoc">seta o endereço do usuario</div><div class="ttdef"><b>Definition:</b> usuario.cpp:39</div></div>
+<div class="ttc" id="aclass_usuario_html_a28efaec1398906b6f43b12877bf59db7"><div class="ttname"><a href="class_usuario.html#a28efaec1398906b6f43b12877bf59db7">Usuario::setSenha</a></div><div class="ttdeci">void setSenha(std::string senha)</div><div class="ttdoc">seta a senha do usuario</div><div class="ttdef"><b>Definition:</b> usuario.cpp:46</div></div>
+<div class="ttc" id="aclass_usuario_html_a385e31b1500b5334c695374713ae4d21"><div class="ttname"><a href="class_usuario.html#a385e31b1500b5334c695374713ae4d21">Usuario::Usuario</a></div><div class="ttdeci">Usuario(std::string nome, int cpf, std::string email, Endereco endereco, std::string senha)</div><div class="ttdoc">Construtor para a Classe Usuário.</div><div class="ttdef"><b>Definition:</b> usuario.cpp:7</div></div>
+<div class="ttc" id="aclass_usuario_html_a4d8c4bd150ea98c34bad85e72219d9ef"><div class="ttname"><a href="class_usuario.html#a4d8c4bd150ea98c34bad85e72219d9ef">Usuario::getCpf</a></div><div class="ttdeci">int getCpf()</div><div class="ttdoc">Retorna o cpf do usuario.</div><div class="ttdef"><b>Definition:</b> usuario.cpp:62</div></div>
+<div class="ttc" id="aclass_usuario_html_a7658f41712561696ce50dff8fa4a5b80"><div class="ttname"><a href="class_usuario.html#a7658f41712561696ce50dff8fa4a5b80">Usuario::setCpf</a></div><div class="ttdeci">void setCpf(int cpf)</div><div class="ttdoc">seta o cpf do usuario</div><div class="ttdef"><b>Definition:</b> usuario.cpp:25</div></div>
+<div class="ttc" id="aclass_usuario_html_a9fd39b37a8f38cfd990aba2234de9ea0"><div class="ttname"><a href="class_usuario.html#a9fd39b37a8f38cfd990aba2234de9ea0">Usuario::getNome</a></div><div class="ttdeci">std::string getNome()</div><div class="ttdoc">Retorna o nome do usuario.</div><div class="ttdef"><b>Definition:</b> usuario.cpp:54</div></div>
+<div class="ttc" id="aclass_usuario_html_aa46b53a37afb4aa3f7f6a5a1b3fe8528"><div class="ttname"><a href="class_usuario.html#aa46b53a37afb4aa3f7f6a5a1b3fe8528">Usuario::setEmail</a></div><div class="ttdeci">void setEmail(std::string email)</div><div class="ttdoc">seta o email do usuario</div><div class="ttdef"><b>Definition:</b> usuario.cpp:32</div></div>
+<div class="ttc" id="aclass_usuario_html_aac4c2061ef3903791f87f1147aecd7ad"><div class="ttname"><a href="class_usuario.html#aac4c2061ef3903791f87f1147aecd7ad">Usuario::getEndereco</a></div><div class="ttdeci">Endereco getEndereco()</div><div class="ttdoc">Retorna o endereço do usuario.</div><div class="ttdef"><b>Definition:</b> usuario.cpp:78</div></div>
+<div class="ttc" id="aclass_usuario_html_ab47f811619c0f6e26d43f11393f2b143"><div class="ttname"><a href="class_usuario.html#ab47f811619c0f6e26d43f11393f2b143">Usuario::getEmail</a></div><div class="ttdeci">std::string getEmail()</div><div class="ttdoc">Retorna o email do usuario.</div><div class="ttdef"><b>Definition:</b> usuario.cpp:70</div></div>
+<div class="ttc" id="aclass_usuario_html_ab6a6a430d055449a8e9d6c06253a272e"><div class="ttname"><a href="class_usuario.html#ab6a6a430d055449a8e9d6c06253a272e">Usuario::setNome</a></div><div class="ttdeci">void setNome(std::string nome)</div><div class="ttdoc">seta o nome</div><div class="ttdef"><b>Definition:</b> usuario.cpp:18</div></div>
+<div class="ttc" id="aclass_usuario_html_afe5b8e2b50dcf24b109357fda3716f7f"><div class="ttname"><a href="class_usuario.html#afe5b8e2b50dcf24b109357fda3716f7f">Usuario::getSenha</a></div><div class="ttdeci">std::string getSenha()</div><div class="ttdoc">Retorna a senha do usuario.</div><div class="ttdef"><b>Definition:</b> usuario.cpp:86</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
