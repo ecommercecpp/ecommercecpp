@@ -1,0 +1,43 @@
+   
+
+\begin{quote}
+O Ecommerce\+CPP é uma abstração de um sistema de e-\/commerce. \end{quote}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{☕ User Stories}\label{md__r_e_a_d_m_e_autotoc_md1}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{Cadastro de novos usuarios (roles\+: administrador, cliente) $\vert$ $<$a href=\char`\"{}https\+://github.\+com/\+Edu\+Scf\char`\"{}$>$@\+Edu\+Scf$<$/a$>$}\label{md__r_e_a_d_m_e_autotoc_md2}
+Como administrador da plataforma, desejo um sistema seguro, rápido e fácil de cadastro. Para isso, quero que seja possível ser cadastrado como cliente, tendo acesso a sua conta que fornecerá dados pessoais e um histórico de compras, ou como administrador, que será possível modificar e consultar os produtos da loja. Sendo que independentemente da categoria, para criação do cadastro deverá ser fornecido o nome completo, CPF, RG e CEP de onde a pessoa mora. Prezando a segurança do banco de dados para que todas as informações fornecidas pelo cliente fiquem em segurança.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Controle de cadastro de produtos $\vert$ $<$a href=\char`\"{}https\+://github.\+com/aquila1004\char`\"{}$>$@aquila1004$<$/a$>$}\label{md__r_e_a_d_m_e_autotoc_md3}
+Como administrador, quero separar os produtor por categorias no momento da escolha. Dessa forma, o próximo passo vai ser fazer uma boa descrição do produto através do seu controle no momento do cadastro. Todos os produtos deverão ter as seguintes informações cedidas no momento de seu cadastro. Sendo assim, deverão possuir foto do produto, peso.\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Controle de cadastro de variações de produtos (produto simples e produto variável) $\vert$ $<$a href=\char`\"{}https\+://github.\+com/\+Caio\+Hosken\char`\"{}$>$@\+Caio\+Hosken$<$/a$>$}\label{md__r_e_a_d_m_e_autotoc_md4}
+Como administrador, quero a possibilidade de cadastrar dois tipos de produtos (produto simples e produto variável). O produto simples é único, e por isso cadastrado com apenas seu tamanho, cor e quantidade, por não possuir nenhum outro item do do mesmo modelo porém cor ou tamanho diferente, não é preciso separá-\/lo. Já o produto variável é cadastrado e separado com diferentes tamanhos e cores disponíveis no estoque. Tudo isso para que o cliente saiba quantas unidades temos de cada item, separados por tamanhos, cores e outras espicifidades.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{Cadastro de métodos de entrega $\vert$ $<$a href=\char`\"{}https\+://github.\+com/\+Felippe\+Veloso\+Marinho\char`\"{}$>$@\+Felippe\+Veloso\+Marinho$<$/a$>$}\label{md__r_e_a_d_m_e_autotoc_md5}
+Como cliente, quero que seja possível definir o tipo de entrega que desejo ao realizar uma venda e, que haja o calculo do frete conforme a região do endereço indicado. Sendo minimamente necessário uma opção de frete por localização. É de grande importância um sistema de rastreamento na entrega do produto e o auto preenchimento dos dados de endereço ao ser digitado o CEP. Sendo assim, maneiras de obter uma melhor experiência de usuário, e que haja maior transparência durante o processo da compra.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{Cadastro de vendas $\vert$ $<$a href=\char`\"{}https\+://github.\+com/srgoogle23\char`\"{}$>$@srgoogle23$<$/a$>$}\label{md__r_e_a_d_m_e_autotoc_md6}
+Como Administrador, quero ver em vendas os produtos ( e suas variações ) selecionados pelo cliente, assim como os principais dados do cliente, como nome, e-\/mail, CPF, dados de endereço, método de entrega selecionado, método de pagamento selecionado pelo cliente. Para que baseado nessas informações, consiga saber se o pedido (venda) já foi pago, está em andamento, já foi aprovado ou se já posso enviar pro cliente o pedido, conforme o método de entrega e dados de endereço informados.\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{Emissão de nota fiscal $\vert$ $<$a href=\char`\"{}https\+://github.\+com/srgoogle23\char`\"{}$>$@srgoogle23$<$/a$>$}\label{md__r_e_a_d_m_e_autotoc_md7}
+Como administrador, quero a possibilidade de, após a venda ser efetivada, antes de realizar o envio para o cliente, conseguir emitir uma nota fiscal para o cliente, com os dados dos produtos inclusos na compra, dados de pagamento, dados do cliente e dados de entrega para o cliente, mesclando tudo em uma nota fiscal informativa para o cliente, de modo que consiga anexar isso ao pedido como documentação, para eventuais questionamentos.\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{Começando 🚀}\label{md__r_e_a_d_m_e_autotoc_md8}
+Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo\+:\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{Pré-\/requisitos}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Ter um compilador c++ instalado.
+\item Ter o cmake instalado.
+\item Ter o git instalado.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{Instalação}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item Clone o repositório. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/ecommercecpp/ecommercecpp.git}
+
+\end{DoxyCode}
+
+\item Entre no diretório do repositório. \`{}\`{}\`{}sh cd ecommercecpp \`{}\`{}{\ttfamily }
+\item {\ttfamily Execute o comando}make{\ttfamily para gerar o projeto. }\`{}\`{}sh make \`{}\`{}\`{}
+\item (opcional) Execute o comando {\ttfamily make test} para testar o projeto. \`{}\`{}\`{}sh make test \`{}\`{}\`{}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{🤝 Colaboradores}\label{md__r_e_a_d_m_e_autotoc_md11}
+Agradecemos às seguintes pessoas que contribuíram para este projeto\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \href{\#}{\texttt{  \textsubscript{ {\bfseries{srgoogle23}} } }}  &\PBS\centering \href{\#}{\texttt{  \textsubscript{ {\bfseries{Edu\+Scf}} } }}  &\PBS\centering \href{\#}{\texttt{  \textsubscript{ {\bfseries{aquila1004}} } }}  &\PBS\centering \href{\#}{\texttt{  \textsubscript{ {\bfseries{Felippe\+Veloso\+Marinho}} } }}  &\PBS\centering \href{\#}{\texttt{  \textsubscript{ {\bfseries{Caio\+Hosken}} } }}   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{🔗 Links Úteis}\label{md__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyItemize}
+\item \href{https://www.atlassian.com/br/agile/project-management/user-stories}{\texttt{ Histórias de usuários com exemplos e um template}} 
+\end{DoxyItemize}
