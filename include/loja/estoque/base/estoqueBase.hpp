@@ -7,6 +7,7 @@ class EstoqueBase {
 	protected:
 		std::map<int, Produto> estoque;
 	public:
+		EstoqueBase();
 		void adicionar(Produto produto);
 		void remover(int id);
 		Produto* buscar(int id);

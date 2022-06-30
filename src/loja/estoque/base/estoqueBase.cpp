@@ -4,7 +4,6 @@
  * @brief Construct a new EstoqueBase:: EstoqueBase object
  * 
  */
-
 EstoqueBase::EstoqueBase()
 {
 
