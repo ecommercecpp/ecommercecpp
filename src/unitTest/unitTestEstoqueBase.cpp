@@ -10,32 +10,38 @@ void UnitTestEstoqueBase::run()
 
 		// cria um estoque
 		EstoqueBase* estoqueX = new EstoqueBase();	
-		
 
 		// adiciona 50 produtos ao estoque
-		
-		for(int i = 1; i < 51; i++)
+		for(unsigned int i = 1; i <= 50; i++)
 		{
-			Produto prod = Produto(i, "nomeProduto", "descricao qualquer", i);
-			estoqueX->EstoqueBase::adicionar(prod);
+			// adiciona um produto ao estoque base
+			estoqueX->adicionar(Produto(i, "Produto " + std::to_string(i), "Produto legal que é o numero " + std::to_string(i),i * 10));
 		}
 
-		// busca todos produtos
-		for(int i = 1; i < 51; i++)
+		// busca todos produtos e confere se as informacoes estao corretas
+		for(unsigned int i = 1; i <= 50; i++)
 		{
-			estoqueX->EstoqueBase::buscar(i);
+			// busca um produto no estoque base
+			Produto* produto = estoqueX->buscar(i);
+			// confere se as informacoes estao corretas
+			if(produto->getId() != i || produto->getNome() != "Produto " + std::to_string(i) || produto->getDescricao() != "Produto legal que é o numero " + std::to_string(i) || produto->getQtd() != i * 10)
+			{
+				throw std::runtime_error("Erro ao buscar produto no estoque base");
+			}
 		}
 		
-
-		// retorna o estoque
-		estoqueX.EstoqueBase::getEstoque();
-
-		// remove todos produtos
-		for(int i = 1; i < 51; i++)
+		// valida se a função de getEstoque retorna o estoque correto
+		if(estoqueX->getEstoque()->size() != 50)
 		{
-			estoqueX.EstoqueBase::remover(i);
+			throw std::runtime_error("Erro ao retornar estoque base");
 		}
-		
+
+		// testa a função para deleção de todos os produtos do estoque
+		for(unsigned int i = 1; i <= 50; i++)
+		{
+			// remove um produto do estoque base
+			estoqueX->remover(i);
+		}
 
 		//deleta o  estoque
 		delete estoqueX;
