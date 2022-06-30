@@ -1,6 +1,7 @@
 #ifndef _AUTOLOAD_HPP_
 #define _AUTOLOAD_HPP_
 
+#include <bits/stdc++.h>
 #include <vector>
 #include <map>
 #include <string>
@@ -29,6 +30,7 @@
 #include "./unitTest/unitTestEndereco.hpp"
 #include "./unitTest/unitTestAtributos.hpp"
 #include "./unitTest/unitTestUsuario.hpp"
+#include "./unitTest/unitTestProdutos.hpp"
 #include "./unitTest/unitTestEstoqueBase.hpp"
 
 #endif
