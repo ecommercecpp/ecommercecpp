@@ -33,6 +33,12 @@ int main(int argc, char *argv[])
 				UnitTestUsuario unitTestUsuario;
 				unitTestUsuario.run();
 			}
+
+			if (std::string(argv[2]) == "estoqueBase")
+			{
+				UnitTestEstoqueBase unitTestEstoqueBase;
+				unitTestEstoqueBase.run();
+			}
 		}
 		
 	}

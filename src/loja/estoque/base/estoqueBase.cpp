@@ -1,6 +1,15 @@
 #include "../../../../include/autoload.hpp"
 
 /**
+ * @brief Construct a new EstoqueBase:: EstoqueBase object
+ * 
+ */
+EstoqueBase::EstoqueBase()
+{
+
+}
+
+/**
  * @brief Adiciona um produto ao estoque.
  *
  * @param  Produto produto
