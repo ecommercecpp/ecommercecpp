@@ -31,5 +31,6 @@
 #include "./unitTest/unitTestAtributos.hpp"
 #include "./unitTest/unitTestUsuario.hpp"
 #include "./unitTest/unitTestProdutos.hpp"
+#include "./unitTest/unitTestEstoqueBase.hpp"
 
 #endif

@@ -29,3 +29,4 @@ test:
 	./$(TARGET) --test endereco && echo "OK" || exit "Erro!";
 	./$(TARGET) --test usuario && echo "OK" || exit "Erro!";
 	./$(TARGET) --test atributos && echo "OK" || exit "Erro!";
+	./$(TARGET) --test estoqueBase && echo "OK" || exit "Erro!";
