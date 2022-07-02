@@ -2,7 +2,7 @@
 #define _PRODUTO_HPP_
 
 
-#include "../autoload.hpp"
+#include "autoload.hpp"
 
 class Produto {
     public:

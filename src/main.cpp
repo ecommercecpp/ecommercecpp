@@ -1,4 +1,4 @@
-#include "../include/autoload.hpp"
+#include "autoload.hpp"
 
 // int main com args
 int main(int argc, char *argv[])

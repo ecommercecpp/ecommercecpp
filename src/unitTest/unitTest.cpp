@@ -1,4 +1,4 @@
-#include "../../include/autoload.hpp"
+#include "autoload.hpp"
 
 /**
  * @brief Passa o teste unitário

@@ -1,10 +1,12 @@
 #ifndef USUARIO_HPP
 #define USUARIO_HPP
 
-#include "../autoload.hpp"
+#include "autoload.hpp"
 
 class Usuario{
     protected:
+        bool tipo;
+        bool autenticado;
         std::string nome;
         int cpf;
         std::string email;

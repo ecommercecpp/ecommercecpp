@@ -1,7 +1,7 @@
 #ifndef _UNIT_TEST_ESTOQUE_BASE_HPP_
 #define _UNIT_TEST_ESTOQUE_BASE_HPP_
 
-#include "../autoload.hpp"
+#include "autoload.hpp"
 
 class UnitTestEstoqueBase : public UnitTest
 {

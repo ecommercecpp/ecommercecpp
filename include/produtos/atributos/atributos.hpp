@@ -1,7 +1,7 @@
 #ifndef _ATRIBUTOS_HPP_
 #define _ATRIBUTOS_HPP_
 
-#include "../../autoload.hpp"
+#include "autoload.hpp"
 
 class Atributos
 {

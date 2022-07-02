@@ -1,7 +1,7 @@
 #ifndef _ENDERECO_HPP_
 #define _ENDERECO_HPP_
 
-#include "../../autoload.hpp"
+#include "autoload.hpp"
 
 class Endereco
 {
