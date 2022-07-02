@@ -4,6 +4,7 @@
 ![Linguagens](https://img.shields.io/github/languages/count/ecommercecpp/ecommercecpp?style=for-the-badge)
 ![Forks](https://img.shields.io/github/forks/ecommercecpp/ecommercecpp?style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues/ecommercecpp/ecommercecpp?style=for-the-badge)
+<br/>
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ecommercecpp_ecommercecpp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ecommercecpp_ecommercecpp)
 
 > O EcommerceCPP é uma abstração de um sistema de e-commerce.
