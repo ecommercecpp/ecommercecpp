@@ -12,6 +12,7 @@ class EstoqueBase {
 		void remover(int id);
 		Produto* buscar(int id);
 		std::map<int, Produto>* getEstoque();
+		virtual void listarEstoque() = 0;
 };
 
 #endif
