@@ -38,6 +38,33 @@ CLI::CLI(int argc, char *argv[])
 }
 
 /**
+ * @brief 	Mostra a loja
+ * 
+ */
+void CLI::mostrarLoja()
+{
+	std::cout << "Mostrar loja" << std::endl;
+	// cria uma loja com o usuario logado, obs: obrigatorio testar se o usuario logado existe e se está autenticado
+	
+
+	// apenas pra testar, cria um usuario fake
+	Usuario* usuarioLogado = new Usuario(
+		"nome",
+		123,
+		"email",
+		Endereco("rua", 123, "complemento", 123, "bairro", "cidade", "estado"),
+		"senha"
+	);
+
+	// verifica o tipo do cliente, se é adm ou nao e cria um estoque de acordo com o tipo
+
+	// apenas pra testar, cria um estoque fake
+	EstoqueAdm* estoque = new EstoqueAdm();
+	Loja loja(usuarioLogado, estoque);
+	loja.mostrarLoja();
+}
+
+/**
  * @brief 	Mostra o menu inicial do programa
  * 
  */
@@ -51,8 +78,9 @@ void CLI::lerOpcoesMenuInicial()
 	}
 	else if(opcao == "2")
 	{
-		std::cout << "Login";
-		login();
+		std::cout << "Login" << std::endl;
+		mostrarLoja();
+		return;
 	}
 	else if(opcao == "3")
 	{
