@@ -45,8 +45,10 @@ Para começar a utilizar o repositório, você precisa cumprir todos os requisit
 ### Pré-requisitos
 
 - Ter um compilador c++ instalado.
+- Ter o mingw na versão 11.2.0
 - Ter o cmake instalado.
 - Ter o git instalado.
+- Estar em um ambiente linux
 
 ### Instalação
 
