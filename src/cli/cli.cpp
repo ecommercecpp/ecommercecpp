@@ -38,6 +38,15 @@ CLI::CLI(int argc, char *argv[])
 }
 
 /**
+ * @brief 	Mostra a loja
+ * 
+ */
+void CLI::mostrarLoja()
+{
+	std::cout << "Mostrar loja" << std::endl;
+}
+
+/**
  * @brief 	Mostra o menu inicial do programa
  * 
  */
@@ -51,7 +60,8 @@ void CLI::lerOpcoesMenuInicial()
 	}
 	else if(opcao == "2")
 	{
-		std::cout << "Login";
+		std::cout << "Login" << std::endl;
+		mostrarLoja();
 		return;
 	}
 	else if(opcao == "3")
