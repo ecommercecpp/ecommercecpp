@@ -13,6 +13,7 @@ class EstoqueBase {
 		Produto* buscar(int id);
 		std::map<int, Produto>* getEstoque();
 		virtual void listarEstoque() = 0;
+		virtual ~EstoqueBase();
 };
 
 #endif

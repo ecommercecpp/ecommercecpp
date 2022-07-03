@@ -44,6 +44,7 @@ CLI::CLI(int argc, char *argv[])
 void CLI::mostrarLoja()
 {
 	std::cout << "Mostrar loja" << std::endl;
+	// chama a função para listar os produtos da loja
 }
 
 /**

@@ -47,5 +47,7 @@ std::map<int, Produto>* EstoqueBase::getEstoque(){
     return &estoque;
 }
 
-
-
+/** @brief Destruct a new EstoqueBase::~ EstoqueBase object
+ * 
+ */
+EstoqueBase::~EstoqueBase(){}

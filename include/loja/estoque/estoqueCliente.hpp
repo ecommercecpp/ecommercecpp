@@ -6,7 +6,9 @@
 class EstoqueCliente: public EstoqueBase
 {
 	public:
+		EstoqueCliente();
 		virtual void listarEstoque() override;
+		~EstoqueCliente();
 };
 
 #endif

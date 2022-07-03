@@ -9,13 +9,13 @@ void UnitTestEstoqueBase::run()
 	try {
 
 		// cria um estoque
-		EstoqueBase* estoqueX = new EstoqueBase();	
+		EstoqueCliente* estoqueX = new EstoqueCliente();	
 
 		// adiciona 50 produtos ao estoque
 		for(unsigned int i = 1; i <= 50; i++)
 		{
 			// adiciona um produto ao estoque base
-			estoqueX->adicionar(Produto(i, "Produto " + std::to_string(i), "Produto legal que é o numero " + std::to_string(i),i * 10));
+			estoqueX->adicionar(Produto(i, "Produto " + std::to_string(i), "Produto legal que é o numero " + std::to_string(i),i * 10, i * 11.5));
 		}
 
 		// busca todos produtos e confere se as informacoes estao corretas

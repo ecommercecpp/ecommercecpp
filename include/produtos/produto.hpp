@@ -6,7 +6,7 @@
 
 class Produto {
     public:
-        Produto(unsigned int id, std::string nome, std::string descricao, double qtd);
+        Produto(unsigned int id, std::string nome, std::string descricao, double qtd, double preco);
         Produto();
         unsigned int getId();
         std::string getNome();
@@ -16,11 +16,13 @@ class Produto {
         void setNome(std::string nome);
         void setDescricao(std::string descricao);
         void setQtd(double qtd);
+        void setPreco(double preco);
+        double getPreco();
     private:
         unsigned int id;
         std::string nome;
         std::string descricao;
-        double qtd;
+        double qtd, preco;
         Atributos atributos;
 };
 

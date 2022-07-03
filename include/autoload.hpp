@@ -23,6 +23,8 @@
 
 // include da loja
 #include "./loja/estoque/base/estoqueBase.hpp"
+#include "./loja/estoque/estoqueAdm.hpp"
+#include "./loja/estoque/estoqueCliente.hpp"
 #include "./loja/loja.hpp"
 
 //include de testes

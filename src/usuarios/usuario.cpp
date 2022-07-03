@@ -170,3 +170,14 @@ bool Usuario::cadastro()
  * 
  */
 void Usuario::logout(){};
+
+/**
+ * @brief   Retorna o tipo do usuario
+ * 
+ * @return true 
+ * @return false 
+ */
+bool Usuario::getTipo()
+{
+    return this->tipo;
+}

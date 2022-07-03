@@ -8,12 +8,13 @@
  * @param descricao 
  * @param qtd 
  */
-Produto::Produto(unsigned int id, std::string nome, std::string descricao, double qtd)
+Produto::Produto(unsigned int id, std::string nome, std::string descricao, double qtd, double preco)
 {
     this->id = id;
     this->nome = nome;
     this->descricao = descricao;
     this->qtd = qtd;
+    this->preco = preco;
 }
 
 /**
@@ -106,4 +107,14 @@ void Produto::setDescricao(std::string descricao)
 void Produto::setQtd(double qtd)
 {
     this->qtd = qtd;
+}
+
+void Produto::setPreco(double preco)
+{
+    this->preco = preco;
+}
+
+double Produto::getPreco()
+{
+    return this->preco;
 }
