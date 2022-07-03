@@ -44,7 +44,24 @@ CLI::CLI(int argc, char *argv[])
 void CLI::mostrarLoja()
 {
 	std::cout << "Mostrar loja" << std::endl;
-	// chama a função para listar os produtos da loja
+	// cria uma loja com o usuario logado, obs: obrigatorio testar se o usuario logado existe e se está autenticado
+	
+
+	// apenas pra testar, cria um usuario fake
+	Usuario* usuarioLogado = new Usuario(
+		"nome",
+		123,
+		"email",
+		Endereco("rua", 123, "complemento", 123, "bairro", "cidade", "estado"),
+		"senha"
+	);
+
+	// verifica o tipo do cliente, se é adm ou nao e cria um estoque de acordo com o tipo
+
+	// apenas pra testar, cria um estoque fake
+	EstoqueAdm* estoque = new EstoqueAdm();
+	Loja loja(usuarioLogado, estoque);
+	loja.mostrarLoja();
 }
 
 /**
