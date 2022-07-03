@@ -5,7 +5,7 @@
 
 class Usuario{
     protected:
-        bool tipo;
+        bool tipo = 0;
         bool autenticado;
         std::string nome;
         int cpf;
@@ -24,5 +24,11 @@ class Usuario{
         void setEndereco(Endereco endereco);
         void setSenha(std::string senha);
         Usuario(std::string nome, int cpf, std::string email, Endereco endereco, std::string senha);
+        Usuario();
+        bool estaAutenticado();
+        bool ehAdministrador();
+        bool login();
+        bool cadastro();
+        void logout();
 };
 #endif

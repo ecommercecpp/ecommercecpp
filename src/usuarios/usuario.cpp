@@ -86,3 +86,87 @@ Endereco Usuario::getEndereco(){
 std::string Usuario::getSenha(){
     return this->senha;
 }
+
+/**
+ * @brief Construct a new Usuario:: Usuario object
+ * 
+ */
+Usuario::Usuario(){}
+
+/**
+ * @brief  Retorna se o usuario esta autenticado
+ * 
+ * @return true 
+ * @return false 
+ */
+bool Usuario::estaAutenticado()
+{
+    return this->autenticado;
+}
+
+/**
+ * @brief   Retorna se o usuario é administrador
+ * 
+ * @return true 
+ * @return false 
+ */
+bool Usuario::ehAdministrador()
+{
+    return this->tipo;
+}
+
+/**
+ * @brief   Realiza o login do usuario
+ * 
+ * @return true 
+ * @return false 
+ */
+bool Usuario::login()
+{
+    return true;
+}
+
+/**
+ * @brief   Realiza o cadastro do usuario
+ * 
+ * @return true 
+ * @return false 
+ */
+bool Usuario::cadastro()
+{
+    std::ifstream filer("./data/usuarios.json");
+    json::value json = json::parse(filer);
+
+    auto jsonArray = json::array {
+		json::object{
+            {"tipo", tipo},
+            {"nome", nome},
+            {"cpf", cpf},
+            {"email", email},
+            {"endereco", json::object{
+                {"rua", endereco.getRua()},
+                {"numero", endereco.getNumero()},
+                {"bairro", endereco.getBairro()},
+                {"cidade", endereco.getCidade()},
+                {"estado", endereco.getEstado()},
+                {"cep", endereco.getCep()}
+            }},
+            {"senha", senha}
+		}
+	};
+
+    // adiciona o jsonArray no json
+    json.push_back(jsonArray);
+
+    std::ofstream file("./data/usuarios.json");
+    file << stringify(json);
+    file.close();
+
+    return true;
+}
+
+/**
+ * @brief  Realiza o logout do usuario
+ * 
+ */
+void Usuario::logout(){};
