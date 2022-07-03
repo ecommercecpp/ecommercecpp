@@ -52,7 +52,7 @@ void CLI::lerOpcoesMenuInicial()
 	else if(opcao == "2")
 	{
 		std::cout << "Login";
-		return;
+		login();
 	}
 	else if(opcao == "3")
 	{
@@ -183,4 +183,20 @@ void CLI::cadastro()
 
 	Usuario usuario = Usuario(nome, cpf, email, endereco, senha);
 	usuario.cadastro();
+}
+void CLI::login()
+{
+
+	std::cout << std::endl << std::endl << std::endl << "Login" << std::endl;
+    Usuario usuario;
+    std::string senha;
+    int cpf;
+	std::cout << "Digite seu CPF: ";
+	std::cin >> cpf;
+	std::cout << "Digite sua senha: ";
+	std::cin >> senha;
+	usuario.setCpf(cpf);
+	usuario.setSenha(senha);
+	Usuario usuario = Usuario(cpf, senha);
+	usuario.login();
 }
