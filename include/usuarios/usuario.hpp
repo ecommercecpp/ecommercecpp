@@ -5,8 +5,8 @@
 
 class Usuario{
     protected:
-        bool tipo = 0;
-        bool autenticado;
+        bool tipo = false;
+        bool autenticado = false;
         std::string nome;
         int cpf;
         std::string email;
