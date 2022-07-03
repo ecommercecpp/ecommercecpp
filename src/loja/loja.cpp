@@ -36,6 +36,7 @@ void Loja::mostrarLoja()
 {
 	std::cout << "Loja" << std::endl;
 	std::cout << "Usuario logado: " << usuarioLogado->getNome() << std::endl;
+	usuarioLogado->setTipo(true);
 	std::cout << "Estoque: " << std::endl;
 	estoque->listarEstoque();
 

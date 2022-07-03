@@ -43,9 +43,6 @@ void UnitTestEstoqueBase::run()
 			estoqueX->remover(i);
 		}
 
-		//deleta o  estoque
-		delete estoqueX;
-
 		// pass the test
 		pass();
 	}

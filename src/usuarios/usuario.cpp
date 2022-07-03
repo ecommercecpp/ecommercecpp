@@ -181,3 +181,8 @@ bool Usuario::getTipo()
 {
     return this->tipo;
 }
+
+void Usuario::setTipo(bool tipo)
+{
+    this->tipo = tipo;
+}

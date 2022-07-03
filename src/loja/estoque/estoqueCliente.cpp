@@ -13,7 +13,10 @@ void EstoqueCliente::listarEstoque()
  * @brief Destroy the Estoque Cliente:: Estoque Cliente object
  * 
  */
-EstoqueCliente::~EstoqueCliente(){}
+EstoqueCliente::~EstoqueCliente()
+{
+	
+}
 
 /**
  * @brief Construct a new Estoque Cliente:: Estoque Cliente object

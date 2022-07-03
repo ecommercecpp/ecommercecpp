@@ -19,6 +19,7 @@ class Usuario{
         Endereco getEndereco();
         std::string getSenha();
         bool getTipo();
+        void setTipo(bool tipo);
         void setNome(std::string nome);
         void setCpf(int cpf);
         void setEmail(std::string email);
