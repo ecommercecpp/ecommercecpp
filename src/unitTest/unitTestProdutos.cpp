@@ -1,4 +1,4 @@
-#include "../../include/autoload.hpp"
+#include "autoload.hpp"
 
 /**
  * @brief Teste unitário para a classe Produtos

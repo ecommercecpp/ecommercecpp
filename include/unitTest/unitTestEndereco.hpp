@@ -1,7 +1,7 @@
 #ifndef _UNIT_TEST_ENDERECO_HPP_
 #define _UNIT_TEST_ENDERECO_HPP_
 
-#include "../autoload.hpp"
+#include "autoload.hpp"
 
 class UnitTestEndereco : public UnitTest
 {

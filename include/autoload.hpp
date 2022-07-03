@@ -7,11 +7,11 @@
 #include <string>
 #include <iostream>
 
+#include "../third_party/json.hpp"
+
 // include de usuarios
 #include "./usuarios/endereco/endereco.hpp"
 #include "./usuarios/usuario.hpp"
-#include "./usuarios/tipos/cliente.hpp"
-#include "./usuarios/tipos/administrador.hpp"
 
 // include de produtos
 #include "./produtos/atributos/atributos.hpp"
@@ -32,5 +32,7 @@
 #include "./unitTest/unitTestUsuario.hpp"
 #include "./unitTest/unitTestProdutos.hpp"
 #include "./unitTest/unitTestEstoqueBase.hpp"
+
+#include "./cli/cli.hpp"
 
 #endif
