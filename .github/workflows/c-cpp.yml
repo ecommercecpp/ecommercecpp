@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: version
-      run: cpp --version
     - name: make
       run: make
     - name: make test
