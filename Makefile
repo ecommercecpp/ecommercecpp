@@ -20,7 +20,7 @@ clean:
 	$(RM) -r $(BUILDDIR)/* $(TARGET)
 
 check:
-	./$(TARGET)
+	./$(TARGET) --help
 
 distcheck:
 	$(RM) -r $(BUILDDIR)/*
