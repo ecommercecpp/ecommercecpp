@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ecommerce C++: Código-Fonte de include/loja/estoque/estoqueAdm.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="103675273?s=200&v=4"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Ecommerce C++
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho Prático PDS2 | UFMG</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ddaff4d3cb27df433e0f4befab9ed00b.html">loja</a></li><li class="navelem"><a class="el" href="dir_42609cec1bce436240f990415176e46f.html">estoque</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">estoqueAdm.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _ESTOQUE_ADM_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _ESTOQUE_ADM_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;autoload.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_estoque_adm.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_estoque_adm.html">EstoqueAdm</a>: <span class="keyword">public</span> <a class="code" href="class_estoque_base.html">EstoqueBase</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_estoque_adm.html#ae53107a8518074589283f99890eae1b8">EstoqueAdm</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_estoque_adm.html#a4920bb7f25c468c744fc8c79384a2ea2">listarEstoque</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_estoque_adm.html#a0a5fe91aa9214f311b27d8e75a1fc95a">~EstoqueAdm</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_estoque_adm_html"><div class="ttname"><a href="class_estoque_adm.html">EstoqueAdm</a></div><div class="ttdef"><b>Definition:</b> estoqueAdm.hpp:7</div></div>
+<div class="ttc" id="aclass_estoque_adm_html_a0a5fe91aa9214f311b27d8e75a1fc95a"><div class="ttname"><a href="class_estoque_adm.html#a0a5fe91aa9214f311b27d8e75a1fc95a">EstoqueAdm::~EstoqueAdm</a></div><div class="ttdeci">~EstoqueAdm()</div><div class="ttdoc">Destroy the Estoque Adm:: Estoque Base object.</div><div class="ttdef"><b>Definition:</b> estoqueAdm.cpp:16</div></div>
+<div class="ttc" id="aclass_estoque_adm_html_a4920bb7f25c468c744fc8c79384a2ea2"><div class="ttname"><a href="class_estoque_adm.html#a4920bb7f25c468c744fc8c79384a2ea2">EstoqueAdm::listarEstoque</a></div><div class="ttdeci">virtual void listarEstoque() override</div><div class="ttdoc">Lista o estoque de maneira especial para o adm.</div><div class="ttdef"><b>Definition:</b> estoqueAdm.cpp:7</div></div>
+<div class="ttc" id="aclass_estoque_adm_html_ae53107a8518074589283f99890eae1b8"><div class="ttname"><a href="class_estoque_adm.html#ae53107a8518074589283f99890eae1b8">EstoqueAdm::EstoqueAdm</a></div><div class="ttdeci">EstoqueAdm()</div><div class="ttdoc">Construct a new Estoque Adm:: Estoque Adm object.</div><div class="ttdef"><b>Definition:</b> estoqueAdm.cpp:22</div></div>
+<div class="ttc" id="aclass_estoque_base_html"><div class="ttname"><a href="class_estoque_base.html">EstoqueBase</a></div><div class="ttdef"><b>Definition:</b> estoqueBase.hpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

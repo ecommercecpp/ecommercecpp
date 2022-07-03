@@ -90,6 +90,12 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:afe5b8e2b50dcf24b109357fda3716f7f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#afe5b8e2b50dcf24b109357fda3716f7f">getSenha</a> ()</td></tr>
 <tr class="memdesc:afe5b8e2b50dcf24b109357fda3716f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a senha do usuario.  <a href="class_usuario.html#afe5b8e2b50dcf24b109357fda3716f7f">Mais...</a><br /></td></tr>
 <tr class="separator:afe5b8e2b50dcf24b109357fda3716f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e96f07931553899bf09d865a50d8d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a22e96f07931553899bf09d865a50d8d0">getTipo</a> ()</td></tr>
+<tr class="memdesc:a22e96f07931553899bf09d865a50d8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tipo do usuario.  <a href="class_usuario.html#a22e96f07931553899bf09d865a50d8d0">Mais...</a><br /></td></tr>
+<tr class="separator:a22e96f07931553899bf09d865a50d8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e03fe894f5c77c22fe718e510bd99e"><td class="memItemLeft" align="right" valign="top"><a id="a09e03fe894f5c77c22fe718e510bd99e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setTipo</b> (bool tipo)</td></tr>
+<tr class="separator:a09e03fe894f5c77c22fe718e510bd99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a6a430d055449a8e9d6c06253a272e"><td class="memItemLeft" align="right" valign="top"><a id="ab6a6a430d055449a8e9d6c06253a272e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#ab6a6a430d055449a8e9d6c06253a272e">setNome</a> (std::string nome)</td></tr>
 <tr class="memdesc:ab6a6a430d055449a8e9d6c06253a272e"><td class="mdescLeft">&#160;</td><td class="mdescRight">seta o nome <br /></td></tr>
@@ -114,9 +120,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a385e31b1500b5334c695374713ae4d21">Usuario</a> (std::string nome, int cpf, std::string email, <a class="el" href="class_endereco.html">Endereco</a> endereco, std::string senha)</td></tr>
 <tr class="memdesc:a385e31b1500b5334c695374713ae4d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor para a Classe Usuário. <br /></td></tr>
 <tr class="separator:a385e31b1500b5334c695374713ae4d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85a5371a098dfba5449140d9b8a472f"><td class="memItemLeft" align="right" valign="top"><a id="aa85a5371a098dfba5449140d9b8a472f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#aa85a5371a098dfba5449140d9b8a472f">Usuario</a> ()</td></tr>
+<tr class="memdesc:aa85a5371a098dfba5449140d9b8a472f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_usuario.html">Usuario</a>:: <a class="el" href="class_usuario.html">Usuario</a> object. <br /></td></tr>
+<tr class="separator:aa85a5371a098dfba5449140d9b8a472f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a2e583e986809d69022b8118f87b27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a80a2e583e986809d69022b8118f87b27">estaAutenticado</a> ()</td></tr>
+<tr class="memdesc:a80a2e583e986809d69022b8118f87b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna se o usuario esta autenticado.  <a href="class_usuario.html#a80a2e583e986809d69022b8118f87b27">Mais...</a><br /></td></tr>
+<tr class="separator:a80a2e583e986809d69022b8118f87b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa46daec58d62c96ac01c2399b44c83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a6aa46daec58d62c96ac01c2399b44c83">ehAdministrador</a> ()</td></tr>
+<tr class="memdesc:a6aa46daec58d62c96ac01c2399b44c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna se o usuario é administrador.  <a href="class_usuario.html#a6aa46daec58d62c96ac01c2399b44c83">Mais...</a><br /></td></tr>
+<tr class="separator:a6aa46daec58d62c96ac01c2399b44c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b5516f17751abfeed443f51dd4a4b21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a1b5516f17751abfeed443f51dd4a4b21">login</a> ()</td></tr>
+<tr class="memdesc:a1b5516f17751abfeed443f51dd4a4b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza o login do usuario.  <a href="class_usuario.html#a1b5516f17751abfeed443f51dd4a4b21">Mais...</a><br /></td></tr>
+<tr class="separator:a1b5516f17751abfeed443f51dd4a4b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30a146aab0c8a4700924a896c952ad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#ad30a146aab0c8a4700924a896c952ad2">cadastro</a> ()</td></tr>
+<tr class="memdesc:ad30a146aab0c8a4700924a896c952ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza o cadastro do usuario.  <a href="class_usuario.html#ad30a146aab0c8a4700924a896c952ad2">Mais...</a><br /></td></tr>
+<tr class="separator:ad30a146aab0c8a4700924a896c952ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeead7be2671f6a836f592fcf21ef611"><td class="memItemLeft" align="right" valign="top"><a id="abeead7be2671f6a836f592fcf21ef611"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#abeead7be2671f6a836f592fcf21ef611">logout</a> ()</td></tr>
+<tr class="memdesc:abeead7be2671f6a836f592fcf21ef611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza o logout do usuario. <br /></td></tr>
+<tr class="separator:abeead7be2671f6a836f592fcf21ef611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
+<tr class="memitem:ad6026a20db15a6eb50678947e26046c6"><td class="memItemLeft" align="right" valign="top"><a id="ad6026a20db15a6eb50678947e26046c6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>tipo</b> = false</td></tr>
+<tr class="separator:ad6026a20db15a6eb50678947e26046c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217791d1060dffbe03861784db18f813"><td class="memItemLeft" align="right" valign="top"><a id="a217791d1060dffbe03861784db18f813"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>autenticado</b> = false</td></tr>
+<tr class="separator:a217791d1060dffbe03861784db18f813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fb4c3a94f863e6d7e12821cb2362e28"><td class="memItemLeft" align="right" valign="top"><a id="a6fb4c3a94f863e6d7e12821cb2362e28"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nome</b></td></tr>
 <tr class="separator:a6fb4c3a94f863e6d7e12821cb2362e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +166,72 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>senha</b></td>
 <tr class="separator:a5f324af32e988e55160d5f3651b5d2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ad30a146aab0c8a4700924a896c952ad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30a146aab0c8a4700924a896c952ad2">&#9670;&nbsp;</a></span>cadastro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Usuario::cadastro </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza o cadastro do usuario. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a6aa46daec58d62c96ac01c2399b44c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa46daec58d62c96ac01c2399b44c83">&#9670;&nbsp;</a></span>ehAdministrador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Usuario::ehAdministrador </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna se o usuario é administrador. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a80a2e583e986809d69022b8118f87b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a2e583e986809d69022b8118f87b27">&#9670;&nbsp;</a></span>estaAutenticado()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Usuario::estaAutenticado </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna se o usuario esta autenticado. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
 <a id="a4d8c4bd150ea98c34bad85e72219d9ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d8c4bd150ea98c34bad85e72219d9ef">&#9670;&nbsp;</a></span>getCpf()</h2>
 
@@ -231,6 +329,50 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>senha</b></td>
 
 <p>Retorna a senha do usuario. </p>
 <dl class="section return"><dt>Retorna</dt><dd>std::string </dd></dl>
+
+</div>
+</div>
+<a id="a22e96f07931553899bf09d865a50d8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e96f07931553899bf09d865a50d8d0">&#9670;&nbsp;</a></span>getTipo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Usuario::getTipo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o tipo do usuario. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a1b5516f17751abfeed443f51dd4a4b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b5516f17751abfeed443f51dd4a4b21">&#9670;&nbsp;</a></span>login()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Usuario::login </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza o login do usuario. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>
