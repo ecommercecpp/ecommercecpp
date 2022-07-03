@@ -14,5 +14,6 @@ class CLI
 		void cadastro();
 		void mostrarOpcoesMenuInicial();
 		void lerOpcoesMenuInicial();
+		void mostrarLoja();
 };
 #endif

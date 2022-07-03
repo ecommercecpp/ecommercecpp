@@ -16,6 +16,7 @@ void UnitTestProdutos::run()
 			   i,	
                "Nome " + std::to_string(i),
 			   "Descricao " + std::to_string(i),
+			   i,
 			   i
             );
             produtos.push_back(produto);
