@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['setcomplemento_29',['setComplemento',['../class_endereco.html#a6c11401c8e11738374f976b7cbc609c8',1,'Endereco']]],
-  ['setcpf_30',['setCpf',['../class_usuario.html#a7658f41712561696ce50dff8fa4a5b80',1,'Usuario']]],
-  ['setdescricao_31',['setDescricao',['../class_produto.html#afdc63d61e7948b1ae4b72b29d1115571',1,'Produto']]],
-  ['setemail_32',['setEmail',['../class_usuario.html#aa46b53a37afb4aa3f7f6a5a1b3fe8528',1,'Usuario']]],
-  ['setendereco_33',['setEndereco',['../class_usuario.html#a161c7f10047bccf70937f7bcb69b2314',1,'Usuario']]],
-  ['setid_34',['setId',['../class_produto.html#a19433f7f1e09a55b01ef696618546eda',1,'Produto']]],
-  ['setnome_35',['setNome',['../class_produto.html#a5513a29009079af0954925220a760395',1,'Produto::setNome()'],['../class_usuario.html#ab6a6a430d055449a8e9d6c06253a272e',1,'Usuario::setNome()']]],
-  ['setqtd_36',['setQtd',['../class_produto.html#a25da1459bbe094197841da4c1a79dff0',1,'Produto']]],
-  ['setrua_37',['setRua',['../class_endereco.html#a9418d6a0c59ac0f8e4b8bb13e9372d85',1,'Endereco']]],
-  ['setsenha_38',['setSenha',['../class_usuario.html#a28efaec1398906b6f43b12877bf59db7',1,'Usuario']]]
+  ['insert_42',['insert',['../classjson_1_1object.html#a0d235ae4e4dc3a10060b932797b82c5f',1,'json::object::insert(std::pair&lt; std::string, T &gt; &amp;&amp;p) -&gt; std::pair&lt; iterator, bool &gt;'],['../classjson_1_1object.html#acb7b872d523587483a822199f3a83811',1,'json::object::insert(std::string key, const T &amp;v) -&gt; std::pair&lt; iterator, bool &gt;'],['../classjson_1_1object.html#ae8ca8a2087f73106983c01bef96561f1',1,'json::object::insert(std::string key, T &amp;&amp;v) -&gt; std::pair&lt; iterator, bool &gt;']]],
+  ['invalid_5findex_43',['invalid_index',['../classjson_1_1invalid__index.html',1,'json']]],
+  ['invalid_5fnumber_44',['invalid_number',['../classjson_1_1invalid__number.html',1,'json']]],
+  ['invalid_5fpath_45',['invalid_path',['../classjson_1_1invalid__path.html',1,'json']]],
+  ['invalid_5freference_5fescape_46',['invalid_reference_escape',['../classjson_1_1invalid__reference__escape.html',1,'json']]],
+  ['invalid_5ftype_5fcast_47',['invalid_type_cast',['../classjson_1_1invalid__type__cast.html',1,'json']]],
+  ['invalid_5funicode_5fcharacter_48',['invalid_unicode_character',['../classjson_1_1invalid__unicode__character.html',1,'json']]],
+  ['invalid_5futf8_5fstring_49',['invalid_utf8_string',['../classjson_1_1invalid__utf8__string.html',1,'json']]]
 ];
