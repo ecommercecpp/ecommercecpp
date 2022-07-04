@@ -91,7 +91,8 @@ std::string Usuario::getSenha(){
  * @brief Construct a new Usuario:: Usuario object
  * 
  */
-Usuario::Usuario(){}
+Usuario::Usuario(){
+}
 
 /**
  * @brief  Retorna se o usuario esta autenticado

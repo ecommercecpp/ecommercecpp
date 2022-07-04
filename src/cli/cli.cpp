@@ -78,7 +78,7 @@ void CLI::lerOpcoesMenuInicial()
 	}
 	else if(opcao == "2")
 	{
-		std::cout << "Login" << std::endl;
+	    login();
 		mostrarLoja();
 		return;
 	}
@@ -225,6 +225,39 @@ void CLI::login()
 	std::cin >> senha;
 	usuario.setCpf(cpf);
 	usuario.setSenha(senha);
-	Usuario usuario = Usuario(cpf, senha);
+	Usuario usuario = Usuario();
 	usuario.login();
+	/*
+	*/
+   // caso login seja feito com sucesso retorna true 
+   // caso contrario retorna false
+   //std::string sair;
+   std::string comando;
+
+   while (comando != "sair")
+   {
+	 try{
+		std::cout << "Digite o comando: ";
+		std::cin >> comando;
+		if (comando == "login")
+		{
+			login();
+		}
+		else if (comando == "sair")
+		{
+			std::cout << "Saindo..." << std::endl;
+		}
+		
+		else
+		{
+			std::cout << "Comando invalido" << std::endl;
+		}
+	 }
+	 catch (std::exception &e)
+	 {
+		std::cout << e.what() << std::endl;
+	 }
+   }
+
 }
+   
