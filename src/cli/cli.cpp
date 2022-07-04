@@ -237,9 +237,10 @@ void CLI::login()
    while (comando != "sair")
    {
 	 try{
-        int cpf;
+        std::string cpf;
 		std::string senha;
-		std::cout  << "Dite seu nome ou sair:"
+		int i;
+		std::cout  << "Dite seu cpf ou sair:"
 		<< std::endl;
 		std::cin >> cpf;
 		if (cpf == "sair")
@@ -248,8 +249,9 @@ void CLI::login()
 		}
 		std::cout << "Digite sua senha: ";
 		std::cin >> senha;
+		i = atol (cpf.c_str());
 		Usuario usuario = Usuario();
-	    usuario.setCpf(cpf);
+	    usuario.setCpf(i);
 	    usuario.setSenha(senha);
 		usuario.login();
     }
