@@ -237,22 +237,22 @@ void CLI::login()
    while (comando != "sair")
    {
 	 try{
-		std::cout << "Digite o comando: ";
-		std::cin >> comando;
-		if (comando == "login")
+        int cpf;
+		std::string senha;
+		std::cout  << "Dite seu nome ou sair:"
+		<< std::endl;
+		std::cin >> cpf;
+		if (cpf == "sair")
 		{
-			login();
+			break;
 		}
-		else if (comando == "sair")
-		{
-			std::cout << "Saindo..." << std::endl;
-		}
-		
-		else
-		{
-			std::cout << "Comando invalido" << std::endl;
-		}
-	 }
+		std::cout << "Digite sua senha: ";
+		std::cin >> senha;
+		Usuario usuario = Usuario();
+	    usuario.setCpf(cpf);
+	    usuario.setSenha(senha);
+		usuario.login();
+    }
 	 catch (std::exception &e)
 	 {
 		std::cout << e.what() << std::endl;
