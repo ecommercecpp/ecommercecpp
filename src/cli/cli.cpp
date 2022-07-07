@@ -50,7 +50,7 @@ void CLI::mostrarLoja()
 	// apenas pra testar, cria um usuario fake
 	Usuario* usuarioLogado = new Usuario(
 		"nome",
-		"123",
+		"12312312312",
 		"email",
 		Endereco("rua", "123", "complemento", "123", "bairro", "cidade", "estado"),
 		"senha"
