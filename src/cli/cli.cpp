@@ -225,7 +225,6 @@ void CLI::login()
 	std::cin >> senha;
 	usuario.setCpf(cpf);
 	usuario.setSenha(senha);
-	Usuario usuario = Usuario();
 	usuario.login();
 	/*
 	*/
