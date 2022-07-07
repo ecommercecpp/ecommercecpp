@@ -6,9 +6,11 @@
 class CLI
 {
 	public:
+
 		CLI();
 		CLI(int argc, char *argv[]);
 		void help();
+		bool login();
 		void titulo();
 		void test(int argc, char *argv[]);
 		void cadastro();
