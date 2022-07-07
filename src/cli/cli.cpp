@@ -74,7 +74,15 @@ void CLI::lerOpcoesMenuInicial()
 	std::cin >> opcao;
 	if(opcao == "1")
 	{
-		cadastro();
+		if(cadastro())
+		{
+			mostrarLoja();
+		}
+		else
+		{
+			mostrarOpcoesMenuInicial();
+			lerOpcoesMenuInicial();
+		}
 	}
 	else if(opcao == "2")
 	{
