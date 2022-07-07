@@ -175,7 +175,7 @@ void CLI::test(int argc, char *argv[])
  * @brief 	Mostra o menu de cadastro do programa
  * 
  */
-void CLI::cadastro()
+bool CLI::cadastro()
 {
 	std::cout << std::endl << std::endl << std::endl << "Cadastro" << std::endl;
 
