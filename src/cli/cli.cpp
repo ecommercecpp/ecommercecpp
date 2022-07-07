@@ -78,9 +78,15 @@ void CLI::lerOpcoesMenuInicial()
 	}
 	else if(opcao == "2")
 	{
-	    login();
-		mostrarLoja();
-		return;
+	    if(login())
+		{
+			mostrarLoja();
+		}
+		else
+		{
+			mostrarOpcoesMenuInicial();
+			lerOpcoesMenuInicial();
+		}
 	}
 	else if(opcao == "3")
 	{
@@ -212,53 +218,44 @@ void CLI::cadastro()
 	Usuario usuario = Usuario(nome, cpf, email, endereco, senha);
 	usuario.cadastro();
 }
-void CLI::login()
+
+bool CLI::login()
 {
+   	std::string cpf, senha;
+	int i;
 
-	std::cout << std::endl << std::endl << std::endl << "Login" << std::endl;
-    Usuario usuario;
-    std::string senha;
-    int cpf;
-	std::cout << "Digite seu CPF: ";
-	std::cin >> cpf;
-	std::cout << "Digite sua senha: ";
-	std::cin >> senha;
-	usuario.setCpf(cpf);
-	usuario.setSenha(senha);
-	usuario.login();
-	/*
-	*/
-   // caso login seja feito com sucesso retorna true 
-   // caso contrario retorna false
-   //std::string sair;
-   std::string comando;
-
-   while (comando != "sair")
-   {
-	 try{
-        std::string cpf;
-		std::string senha;
-		int i;
-		std::cout  << "Dite seu cpf ou sair:"
-		<< std::endl;
-		std::cin >> cpf;
-		if (cpf == "sair")
-		{
-			break;
+	while (cpf != "sair")
+	{
+		try{
+			
+			std::cout  << "Dite seu cpf ou sair:" << std::endl;
+			std::cin >> cpf;
+			if (cpf == "sair")
+			{
+				break;
+			}
+			std::cout << "Digite sua senha: ";
+			std::cin >> senha;
+			i = atol (cpf.c_str());
+			Usuario usuario = Usuario();
+			usuario.setCpf(i);
+			usuario.setSenha(senha);
+			
+			if(usuario.login())
+			{
+				return true;
+			}
+			else
+			{
+				std::cout << "Usuario ou senha incorretos" << std::endl;
+			}
 		}
-		std::cout << "Digite sua senha: ";
-		std::cin >> senha;
-		i = atol (cpf.c_str());
-		Usuario usuario = Usuario();
-	    usuario.setCpf(i);
-	    usuario.setSenha(senha);
-		usuario.login();
-    }
-	 catch (std::exception &e)
-	 {
-		std::cout << e.what() << std::endl;
-	 }
-   }
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
 
+	return false;
 }
    

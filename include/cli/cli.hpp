@@ -14,7 +14,7 @@ class CLI
 		CLI();
 		CLI(int argc, char *argv[]);
 		void help();
-		void login();
+		bool login();
 		void titulo();
 		void test(int argc, char *argv[]);
 		void cadastro();
