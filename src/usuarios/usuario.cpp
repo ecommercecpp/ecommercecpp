@@ -4,7 +4,7 @@
  * @brief Construtor para a Classe Usuário
  * 
  */
-Usuario::Usuario(std::string nome, int cpf, std::string email, Endereco endereco, std::string senha){
+Usuario::Usuario(std::string nome, std::string cpf, std::string email, Endereco endereco, std::string senha){
     this->nome = nome;
     this->cpf = cpf;
     this->email = email;
@@ -22,7 +22,7 @@ void Usuario::setNome(std::string nome){
  * @brief seta o cpf do usuario
  * 
  */
-void Usuario::setCpf(int cpf){
+void Usuario::setCpf(std::string cpf){
     this->cpf = cpf;
 }
 /**
@@ -57,9 +57,9 @@ std::string Usuario::getNome(){
 /**
  * @brief Retorna o cpf do usuario
  * 
- * @return int 
+ * @return std::string 
  */
-int Usuario::getCpf(){
+std::string Usuario::getCpf(){
     return this->cpf;
 }
 /**
@@ -124,7 +124,50 @@ bool Usuario::ehAdministrador()
  */
 bool Usuario::login()
 {
-    return true;
+    std::ifstream filer("./data/usuarios.json");
+    json::value json = json::parse(filer);
+    filer.close();
+    
+    const json::array &dados = as_array(json);
+    if (dados.size() > 0)
+    {
+        bool usuario_encontrado = false;
+        for(auto it = dados.begin(); it != dados.end(); ++it)
+        {
+            const json::value &v = *it;
+
+            if (v["cpf"].as_string() == this->cpf)
+            {
+                usuario_encontrado = true;
+            }
+        }
+
+        if(!usuario_encontrado)
+        {
+            throw UsuarioNaoEncontradoException();
+        }
+
+        bool senha_valida = false;
+        for(auto it = dados.begin(); it != dados.end(); ++it)
+        {
+            const json::value &v = *it;
+
+            if (v["senha"].as_string() == this->senha)
+            {
+                senha_valida = true;
+            }
+        }
+
+        if(!senha_valida)
+        {
+            throw UsuarioSenhaInvalidaException();
+        }
+
+        this->autenticado = true;
+        return true;
+    }
+
+    return false;
 }
 
 /**
@@ -138,23 +181,35 @@ bool Usuario::cadastro()
     std::ifstream filer("./data/usuarios.json");
     json::value json = json::parse(filer);
 
-    auto jsonArray = json::array {
-		json::object{
-            {"tipo", tipo},
-            {"nome", nome},
-            {"cpf", cpf},
-            {"email", email},
-            {"endereco", json::object{
-                {"rua", endereco.getRua()},
-                {"numero", endereco.getNumero()},
-                {"bairro", endereco.getBairro()},
-                {"cidade", endereco.getCidade()},
-                {"estado", endereco.getEstado()},
-                {"cep", endereco.getCep()}
-            }},
-            {"senha", senha}
-		}
-	};
+    const json::array &dados = as_array(json);
+    if (dados.size() > 0)
+    {
+        for(auto it = dados.begin(); it != dados.end(); ++it)
+        {
+            const json::value &v = *it;
+
+            if (v["cpf"].as_string() == this->cpf)
+            {
+                throw UsuarioExistenteException();
+            }
+        }
+    }
+
+    auto jsonArray = json::object{
+        {"tipo", tipo},
+        {"nome", nome},
+        {"cpf", cpf},
+        {"email", email},
+        {"endereco", json::object{
+            {"rua", endereco.getRua()},
+            {"numero", endereco.getNumero()},
+            {"bairro", endereco.getBairro()},
+            {"cidade", endereco.getCidade()},
+            {"estado", endereco.getEstado()},
+            {"cep", endereco.getCep()}
+        }},
+        {"senha", senha}
+    };
 
     // adiciona o jsonArray no json
     json.push_back(jsonArray);

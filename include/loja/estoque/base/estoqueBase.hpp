@@ -8,7 +8,7 @@ class EstoqueBase {
 		std::map<int, Produto> estoque;
 	public:
 		EstoqueBase();
-		void adicionar(Produto produto);
+		void adicionar(Produto produto, bool adicionarNoArquivo);
 		void remover(int id);
 		Produto* buscar(int id);
 		std::map<int, Produto>* getEstoque();

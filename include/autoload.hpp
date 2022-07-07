@@ -7,7 +7,11 @@
 #include <string>
 #include <iostream>
 
+// include third_party
 #include "../third_party/json.hpp"
+
+// exceptions
+#include "./exceptions/exceptions.hpp"
 
 // include de usuarios
 #include "./usuarios/endereco/endereco.hpp"
