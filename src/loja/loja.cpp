@@ -34,9 +34,10 @@ Loja::~Loja()
  */
 void Loja::mostrarLoja()
 {
-	std::cout << "Loja" << std::endl;
-	std::cout << "Usuario logado: " << usuarioLogado->getNome() << std::endl;
+	std::cout << std::endl << "Loja" << std::endl << std::endl;
+
 	usuarioLogado->setTipo(true);
+	
 	std::cout << "Estoque: " << std::endl;
 	estoque->listarEstoque();
 
@@ -74,7 +75,7 @@ void Loja::mostrarLoja()
 			std::cin >> id;
 
 			Produto produto(id, nome, descricao, quantidade, preco);
-			estoque->adicionar(produto);
+			estoque->adicionar(produto, true);
 		}
 		else
 		{

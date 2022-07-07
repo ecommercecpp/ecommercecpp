@@ -31,7 +31,7 @@ EstoqueBase::EstoqueBase()
         );
 
         // adiciona o produto no estoque
-        adicionar(produto);
+        adicionar(produto, false);
     }
 }
 
@@ -40,28 +40,32 @@ EstoqueBase::EstoqueBase()
  *
  * @param  Produto produto
  */
-void EstoqueBase::adicionar(Produto produto){
+void EstoqueBase::adicionar(Produto produto, bool adicionarNoArquivo)
+{
     // insere o estoque no array e no arquivo
     estoque.insert(std::pair<int, Produto>(produto.getId(), produto));
 
-    std::ifstream filer("./data/estoque.json");
-    json::value json = json::parse(filer);
+    if(adicionarNoArquivo)
+    {
+        std::ifstream filer("./data/estoque.json");
+        json::value json = json::parse(filer);
 
-    // cria o objeto de produto
-    json::value jsonProduto = json::object{
-            {"id", produto.getId()},
-            {"nome", produto.getNome()},
-            {"descricao", produto.getDescricao()},
-            {"qtd", produto.getQtd()},
-            {"preco", produto.getPreco()}
-    };
+        // cria o objeto de produto
+        json::value jsonProduto = json::object{
+                {"id", produto.getId()},
+                {"nome", produto.getNome()},
+                {"descricao", produto.getDescricao()},
+                {"qtd", produto.getQtd()},
+                {"preco", produto.getPreco()}
+        };
 
-    // insere o produto no array
-    json.push_back(jsonProduto);
+        // insere o produto no array
+        json.push_back(jsonProduto);
 
-    std::ofstream file("./data/estoque.json");
-    file << stringify(json);
-    file.close();
+        std::ofstream file("./data/estoque.json");
+        file << stringify(json);
+        file.close();
+    }
 }
 
 /**
