@@ -50,9 +50,9 @@ void CLI::mostrarLoja()
 	// apenas pra testar, cria um usuario fake
 	Usuario* usuarioLogado = new Usuario(
 		"nome",
-		123,
+		"123",
 		"email",
-		Endereco("rua", 123, "complemento", 123, "bairro", "cidade", "estado"),
+		Endereco("rua", "123", "complemento", "123", "bairro", "cidade", "estado"),
 		"senha"
 	);
 
@@ -186,59 +186,160 @@ bool CLI::cadastro()
 	std::cout << std::endl << std::endl << std::endl << "Cadastro" << std::endl;
 
 	Endereco endereco;
-	int numero, cep, cpf;
-	std::string nome, email, senha, rua, bairro, cidade, estado;
-	std::cout << "Digite seu nome: ";
-	std::cin >> nome;
-	std::cout << "Digite CPF: ";
-	std::cin >> cpf;
-	std::cout << "Digite seu email: ";
-	std::cin >> email;
-	std::cout << "Digite sua senha: ";
-	std::cin >> senha;
-	std::cout << "Digite sua rua: ";
-	std::cin >> rua;
-	std::cout << "Digite seu numero: ";
-	std::cin >> numero;
-	std::cout << "Digite seu bairro: ";
-	std::cin >> bairro;
-	std::cout << "Digite sua cidade: ";
-	std::cin >> cidade;
-	std::cout << "Digite seu estado: ";
-	std::cin >> estado;
-	std::cout << "Digite seu cep: ";
-	std::cin >> cep;
-	endereco.setRua(rua);
-	endereco.setNumero(numero);
-	endereco.setBairro(bairro);
-	endereco.setCidade(cidade);
-	endereco.setEstado(estado);
-	endereco.setCep(cep);
+	std::string comando, nome, email, senha, rua, bairro, cidade, estado, numero, cep, cpf;
 
-	Usuario usuario = Usuario(nome, cpf, email, endereco, senha);
-	usuario.cadastro();
+	while (comando != "sair")
+	{
+		try
+		{
+			std::cout << "Digite seu nome ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				nome = comando;
+
+			std::cout << "Digite CPF ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				cpf = comando;
+			
+			// valida se é um inteiro usando RegExp
+			std::regex regex("^[0-9]{11}$");
+			if (!std::regex_match(cpf, regex))
+			{
+				std::cout << "CPF inválido" << std::endl;
+				continue;
+			}
+
+			std::cout << "Digite seu email ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				email = comando;
+
+			std::cout << "Digite sua senha ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				senha = comando;
+
+			std::cout << "Digite sua rua ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				rua = comando;
+
+			std::cout << "Digite seu numero ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				numero = comando;
+
+			// valida se é um numero inteiro de qualquer tamanho usando regex
+			std::regex regex2("^[0-9]{1,}$");
+			if (!std::regex_match(numero, regex2))
+			{
+				std::cout << "Numero inválido" << std::endl;
+				continue;
+			}
+
+			std::cout << "Digite seu bairro ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				bairro = comando;
+
+			std::cout << "Digite sua cidade ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				cidade = comando;
+
+			std::cout << "Digite seu estado ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				estado = comando;
+
+			std::cout << "Digite seu cep ou sair: " << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				cep = comando;
+
+			// valida se é um cep usando regex_match
+			std::regex regex3("^[0-9]{8}$");
+			if (!std::regex_match(cep, regex3))
+			{
+				std::cout << "Cep inválido" << std::endl;
+				continue;
+			}
+
+
+			endereco.setRua(rua);
+			endereco.setNumero(numero);
+			endereco.setBairro(bairro);
+			endereco.setCidade(cidade);
+			endereco.setEstado(estado);
+			endereco.setCep(cep);
+
+			Usuario usuario = Usuario(nome, cpf, email, endereco, senha);
+			
+			if(usuario.cadastro())
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+			continue;
+		}
+	}
+
+	return false;
 }
 
 bool CLI::login()
 {
-   	std::string cpf, senha;
-	int i;
+   	std::string comando, cpf, senha;
 
-	while (cpf != "sair")
+	while (comando != "sair")
 	{
-		try{
+		try
+		{
 			
 			std::cout  << "Dite seu cpf ou sair:" << std::endl;
-			std::cin >> cpf;
-			if (cpf == "sair")
-			{
+			std::cin >> comando;
+			if (comando == "sair")
 				break;
-			}
-			std::cout << "Digite sua senha: ";
-			std::cin >> senha;
-			i = atol (cpf.c_str());
+			else
+				cpf = comando;
+			
+			std::cout  << "Dite sua senha ou sair:" << std::endl;
+			std::cin >> comando;
+			if (comando == "sair")
+				break;
+			else
+				senha = comando;
+
 			Usuario usuario = Usuario();
-			usuario.setCpf(i);
+			usuario.setCpf(cpf);
 			usuario.setSenha(senha);
 			
 			if(usuario.login())
@@ -253,6 +354,7 @@ bool CLI::login()
 		catch (std::exception &e)
 		{
 			std::cout << e.what() << std::endl;
+			continue;
 		}
 	}
 

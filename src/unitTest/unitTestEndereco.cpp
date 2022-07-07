@@ -13,9 +13,9 @@ void UnitTestEndereco::run()
 		{
 			Endereco *endereco = new Endereco(
 				"Rua " + std::to_string(i),
-				i,
+				std::to_string(i),
 				"Complemento " + std::to_string(i),
-				i,
+				std::to_string(i),
 				"Bairro " + std::to_string(i),
 				"Cidade " + std::to_string(i),
 				"Estado " + std::to_string(i)
@@ -28,11 +28,11 @@ void UnitTestEndereco::run()
 		{
 			if (enderecos[i]->getRua() != "Rua " + std::to_string(i))
 				throw std::runtime_error("Erro ao testar o set da rua");
-			if (enderecos[i]->getNumero() != i)
+			if (enderecos[i]->getNumero() != std::to_string(i))
 				throw std::runtime_error("Erro ao testar o set do numero");
 			if (enderecos[i]->getComplemento() != "Complemento " + std::to_string(i))
 				throw std::runtime_error("Erro ao testar o set do complemento");
-			if (enderecos[i]->getCep() != i)
+			if (enderecos[i]->getCep() != std::to_string(i))
 				throw std::runtime_error("Erro ao testar o set do CEP");
 			if (enderecos[i]->getBairro() != "Bairro " + std::to_string(i))
 				throw std::runtime_error("Erro ao testar o set do bairro");
@@ -46,9 +46,9 @@ void UnitTestEndereco::run()
 		for (int i = 0; i < 100; i++)
 		{
 			enderecos[i]->setRua("Rua " + std::to_string(i));
-			enderecos[i]->setNumero(i);
+			enderecos[i]->setNumero(std::to_string(i));
 			enderecos[i]->setComplemento("Complemento " + std::to_string(i));
-			enderecos[i]->setCep(i);
+			enderecos[i]->setCep(std::to_string(i));
 			enderecos[i]->setBairro("Bairro " + std::to_string(i));
 			enderecos[i]->setCidade("Cidade " + std::to_string(i));
 			enderecos[i]->setEstado("Estado " + std::to_string(i));

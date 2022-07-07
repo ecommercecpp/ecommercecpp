@@ -4,7 +4,7 @@
  * @brief Construtor para a Classe Usuário
  * 
  */
-Usuario::Usuario(std::string nome, int cpf, std::string email, Endereco endereco, std::string senha){
+Usuario::Usuario(std::string nome, std::string cpf, std::string email, Endereco endereco, std::string senha){
     this->nome = nome;
     this->cpf = cpf;
     this->email = email;
@@ -22,7 +22,7 @@ void Usuario::setNome(std::string nome){
  * @brief seta o cpf do usuario
  * 
  */
-void Usuario::setCpf(int cpf){
+void Usuario::setCpf(std::string cpf){
     this->cpf = cpf;
 }
 /**
@@ -57,9 +57,9 @@ std::string Usuario::getNome(){
 /**
  * @brief Retorna o cpf do usuario
  * 
- * @return int 
+ * @return std::string 
  */
-int Usuario::getCpf(){
+std::string Usuario::getCpf(){
     return this->cpf;
 }
 /**

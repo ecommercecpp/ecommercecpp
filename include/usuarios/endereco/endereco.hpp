@@ -7,26 +7,26 @@ class Endereco
 {
     private:
         std::string rua;
-        int numero;
+        std::string numero;
         std::string complemento; 
-        int cep; 
+        std::string cep; 
         std::string bairro; 
         std::string cidade;
         std::string estado; 
     public:
         Endereco();
-        Endereco(std::string rua, int numero, std::string complemento, int cep, std::string bairro, std::string cidade, std::string estado);
+        Endereco(std::string rua, std::string numero, std::string complemento, std::string cep, std::string bairro, std::string cidade, std::string estado);
         std::string getRua();
-        int getNumero();
+        std::string getNumero();
         std::string getComplemento();
-        int getCep();
+        std::string getCep();
         std::string getBairro();
         std::string getCidade();
         std::string getEstado();
         void setRua(std::string rua);
-        void setNumero(int numero);
+        void setNumero(std::string numero);
         void setComplemento(std::string complemento);
-        void setCep(int cep);    
+        void setCep(std::string cep);    
         void setBairro(std::string bairro);
         void setCidade(std::string cidade);
         void setEstado(std::string estado);
