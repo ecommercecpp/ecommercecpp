@@ -78,9 +78,15 @@ void CLI::lerOpcoesMenuInicial()
 	}
 	else if(opcao == "2")
 	{
-		std::cout << "Login" << std::endl;
-		mostrarLoja();
-		return;
+	    if(login())
+		{
+			mostrarLoja();
+		}
+		else
+		{
+			mostrarOpcoesMenuInicial();
+			lerOpcoesMenuInicial();
+		}
 	}
 	else if(opcao == "3")
 	{
@@ -212,3 +218,44 @@ bool CLI::cadastro()
 	Usuario usuario = Usuario(nome, cpf, email, endereco, senha);
 	usuario.cadastro();
 }
+
+bool CLI::login()
+{
+   	std::string cpf, senha;
+	int i;
+
+	while (cpf != "sair")
+	{
+		try{
+			
+			std::cout  << "Dite seu cpf ou sair:" << std::endl;
+			std::cin >> cpf;
+			if (cpf == "sair")
+			{
+				break;
+			}
+			std::cout << "Digite sua senha: ";
+			std::cin >> senha;
+			i = atol (cpf.c_str());
+			Usuario usuario = Usuario();
+			usuario.setCpf(i);
+			usuario.setSenha(senha);
+			
+			if(usuario.login())
+			{
+				return true;
+			}
+			else
+			{
+				std::cout << "Usuario ou senha incorretos" << std::endl;
+			}
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
+
+	return false;
+}
+   

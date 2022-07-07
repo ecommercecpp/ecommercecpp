@@ -6,6 +6,7 @@
 class CLI
 {
 	public:
+
 		CLI();
 		CLI(int argc, char *argv[]);
 		void help();
