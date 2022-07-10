@@ -1,6 +1,6 @@
 #include "autoload.hpp"
 
-#include "./base/json.hpp"
+#include "../../third_party/jsoncpp.hpp"
 
 using namespace std;
 
