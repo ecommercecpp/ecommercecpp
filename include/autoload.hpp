@@ -10,6 +10,7 @@
 
 // include third_party
 #include "../third_party/json.hpp"
+#include "../third_party/jsoncpp.hpp"
 
 // exceptions
 #include "./exceptions/exceptions.hpp"

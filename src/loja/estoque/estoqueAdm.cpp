@@ -1,7 +1,5 @@
 #include "autoload.hpp"
 
-#include "../../third_party/jsoncpp.hpp"
-
 using namespace std;
 
 //links do nlohmann pra trabalhar jason com c++ moderno 
