@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//links do nlohmann pra trabalhar jason com c++ moderno 
 //https://linuxhint.com/parse-json-data-cpp/
 //https://github.com/nlohmann/json/releases
 
@@ -19,7 +20,7 @@ void EstoqueCliente::listarEstoque()
 
     const json::array &a = as_array(json);
 
-    int i = 1;
+    int i = 1;//variavel pra contar os itens adicionados na tabela
     // caso o estoque estiver vazio
     if (a.size() == 0)
     {
