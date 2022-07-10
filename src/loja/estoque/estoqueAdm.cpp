@@ -21,7 +21,7 @@ void EstoqueAdm::listarEstoque()
 
     const json::array &a = as_array(json);
 
-    int i = 1;/variavel pra contar os itens adicionados na tabela
+    int i = 1;//variavel pra contar os itens adicionados na tabela
     // caso o estoque estiver vazio
     if (a.size() == 0)
     {
