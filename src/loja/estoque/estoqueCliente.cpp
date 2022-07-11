@@ -1,11 +1,5 @@
 #include "autoload.hpp"
 
-using namespace std;
-
-//links do nlohmann pra trabalhar jason com c++ moderno 
-//https://linuxhint.com/parse-json-data-cpp/
-//https://github.com/nlohmann/json/releases
-
 /**
  * @brief 	Lista o estoque de maneira especial para o cliente
  * 
@@ -15,36 +9,41 @@ void EstoqueCliente::listarEstoque()
 	//percorrer o estoque e listar 
     std::ifstream file("data/estoque.json");
     json::value json = json::parse(file);
+    file.close();
 
     const json::array &a = as_array(json);
 
-    int i = 1;//variavel pra contar os itens adicionados na tabela
+    int i = 1;
+
     // caso o estoque estiver vazio
     if (a.size() == 0)
     {
         return;
     }
 
-    std::cout<< "+---+----+------+-----------+-----+-------+"<<std::endl;
-    std::cout<< "|   | ID | NOME | DESCRICAO | QTD | PRECO |"<<std::endl;
+    std::cout<< "+--------+------+-----------+-----+-------+"<<std::endl;
+    std::cout<< "| NUMERO | NOME | DESCRICAO | QTD | PRECO |"<<std::endl;
 
     for(auto it = a.begin(); it != a.end(); ++it)
     {
-        /* json::value v;*/
-        nlohmann::json v;
-        std::string idstr = v["id"];
-        std::string nomestr = v["nome"];
-        std::string descstr = v["descricao"];
-        std::string qtdstr = v["qtd"];
-        long int precostr = v["preco"];
+        const json::value &v = *it;
 
-        std::cout<<"+-----------------------------------------------------+"<<std::endl;
-        std::cout<< "| "<<i;
-        std::cout<< " | " << idstr << std::endl;
-        std::cout<< " | " << nomestr << std::endl;
-        std::cout<< " | " << descstr << std::endl;
-        std::cout<< " | " << qtdstr << std::endl;
-        std::cout<< " | " << "R$" << setprecision(2) << fixed << precostr << std::endl;
+        std::string idstr = v["id"].as_string();
+        std::string nomestr = v["nome"].as_string();
+        std::string descstr = v["descricao"].as_string();
+
+        // converte preco para double
+        double preco_double = std::stod(v["preco"].as_string());
+        // converte qtd para double
+        double qtd_double = std::stod(v["qtd"].as_string());
+
+        std::cout <<"+-----------------------------------------------------+"<<std::endl;
+        std::cout << "| "<< i;
+        std::cout << " | " << idstr;
+        std::cout << " | " << nomestr;
+        std::cout << " | " << descstr;
+        std::cout << " | " << std::setprecision(2) << std::fixed << qtd_double;
+        std::cout << " | " << "R$" << std::setprecision(2) << std::fixed << preco_double << std::endl;
         i++;
     }  
     std::cout<<"+-----------------------------------------------------+"<<std::endl;
@@ -54,18 +53,10 @@ void EstoqueCliente::listarEstoque()
  * @brief Destroy the Estoque Cliente:: Estoque Cliente object
  * 
  */
-EstoqueCliente::~EstoqueCliente()
-{
-    //destrutor da classe
-	
-}
+EstoqueCliente::~EstoqueCliente(){}
 
 /**
  * @brief Construct a new Estoque Cliente:: Estoque Cliente object
  * 
  */
-EstoqueCliente::EstoqueCliente()
-{
-	//construtor da classe
-
-}
+EstoqueCliente::EstoqueCliente(){}
