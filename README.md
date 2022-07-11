@@ -1,5 +1,7 @@
 # EcommerceCPP
 
+> O EcommerceCPP é uma abstração de um sistema de e-commerce.
+
 ![Tamanho](https://img.shields.io/github/repo-size/ecommercecpp/ecommercecpp?style=for-the-badge)
 ![Linguagens](https://img.shields.io/github/languages/count/ecommercecpp/ecommercecpp?style=for-the-badge)
 ![Forks](https://img.shields.io/github/forks/ecommercecpp/ecommercecpp?style=for-the-badge)
@@ -8,8 +10,6 @@
 <br/>
 
 > O EcommerceCPP possui uma política de qualidade de código, onde garantimos que todos os códigos são testados, seguros e corretos. Status:  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ecommercecpp_ecommercecpp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ecommercecpp_ecommercecpp)
-
-> O EcommerceCPP é uma abstração de um sistema de e-commerce.
 
 ## Começando 🚀
 
