@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_231',['value',['../classjson_1_1value.html#ad9c9bf1c631aff8452cf5be4c2db6533',1,'json::value::value(const array &amp;a)'],['../classjson_1_1value.html#a57d3ca94ad28f42027a7570ff61197f3',1,'json::value::value(const object &amp;o)'],['../classjson_1_1value.html#a897ea2fdd590e48dc628cf67051fc45f',1,'json::value::value(array &amp;&amp;a)'],['../classjson_1_1value.html#afb28e3a9a94bd4f616df06fc9cf52ce3',1,'json::value::value(object &amp;&amp;o)']]]
+  ['usuario_266',['Usuario',['../class_usuario.html#ac7de3a2a6d716683c4102e07aaf5402f',1,'Usuario::Usuario(std::string nome, std::string cpf, std::string email, Endereco endereco, std::string senha)'],['../class_usuario.html#aa85a5371a098dfba5449140d9b8a472f',1,'Usuario::Usuario()']]]
 ];
