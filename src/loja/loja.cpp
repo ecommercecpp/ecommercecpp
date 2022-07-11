@@ -7,11 +7,12 @@
  * @param estoque 
  * @param carrinho 
  */
-Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho)
+Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho, Vendas* vendas)
 {
 	this->usuarioLogado = usuarioLogado;
 	this->estoque = estoque;
 	this->carrinho = carrinho;
+	this->vendas = vendas;
 }
 
 /**
@@ -29,6 +30,27 @@ Loja::~Loja()
 	delete usuarioLogado;
 	delete estoque;
 	delete carrinho;
+	delete vendas;
+}
+
+void Loja::finalizarCompra()
+{
+	listarProdutosNoCarrinho();
+
+	std::cout << std::endl << std::endl << "Deseja finalizar a compra com os itens do carrinho? (s/n)" << std::endl;
+	std::string opcao;
+	std::cin >> opcao;
+	std::transform(opcao.begin(), opcao.end(), opcao.begin(), ::tolower);
+	if (opcao == "s")
+	{
+		vendas->adicionarVenda(carrinho->getCarrinho(), estoque, usuarioLogado->getCpf());
+		std::cout << std::endl << "Compra finalizada com sucesso!" << std::endl;
+		carrinho->limparCarrinho();
+	}
+	else
+	{
+		std::cout << std::endl << "Compra cancelada! Voltando a menu..." << std::endl;
+	}
 }
 
 /**
@@ -160,7 +182,8 @@ void Loja::opcoesUsuario()
 	std::cout << "2. Listar produtos no carrinho" << std::endl;
 	std::cout << "3. Remover produtos no carrinho" << std::endl;
 	std::cout << "4. Listar estoque novamente" << std::endl;
-	std::cout << "5. Sair" << std::endl << std::endl;
+	std::cout << "5. Finalizar compra" << std::endl;
+	std::cout << "6. Sair" << std::endl << std::endl;
 
 	int opcao;
 	std::cin >> opcao;
@@ -180,6 +203,9 @@ void Loja::opcoesUsuario()
 			estoque->listarEstoque();
 			break;
 		case 5:
+			finalizarCompra();
+			break;
+		case 6:
 			usuarioLogado->logout();
 			return;
 			break;

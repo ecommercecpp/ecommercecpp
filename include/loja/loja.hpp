@@ -9,8 +9,9 @@ class Loja
 		Usuario* usuarioLogado;
 		EstoqueBase* estoque;
 		Carrinho *carrinho;
+		Vendas* vendas;
 	public:
-		Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho);
+		Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho* carrinho, Vendas* vendas);
 		Loja();
 		~Loja();
 		void mostrarLoja();
@@ -21,6 +22,7 @@ class Loja
 		void listarProdutosNoCarrinho();
 		void opcoesAdm();
 		void opcoesUsuario();
+		void finalizarCompra();
 };
 
 #endif

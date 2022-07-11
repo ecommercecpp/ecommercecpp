@@ -3,12 +3,8 @@
 /**
  * @brief Construct a new Carrinho:: Carrinho object
  * 
- * @param cpf 
  */
-Carrinho::Carrinho(std::string cpf)
-{
-	this->cpf = cpf;
-}
+Carrinho::Carrinho(){}
 
 /**
  * @brief Destroy the Carrinho:: Carrinho object
@@ -89,4 +85,13 @@ void Carrinho::removerProduto(int id, double qtd)
 			ids_produtos[id] -= qtd;
 		}
 	}
+}
+
+/**
+ * @brief Limpa o carrinho
+ * 
+ */
+void Carrinho::limparCarrinho()
+{
+	ids_produtos.clear();
 }
