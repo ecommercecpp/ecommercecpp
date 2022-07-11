@@ -6,15 +6,8 @@
  */
 void EstoqueAdm::listarEstoque()
 {
-	//percorrer o estoque e listar 
-    std::ifstream file("data/estoque.json");
-    json::value json = json::parse(file);
-    file.close();
-
-    const json::array &a = as_array(json);
-
     // caso o estoque estiver vazio
-    if (a.size() == 0)
+    if (this->estoque.size() == 0)
     {
         return;
     }
@@ -22,21 +15,16 @@ void EstoqueAdm::listarEstoque()
     std::cout<< "+----+------+-----------+-----+-------+"<<std::endl;
     std::cout<< "| ID | NOME | DESCRICAO | QTD | PRECO |"<<std::endl;
 
-    for(auto it = a.begin(); it != a.end(); ++it)
+    // lista o this->estoque usando foreach
+    for ( auto dados: this->estoque )
     {
-        const json::value &v = *it;
-        // converte preco para double
-        double preco_double = std::stod(v["preco"].as_string());
-        // converte qtd para double
-        double qtd_double = std::stod(v["qtd"].as_string());
-
         std::cout <<"+-----------------------------------------------------+"<<std::endl;
-        std::cout << " | " << v["id"].as_string();
-        std::cout << " | " << v["nome"].as_string();
-        std::cout << " | " << v["descricao"].as_string();
-        std::cout << " | " << std::setprecision(2) << std::fixed << qtd_double;
-        std::cout << " | " << "R$" << std::setprecision(2) << std::fixed << preco_double << " |" << std::endl;
-    }  
+        std::cout << " | " << dados.second.getId();
+        std::cout << " | " << dados.second.getNome();
+        std::cout << " | " << dados.second.getDescricao();
+        std::cout << " | " << std::setprecision(2) << std::fixed << dados.second.getQtd();
+        std::cout << " | " << "R$" << std::setprecision(2) << std::fixed << dados.second.getPreco() << " |" << std::endl;
+    }
     std::cout<<"+-----------------------------------------------------+"<<std::endl;	
 }
 

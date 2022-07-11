@@ -46,7 +46,7 @@ void CLI::mostrarLoja()
 	std::cout	<< std::endl << std::endl << "Nossa loja:" << std::endl;
 	
 	// verifica se o usuario está autenticado
-	if (getUsuario() == nullptr || getUsuario()->estaAutenticado() == false)
+	if (getUsuario()->estaAutenticado() == false)
 	{
 		mostrarOpcoesMenuInicial();
 		lerOpcoesMenuInicial();
@@ -62,6 +62,7 @@ void CLI::mostrarLoja()
 	{
 		estoque = dynamic_cast<EstoqueCliente*>(new EstoqueCliente());
 	}
+
 	Loja loja(getUsuario(), estoque);
 	loja.mostrarLoja();
 }
@@ -188,8 +189,10 @@ void CLI::test(int argc, char *argv[])
 }
 
 /**
- * @brief 	Mostra o menu de cadastro do programa
+ * @brief Realiza o cadastro de um usuario
  * 
+ * @return true 
+ * @return false 
  */
 bool CLI::cadastro()
 {
@@ -308,6 +311,7 @@ bool CLI::cadastro()
 			
 			if(usuario.cadastro())
 			{
+				setUsuario(usuario);
 				return true;
 			}
 			else
@@ -325,6 +329,12 @@ bool CLI::cadastro()
 	return false;
 }
 
+/**
+ * @brief Realiza o login do usuario
+ * 
+ * @return true 
+ * @return false 
+ */
 bool CLI::login()
 {
    	std::string comando, cpf, senha;
@@ -354,7 +364,7 @@ bool CLI::login()
 			
 			if(usuario.login())
 			{
-				setUsuario(&usuario);
+				setUsuario(usuario);
 				return true;
 			}
 			else
@@ -371,12 +381,23 @@ bool CLI::login()
 
 	return false;
 }
+
+/**
+ * @brief 	GET usuario do CLI
+ * 
+ * @return Usuario 
+ */
 Usuario* CLI::getUsuario()
 {
-	return usuario;
+	return &usuario;
 }
 
-void CLI::setUsuario(Usuario* usuario)
+/**
+ * @brief 	Set usuario do CLI
+ * 
+ * @param usuario 
+ */
+void CLI::setUsuario(Usuario usuario)
 {
 	this->usuario = usuario;
 }

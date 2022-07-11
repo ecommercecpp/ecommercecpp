@@ -37,46 +37,93 @@ void Loja::mostrarLoja()
 	std::cout << std::endl << "Loja" << std::endl << std::endl << std::endl;
 	
 	estoque->listarEstoque();
-
+	
 	// caso o usuario seja administrador
-	if (usuarioLogado->getTipo() == true)
+	if (usuarioLogado->ehAdministrador() == 1)
 	{
-		// da opção de adicionar um produto
-		std::cout << "Adicionar produto: " << std::endl;
-		std::cout << "1 - Sim" << std::endl;
-		std::cout << "2 - Não" << std::endl;
+		opcoesAdm();
+	}
+	else
+	{
+		std::cout << "Digite os IDs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
+	}
+}
 
-		int opcao;
-		std::cin >> opcao;
+void Loja::opcoesAdm()
+{
+	std::cout << std::endl << "Opcoes de administrador:" << std::endl;
+	std::cout << "1. Adicionar ou atualizar algum produto" << std::endl;
+	std::cout << "3. Sair" << std::endl << std::endl;
 
-		if (opcao == 1)
-		{
-			std::cout << "Digite o nome do produto: " << std::endl;
-			std::string nome;
-			std::cin >> nome;
+	int opcao;
+	std::cin >> opcao;
 
-			std::cout << "Digite a descricao do produto: " << std::endl;
-			std::string descricao;
-			std::cin >> descricao;
+	switch (opcao)
+	{
+		case 1:
+			adicionarProduto();
+			break;
+		case 3:
+			break;
+		default:
+			break;
+	}
 
-			std::cout << "Digite o preco do produto: " << std::endl;
-			double preco;
-			std::cin >> preco;
+	mostrarLoja();
+}
 
-			std::cout << "Digite a quantidade do produto: " << std::endl;
-			int quantidade;
-			std::cin >> quantidade;
+void Loja::adicionarProduto()
+{
+	std::cout << std::endl << "Adicionar ou atualizar Produto:" << std::endl;
 
-			std::cout << "Digite o id do produto: " << std::endl;
-			int id;
-			std::cin >> id;
+	std::string comando, nome, descricao, categoria, preco, quantidade, id;
 
-			Produto produto(id, nome, descricao, quantidade, preco);
-			estoque->adicionar(produto, true);
-		}
+	while (comando != "sair")
+	{
+		std::cout << "Digite o nome do produto ou sair: " << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
 		else
-		{
-			std::cout << "Não adicionou produto" << std::endl;
-		}
+			nome = comando;
+
+		std::cout << "Digite a descricao do produto ou sair: " << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			descricao = comando;
+
+		std::cout << "Digite o preco do produto ou sair: " << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			preco = comando;
+
+		std::cout << "Digite a quantidade do produto ou sair: " << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			quantidade = comando;
+
+		std::cout << "Digite o id do produto ou sair: " << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			id = comando;
+
+		// converte id para inteiro
+		int idInt = std::stoi(id);
+		// converte preco e quantidade para double
+		double precoDouble = std::stod(preco);
+		double quantidadeDouble = std::stod(quantidade);
+		Produto produto(idInt, nome, descricao, quantidadeDouble, precoDouble);
+
+		estoque->adicionar(produto, true);
+
+		opcoesAdm();
 	}
 }
