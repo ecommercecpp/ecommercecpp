@@ -21,17 +21,46 @@ Carrinho::~Carrinho(){}
  * 
  * @param id 
  */
-void Carrinho::adicionarProduto(int id)
+void Carrinho::adicionarProduto(int id, double qtd)
 {
-	ids_produtos.push_back(id);
+	// se já existe o produto no carrinho, soma a quantidade
+	if(ids_produtos.find(id) != ids_produtos.end())
+	{
+		ids_produtos[id] += qtd;
+	}
+	// se não existe, adiciona o produto
+	else
+	{
+		ids_produtos[id] = qtd;
+	}
 }
 
 /**
- * @brief Retorna os ids de produtos no carrinho
+ * @brief Retorna os dados do carrinho
  * 
- * @return std::vector<int> 
+ * @return std::map<int, double> 
  */
-std::vector<int> Carrinho::getCarrinho()
+std::map<int, double> Carrinho::getCarrinho()
 {
 	return ids_produtos;
+}
+
+/**
+ * @brief Retorna a quantidade de um produto no carrinho
+ * 
+ * @param id 
+ * @return double 
+ */
+double Carrinho::qtdNoCarrinho(int id)
+{
+	// se tiver o id de um produto no carrinho, retorna a quantidade
+	if(ids_produtos.find(id) != ids_produtos.end())
+	{
+		return ids_produtos[id];
+	}
+	// se não tiver, retorna 0
+	else
+	{
+		return 0;
+	}
 }

@@ -1,1 +1,1 @@
-[{"tipo":"true","nome":"nome","cpf":"12312312312","email":"email","endereco":{"rua":"rua","numero":"123","bairro":"bairro","cidade":"cidade","estado":"estado","cep":"12123123"},"senha":"senha"}]
+[{"tipo":"false","nome":"nome","cpf":"12312312312","email":"email","endereco":{"rua":"rua","numero":"123","bairro":"bairro","cidade":"cidade","estado":"estado","cep":"12123123"},"senha":"senha"}]

@@ -52,17 +52,51 @@ void Loja::mostrarLoja()
 	}
 }
 
+void Loja::listarProdutosNoCarrinho()
+{
+	std::map<int, double> idsDoCarrinho = carrinho->getCarrinho();
+	double totalCarrinho = 0;
+	std::cout<< "+----+------+-----------+-----+-------+"<< std::endl;
+    std::cout<< "| ID | NOME | DESCRICAO | QTD | PRECO |"<< std::endl;
+
+	for (auto dados: idsDoCarrinho)
+	{
+		Produto *produto = estoque->buscar(dados.first);
+		if (produto != nullptr)
+		{
+			std::cout <<"+-----------------------------------------------------+"<<std::endl;
+			std::cout << "| " << produto->getId();
+			std::cout << " | " << produto->getNome();
+			std::cout << " | " << produto->getDescricao();
+			std::cout << " | " << std::setprecision(2) << std::fixed << dados.second;
+			std::cout << " | " << "R$" << std::setprecision(2) << std::fixed << produto->getPreco() << " |" << std::endl;
+			totalCarrinho += produto->getPreco() * dados.second;
+		}
+	}
+	std::cout<<"+-----------------------------------------------------+"<<std::endl;
+	std::cout<< "Total: R$" << std::setprecision(2) << std::fixed << totalCarrinho << " |"  << std::endl;
+	std::cout<<"+-----------------------------------------------------+"<<std::endl;
+}
+
 void Loja::adicionarProdutoCarrinho()
 {
-	std::cout << "Digite os IDs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
+	std::cout << "Digite os SKUs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
 	int id;
 	std::cin >> id;
 	while (id != 0)
 	{
-		Produto *produto = estoque->buscar(id);
+		Produto *produto = estoque->buscarPorSku(id);
 		if (produto != nullptr)
 		{
-			carrinho->adicionarProduto(id);
+			if(produto->getQtd() >= (carrinho->qtdNoCarrinho(produto->getId()) + 1))
+			{
+				carrinho->adicionarProduto(produto->getId(), 1);
+				std::cout << "Produto " << id << " adicionado ao carrinho!" << std::endl;
+			}
+			else
+			{
+				std::cout << "Produto sem estoque" << std::endl;
+			}
 		}
 		else
 		{
@@ -76,6 +110,7 @@ void Loja::opcoesUsuario()
 {
 	std::cout << std::endl << "Opcoes:" << std::endl;
 	std::cout << "1. Adicionar produto no carrinho" << std::endl;
+	std::cout << "2. Listar produtos no carrinho" << std::endl;
 	std::cout << "3. Listar estoque novamente" << std::endl;
 	std::cout << "4. Sair" << std::endl << std::endl;
 
@@ -86,6 +121,9 @@ void Loja::opcoesUsuario()
 	{
 		case 1:
 			adicionarProdutoCarrinho();
+			break;
+		case 2:
+			listarProdutosNoCarrinho();
 			break;
 		case 3:
 			estoque->listarEstoque();
@@ -99,7 +137,7 @@ void Loja::opcoesUsuario()
 			break;
 	}
 
-	mostrarLoja();
+	opcoesUsuario();
 }
 
 void Loja::opcoesAdm()
@@ -133,7 +171,7 @@ void Loja::opcoesAdm()
 			break;
 	}
 
-	mostrarLoja();
+	opcoesAdm();
 }
 
 void Loja::removerProdutoEstoque()

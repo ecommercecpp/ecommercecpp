@@ -19,7 +19,7 @@ void EstoqueAdm::listarEstoque()
     for ( auto dados: this->estoque )
     {
         std::cout <<"+-----------------------------------------------------+"<<std::endl;
-        std::cout << " | " << dados.second.getId();
+        std::cout << "| " << dados.second.getId();
         std::cout << " | " << dados.second.getNome();
         std::cout << " | " << dados.second.getDescricao();
         std::cout << " | " << std::setprecision(2) << std::fixed << dados.second.getQtd();

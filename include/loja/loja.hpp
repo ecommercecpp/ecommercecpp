@@ -17,6 +17,7 @@ class Loja
 		void adicionarProdutoCarrinho();
 		void adicionarProdutoEstoque();
 		void removerProdutoEstoque();
+		void listarProdutosNoCarrinho();
 		void opcoesAdm();
 		void opcoesUsuario();
 };
