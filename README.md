@@ -42,6 +42,22 @@ Para começar a utilizar o repositório, você precisa cumprir todos os requisit
     ```sh
     make test
     ```
+
+## Como utilizar o EcommerceCPP
+
+Para começar a utilizar, após a instalação, basta rodar:
+
+- Para Linux:
+
+```sh
+  ./main
+```
+- Para Windows:
+
+```sh
+  main.exe
+```
+
 ## ☕ User Stories
     
 ### Cadastro de novos usuarios (roles: administrador, cliente) | [@EduScf](https://github.com/EduScf)
