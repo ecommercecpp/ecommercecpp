@@ -20,7 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="103675273?s=200&v=4"/></td>
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Ecommerce C++
    &#160;<span id="projectnumber">1.0</span>
@@ -83,14 +83,17 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_estoque_cliente.html#ae08a7b6cbaaac08d7142cbefff788f7d">EstoqueCliente</a>();</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_estoque_cliente.html#a68d2634a640c06296694b1bec4803f49">listarEstoque</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_estoque_cliente.html#a4d9bcc1ecff7cdf9731b96102e485687">~EstoqueCliente</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_produto.html">Produto</a>* <a class="code" href="class_estoque_cliente.html#a6950ac3c0190200bd5aec0a86320d56f">buscarPorSku</a>(<span class="keywordtype">int</span> sku) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_estoque_base_html"><div class="ttname"><a href="class_estoque_base.html">EstoqueBase</a></div><div class="ttdef"><b>Definition:</b> estoqueBase.hpp:6</div></div>
 <div class="ttc" id="aclass_estoque_cliente_html"><div class="ttname"><a href="class_estoque_cliente.html">EstoqueCliente</a></div><div class="ttdef"><b>Definition:</b> estoqueCliente.hpp:7</div></div>
-<div class="ttc" id="aclass_estoque_cliente_html_a4d9bcc1ecff7cdf9731b96102e485687"><div class="ttname"><a href="class_estoque_cliente.html#a4d9bcc1ecff7cdf9731b96102e485687">EstoqueCliente::~EstoqueCliente</a></div><div class="ttdeci">~EstoqueCliente()</div><div class="ttdoc">Destroy the Estoque Cliente:: Estoque Cliente object.</div><div class="ttdef"><b>Definition:</b> estoqueCliente.cpp:16</div></div>
+<div class="ttc" id="aclass_estoque_cliente_html_a4d9bcc1ecff7cdf9731b96102e485687"><div class="ttname"><a href="class_estoque_cliente.html#a4d9bcc1ecff7cdf9731b96102e485687">EstoqueCliente::~EstoqueCliente</a></div><div class="ttdeci">~EstoqueCliente()</div><div class="ttdoc">Destroy the Estoque Cliente:: Estoque Cliente object.</div><div class="ttdef"><b>Definition:</b> estoqueCliente.cpp:59</div></div>
 <div class="ttc" id="aclass_estoque_cliente_html_a68d2634a640c06296694b1bec4803f49"><div class="ttname"><a href="class_estoque_cliente.html#a68d2634a640c06296694b1bec4803f49">EstoqueCliente::listarEstoque</a></div><div class="ttdeci">virtual void listarEstoque() override</div><div class="ttdoc">Lista o estoque de maneira especial para o cliente.</div><div class="ttdef"><b>Definition:</b> estoqueCliente.cpp:7</div></div>
-<div class="ttc" id="aclass_estoque_cliente_html_ae08a7b6cbaaac08d7142cbefff788f7d"><div class="ttname"><a href="class_estoque_cliente.html#ae08a7b6cbaaac08d7142cbefff788f7d">EstoqueCliente::EstoqueCliente</a></div><div class="ttdeci">EstoqueCliente()</div><div class="ttdoc">Construct a new Estoque Cliente:: Estoque Cliente object.</div><div class="ttdef"><b>Definition:</b> estoqueCliente.cpp:25</div></div>
+<div class="ttc" id="aclass_estoque_cliente_html_a6950ac3c0190200bd5aec0a86320d56f"><div class="ttname"><a href="class_estoque_cliente.html#a6950ac3c0190200bd5aec0a86320d56f">EstoqueCliente::buscarPorSku</a></div><div class="ttdeci">virtual Produto * buscarPorSku(int sku) override</div><div class="ttdoc">Busca um produto por sku.</div><div class="ttdef"><b>Definition:</b> estoqueCliente.cpp:40</div></div>
+<div class="ttc" id="aclass_estoque_cliente_html_ae08a7b6cbaaac08d7142cbefff788f7d"><div class="ttname"><a href="class_estoque_cliente.html#ae08a7b6cbaaac08d7142cbefff788f7d">EstoqueCliente::EstoqueCliente</a></div><div class="ttdeci">EstoqueCliente()</div><div class="ttdoc">Construct a new Estoque Cliente:: Estoque Cliente object.</div><div class="ttdef"><b>Definition:</b> estoqueCliente.cpp:65</div></div>
+<div class="ttc" id="aclass_produto_html"><div class="ttname"><a href="class_produto.html">Produto</a></div><div class="ttdef"><b>Definition:</b> produto.hpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

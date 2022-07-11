@@ -43,14 +43,15 @@ CLI::CLI(int argc, char *argv[])
  */
 void CLI::mostrarLoja()
 {
-	std::cout	<< std::endl << std::endl << "Nossa loja:" << std::endl;
-	
 	// verifica se o usuario está autenticado
 	if (getUsuario()->estaAutenticado() == false)
 	{
+		titulo();
 		mostrarOpcoesMenuInicial();
 		lerOpcoesMenuInicial();
 	}
+
+	std::cout	<< std::endl << std::endl << "Nossa loja:" << std::endl;
 	
 	EstoqueBase *estoque;
 	if(getUsuario()->ehAdministrador())
@@ -63,8 +64,10 @@ void CLI::mostrarLoja()
 		estoque = dynamic_cast<EstoqueCliente*>(new EstoqueCliente());
 	}
 
-	Loja loja(getUsuario(), estoque);
+	Loja loja(getUsuario(), estoque, new Carrinho(getUsuario()->getCpf()));
 	loja.mostrarLoja();
+
+	mostrarLoja();
 }
 
 /**
@@ -101,6 +104,7 @@ void CLI::lerOpcoesMenuInicial()
 	}
 	else if(opcao == "3")
 	{
+		exit(0);
 		return;
 	}
 	else

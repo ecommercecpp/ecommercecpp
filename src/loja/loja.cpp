@@ -5,11 +5,13 @@
  * 
  * @param usuarioLogado 
  * @param estoque 
+ * @param carrinho 
  */
-Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque)
+Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho)
 {
 	this->usuarioLogado = usuarioLogado;
 	this->estoque = estoque;
+	this->carrinho = carrinho;
 }
 
 /**
@@ -26,6 +28,7 @@ Loja::~Loja()
 {
 	delete usuarioLogado;
 	delete estoque;
+	delete carrinho;
 }
 
 /**
@@ -45,15 +48,119 @@ void Loja::mostrarLoja()
 	}
 	else
 	{
-		std::cout << "Digite os IDs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
+		opcoesUsuario();
 	}
 }
 
-void Loja::opcoesAdm()
+/**
+ * @brief Remove um produto do carrinho
+ * 
+ */
+void Loja::removerProdutosNoCarrinho()
 {
-	std::cout << std::endl << "Opcoes de administrador:" << std::endl;
-	std::cout << "1. Adicionar ou atualizar algum produto" << std::endl;
-	std::cout << "3. Sair" << std::endl << std::endl;
+	std::cout << std::endl << "Remover Produto do carrinho:" << std::endl;
+	std::string comando, id, quantidade;
+
+	listarProdutosNoCarrinho();
+
+	while (comando != "sair")
+	{
+		std::cout << "Digite o ID do produto que deseja remover ou sair:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			id = comando;
+
+		std::cout << "Digite a quantidade do produto que deseja remover ou sair:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			quantidade = comando;
+
+		carrinho->removerProduto(std::stoi(id), std::stod(quantidade));
+
+		listarProdutosNoCarrinho();
+	}
+
+	opcoesUsuario();
+}
+
+/**
+ * @brief Lista os produtos do carrinho
+ * 
+ */
+void Loja::listarProdutosNoCarrinho()
+{
+	std::map<int, double> idsDoCarrinho = carrinho->getCarrinho();
+	double totalCarrinho = 0;
+	std::cout<< "+----+------+-----------+-----+-------+"<< std::endl;
+    std::cout<< "| ID | NOME | DESCRICAO | QTD | PRECO |"<< std::endl;
+
+	for (auto dados: idsDoCarrinho)
+	{
+		Produto *produto = estoque->buscar(dados.first);
+		if (produto != nullptr)
+		{
+			std::cout <<"+-----------------------------------------------------+"<<std::endl;
+			std::cout << "| " << produto->getId();
+			std::cout << " | " << produto->getNome();
+			std::cout << " | " << produto->getDescricao();
+			std::cout << " | " << std::setprecision(2) << std::fixed << dados.second;
+			std::cout << " | " << "R$" << std::setprecision(2) << std::fixed << produto->getPreco() << " |" << std::endl;
+			totalCarrinho += produto->getPreco() * dados.second;
+		}
+	}
+	std::cout<<"+-----------------------------------------------------+"<<std::endl;
+	std::cout<< "| Total: R$" << std::setprecision(2) << std::fixed << totalCarrinho << " |"  << std::endl;
+	std::cout<<"+-----------------------------------------------------+"<<std::endl;
+}
+
+/**
+ * @brief Adiciona um produto ao carrinho
+ * 
+ */
+void Loja::adicionarProdutoCarrinho()
+{
+	std::cout << "Digite os SKUs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
+	int id;
+	std::cin >> id;
+	while (id != 0)
+	{
+		Produto *produto = estoque->buscarPorSku(id);
+		if (produto != nullptr)
+		{
+			if(produto->getQtd() >= (carrinho->qtdNoCarrinho(produto->getId()) + 1))
+			{
+				carrinho->adicionarProduto(produto->getId(), 1);
+				std::cout << "Produto " << id << " adicionado ao carrinho!" << std::endl;
+			}
+			else
+			{
+				std::cout << "Produto sem estoque" << std::endl;
+			}
+		}
+		else
+		{
+			std::cout << "Produto nao encontrado" << std::endl;
+		}
+		std::cin >> id;
+	}
+}
+
+/**
+ * @brief Mostra as opcoes do usuario
+ * 
+ */
+void Loja::opcoesUsuario()
+{
+	std::cout << std::endl << "Opcoes:" << std::endl;
+	std::cout << "1. Adicionar produto no carrinho" << std::endl;
+	std::cout << "2. Listar produtos no carrinho" << std::endl;
+	std::cout << "3. Remover produtos no carrinho" << std::endl;
+	std::cout << "4. Listar estoque novamente" << std::endl;
+	std::cout << "5. Sair" << std::endl << std::endl;
 
 	int opcao;
 	std::cin >> opcao;
@@ -61,18 +168,98 @@ void Loja::opcoesAdm()
 	switch (opcao)
 	{
 		case 1:
-			adicionarProduto();
+			adicionarProdutoCarrinho();
+			break;
+		case 2:
+			listarProdutosNoCarrinho();
 			break;
 		case 3:
+			removerProdutosNoCarrinho();
+			break;
+		case 4:
+			estoque->listarEstoque();
+			break;
+		case 5:
+			usuarioLogado->logout();
+			return;
 			break;
 		default:
+			opcoesUsuario();
 			break;
 	}
 
-	mostrarLoja();
+	opcoesUsuario();
 }
 
-void Loja::adicionarProduto()
+/**
+ * @brief Mostra as opcoes do administrador
+ * 
+ */
+void Loja::opcoesAdm()
+{
+	std::cout << std::endl << "Opcoes de administrador:" << std::endl;
+	std::cout << "1. Adicionar ou atualizar algum produto no estoque" << std::endl;
+	std::cout << "2. Remover algum produto no estoque" << std::endl;
+	std::cout << "3. Listar estoque novamente" << std::endl;
+	std::cout << "4. Sair" << std::endl << std::endl;
+
+	int opcao;
+	std::cin >> opcao;
+
+	switch (opcao)
+	{
+		case 1:
+			adicionarProdutoEstoque();
+			break;
+		case 2:
+			removerProdutoEstoque();
+			break;
+		case 3:
+			estoque->listarEstoque();
+			break;
+		case 4:
+			usuarioLogado->logout();
+			return;
+			break;
+		default:
+			opcoesAdm();
+			break;
+	}
+
+	opcoesAdm();
+}
+
+/**
+ * @brief Remove um produto do estoque
+ * 
+ */
+void Loja::removerProdutoEstoque()
+{
+	std::cout << std::endl << "Remover Produto:" << std::endl;
+
+	std::string comando;
+
+	while (comando != "sair")
+	{
+		std::cout << "Digite o ID do produto que deseja remover ou sair:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+		{
+			int id = std::stoi(comando);
+			estoque->remover(id);
+		}
+	}
+
+	opcoesAdm();
+}
+
+/**
+ * @brief Adicionar um produto no estoque
+ * 
+ */
+void Loja::adicionarProdutoEstoque()
 {
 	std::cout << std::endl << "Adicionar ou atualizar Produto:" << std::endl;
 
@@ -123,7 +310,7 @@ void Loja::adicionarProduto()
 		Produto produto(idInt, nome, descricao, quantidadeDouble, precoDouble);
 
 		estoque->adicionar(produto, true);
-
-		opcoesAdm();
 	}
+
+	opcoesAdm();
 }
