@@ -129,14 +129,9 @@ void Vendas::adicionarVenda(std::map<int, double> dadosCarrinho, EstoqueBase *es
 			produto->setQtd(dadoCarrinho.second);
 			produtos.push_back(produto);
 		}
-		delete produtoTPM;
 	}
-
 	vendas[controleId][cpf] = produtos;
-
 	gerarJsonVenda(controleId, cpf);
-
 	atualizaEstoque(controleId, cpf, estoque);
-
 	controleId++;
 }
