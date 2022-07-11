@@ -13,6 +13,7 @@ class Carrinho
 		~Carrinho();
 		void adicionarProduto(int id, double qtd);
 		double qtdNoCarrinho(int id);
+		void removerProduto(int id, double qtd);
 		std::map<int, double> getCarrinho();
 };
 

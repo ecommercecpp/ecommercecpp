@@ -64,3 +64,29 @@ double Carrinho::qtdNoCarrinho(int id)
 		return 0;
 	}
 }
+
+/**
+ * @brief Remove um produto do carrinho
+ * 
+ * @param id 
+ * @param qtd 
+ */
+void Carrinho::removerProduto(int id, double qtd)
+{
+	// se tiver o id de um produto no carrinho
+	if(ids_produtos.find(id) != ids_produtos.end())
+	{
+		std::cout << ids_produtos[id]  << " " << qtd << std::endl;
+		// se a quantidade for maior que a quantidade no carrinho, remove o produto do carrinho
+		if(ids_produtos[id] <= qtd)
+		{
+			// remove do array
+			ids_produtos.erase(id);
+		}
+		else
+		{
+			// se a quantidade for menor que a quantidade no carrinho, remove a quantidade do carrinho
+			ids_produtos[id] -= qtd;
+		}
+	}
+}

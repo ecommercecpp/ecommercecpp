@@ -52,6 +52,37 @@ void Loja::mostrarLoja()
 	}
 }
 
+void Loja::removerProdutosNoCarrinho()
+{
+	std::cout << std::endl << "Remover Produto do carrinho:" << std::endl;
+	std::string comando, id, quantidade;
+
+	listarProdutosNoCarrinho();
+
+	while (comando != "sair")
+	{
+		std::cout << "Digite o ID do produto que deseja remover ou sair:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			id = comando;
+
+		std::cout << "Digite a quantidade do produto que deseja remover ou sair:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			quantidade = comando;
+
+		carrinho->removerProduto(std::stoi(id), std::stod(quantidade));
+
+		listarProdutosNoCarrinho();
+	}
+
+	opcoesUsuario();
+}
+
 void Loja::listarProdutosNoCarrinho()
 {
 	std::map<int, double> idsDoCarrinho = carrinho->getCarrinho();
@@ -74,7 +105,7 @@ void Loja::listarProdutosNoCarrinho()
 		}
 	}
 	std::cout<<"+-----------------------------------------------------+"<<std::endl;
-	std::cout<< "Total: R$" << std::setprecision(2) << std::fixed << totalCarrinho << " |"  << std::endl;
+	std::cout<< "| Total: R$" << std::setprecision(2) << std::fixed << totalCarrinho << " |"  << std::endl;
 	std::cout<<"+-----------------------------------------------------+"<<std::endl;
 }
 
@@ -111,8 +142,9 @@ void Loja::opcoesUsuario()
 	std::cout << std::endl << "Opcoes:" << std::endl;
 	std::cout << "1. Adicionar produto no carrinho" << std::endl;
 	std::cout << "2. Listar produtos no carrinho" << std::endl;
-	std::cout << "3. Listar estoque novamente" << std::endl;
-	std::cout << "4. Sair" << std::endl << std::endl;
+	std::cout << "3. Remover produtos no carrinho" << std::endl;
+	std::cout << "4. Listar estoque novamente" << std::endl;
+	std::cout << "5. Sair" << std::endl << std::endl;
 
 	int opcao;
 	std::cin >> opcao;
@@ -126,9 +158,12 @@ void Loja::opcoesUsuario()
 			listarProdutosNoCarrinho();
 			break;
 		case 3:
-			estoque->listarEstoque();
+			removerProdutosNoCarrinho();
 			break;
 		case 4:
+			estoque->listarEstoque();
+			break;
+		case 5:
 			usuarioLogado->logout();
 			return;
 			break;
