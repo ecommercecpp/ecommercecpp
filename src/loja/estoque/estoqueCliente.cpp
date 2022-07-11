@@ -39,7 +39,6 @@ void EstoqueCliente::listarEstoque()
 
         std::cout <<"+-----------------------------------------------------+"<<std::endl;
         std::cout << "| "<< i;
-        std::cout << " | " << idstr;
         std::cout << " | " << nomestr;
         std::cout << " | " << descstr;
         std::cout << " | " << std::setprecision(2) << std::fixed << qtd_double;

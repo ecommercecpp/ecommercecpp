@@ -5,8 +5,9 @@
 
 class CLI
 {
+	private:
+		Usuario* usuario;
 	public:
-
 		CLI();
 		CLI(int argc, char *argv[]);
 		void help();
@@ -17,5 +18,7 @@ class CLI
 		void mostrarOpcoesMenuInicial();
 		void lerOpcoesMenuInicial();
 		void mostrarLoja();
+		Usuario* getUsuario();
+		void setUsuario(Usuario* usuario);
 };
 #endif
