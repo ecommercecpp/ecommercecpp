@@ -9,6 +9,7 @@ class EstoqueCliente: public EstoqueBase
 		EstoqueCliente();
 		virtual void listarEstoque() override;
 		~EstoqueCliente();
+		virtual Produto* buscarPorSku(int sku) override;
 };
 
 #endif

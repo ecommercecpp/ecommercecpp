@@ -20,7 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="103675273?s=200&v=4"/></td>
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Ecommerce C++
    &#160;<span id="projectnumber">1.0</span>
@@ -73,6 +73,15 @@ $(function() {
 <li>adicionarAtributo()
 : <a class="el" href="class_atributos.html#a967e18d2743f88131e020b18fad0a79f">Atributos</a>
 </li>
+<li>adicionarProduto()
+: <a class="el" href="class_carrinho.html#a1c026f866b2c04b1a4b5661fa558a031">Carrinho</a>
+</li>
+<li>adicionarProdutoCarrinho()
+: <a class="el" href="class_loja.html#a1dc39855e92c3a690046e880b322f38a">Loja</a>
+</li>
+<li>adicionarProdutoEstoque()
+: <a class="el" href="class_loja.html#ac3efd538e65a65c16df79c66f213df14">Loja</a>
+</li>
 <li>array()
 : <a class="el" href="classjson_1_1array.html#a4a6294b980b796632b2f4dd1e604ae33">json::array</a>
 </li>
@@ -90,6 +99,10 @@ $(function() {
 <li>buscar()
 : <a class="el" href="class_estoque_base.html#a5448c91b8ed5f9660a0c72ca8a43ba42">EstoqueBase</a>
 </li>
+<li>buscarPorSku()
+: <a class="el" href="class_estoque_base.html#a18f52275b898e5736f96614845a08111">EstoqueBase</a>
+, <a class="el" href="class_estoque_cliente.html#a6950ac3c0190200bd5aec0a86320d56f">EstoqueCliente</a>
+</li>
 </ul>
 
 
@@ -97,6 +110,9 @@ $(function() {
 <li>cadastro()
 : <a class="el" href="class_c_l_i.html#abab4825e998146e8f015813bb5bdd673">CLI</a>
 , <a class="el" href="class_usuario.html#ad30a146aab0c8a4700924a896c952ad2">Usuario</a>
+</li>
+<li>Carrinho()
+: <a class="el" href="class_carrinho.html#a7191e8c8e3b79ee8f19900c12199309c">Carrinho</a>
 </li>
 <li>CLI()
 : <a class="el" href="class_c_l_i.html#a1a5b0f7ec3b242c5c56e4745adbb391e">CLI</a>
@@ -136,6 +152,9 @@ $(function() {
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>getBairro()
 : <a class="el" href="class_endereco.html#a7df91d6a75d6a93fe27e059b53a34e80">Endereco</a>
+</li>
+<li>getCarrinho()
+: <a class="el" href="class_carrinho.html#a056ef3ebba95d61525ce37693ad8a3a7">Carrinho</a>
 </li>
 <li>getCep()
 : <a class="el" href="class_endereco.html#aa0c2b067d7b94ceceab9eed7dac2e0fc">Endereco</a>
@@ -177,6 +196,9 @@ $(function() {
 <li>getNumero()
 : <a class="el" href="class_endereco.html#a4731804e16a6699b906178f74d143a60">Endereco</a>
 </li>
+<li>getPreco()
+: <a class="el" href="class_produto.html#a53548783d7fad3ea6d5e000fa2227dcf">Produto</a>
+</li>
 <li>getQtd()
 : <a class="el" href="class_produto.html#a4b7993e91d6a90f7f2a5d01b0f3503f5">Produto</a>
 </li>
@@ -188,6 +210,9 @@ $(function() {
 </li>
 <li>getTipo()
 : <a class="el" href="class_usuario.html#a22e96f07931553899bf09d865a50d8d0">Usuario</a>
+</li>
+<li>getUsuario()
+: <a class="el" href="class_c_l_i.html#ad48780f0df18756f8441eea2486a687f">CLI</a>
 </li>
 </ul>
 
@@ -214,14 +239,18 @@ $(function() {
 : <a class="el" href="class_estoque_adm.html#a4920bb7f25c468c744fc8c79384a2ea2">EstoqueAdm</a>
 , <a class="el" href="class_estoque_cliente.html#a68d2634a640c06296694b1bec4803f49">EstoqueCliente</a>
 </li>
+<li>listarProdutosNoCarrinho()
+: <a class="el" href="class_loja.html#ae2d76018225f95908c708578805578ea">Loja</a>
+</li>
 <li>login()
-: <a class="el" href="class_usuario.html#a1b5516f17751abfeed443f51dd4a4b21">Usuario</a>
+: <a class="el" href="class_c_l_i.html#a05444134512e925baaab2457f12de20c">CLI</a>
+, <a class="el" href="class_usuario.html#a1b5516f17751abfeed443f51dd4a4b21">Usuario</a>
 </li>
 <li>logout()
 : <a class="el" href="class_usuario.html#abeead7be2671f6a836f592fcf21ef611">Usuario</a>
 </li>
 <li>Loja()
-: <a class="el" href="class_loja.html#ac1e5d2cb764d617d4dd3c9d5352fe5ad">Loja</a>
+: <a class="el" href="class_loja.html#a2f7d48991feaab10307022d41a448202">Loja</a>
 </li>
 </ul>
 
@@ -240,6 +269,12 @@ $(function() {
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>object()
 : <a class="el" href="classjson_1_1object.html#a5d49df5812fb83f129859dffff4237e7">json::object</a>
+</li>
+<li>opcoesAdm()
+: <a class="el" href="class_loja.html#a1449549ee73f6032b6fada26da036caa">Loja</a>
+</li>
+<li>opcoesUsuario()
+: <a class="el" href="class_loja.html#a22119305e06515c46d7e29639d062600">Loja</a>
 </li>
 <li>operator!=
 : <a class="el" href="classjson_1_1array.html#af06c7437a0946a9d5e093d903b59f6a4">json::array</a>
@@ -270,9 +305,25 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_q"></a>- q -</h3><ul>
+<li>qtdNoCarrinho()
+: <a class="el" href="class_carrinho.html#a830c45f2b1dbed6a20a772fde50e72ef">Carrinho</a>
+</li>
+</ul>
+
+
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>remover()
 : <a class="el" href="class_estoque_base.html#a5796be6aa90ff3ff38d9f008ae54319e">EstoqueBase</a>
+</li>
+<li>removerProduto()
+: <a class="el" href="class_carrinho.html#aa60ccf7b9f9102b0c342fcc2df234fe4">Carrinho</a>
+</li>
+<li>removerProdutoEstoque()
+: <a class="el" href="class_loja.html#ab7ff5d4bffc2029c811f08404fa29ab0">Loja</a>
+</li>
+<li>removerProdutosNoCarrinho()
+: <a class="el" href="class_loja.html#a40d713fa0fe4ef82325f320a9693973a">Loja</a>
 </li>
 <li>run()
 : <a class="el" href="class_unit_test_atributos.html#a8187a584795c23ee9f11cf8b8e6394b7">UnitTestAtributos</a>
@@ -307,6 +358,9 @@ $(function() {
 : <a class="el" href="class_produto.html#a5513a29009079af0954925220a760395">Produto</a>
 , <a class="el" href="class_usuario.html#ab6a6a430d055449a8e9d6c06253a272e">Usuario</a>
 </li>
+<li>setPreco()
+: <a class="el" href="class_produto.html#aba1d39de900f61e612219a42781f7f7e">Produto</a>
+</li>
 <li>setQtd()
 : <a class="el" href="class_produto.html#a25da1459bbe094197841da4c1a79dff0">Produto</a>
 </li>
@@ -315,6 +369,9 @@ $(function() {
 </li>
 <li>setSenha()
 : <a class="el" href="class_usuario.html#a28efaec1398906b6f43b12877bf59db7">Usuario</a>
+</li>
+<li>setUsuario()
+: <a class="el" href="class_c_l_i.html#a73faa8a61cb8c852fd32201edf87331e">CLI</a>
 </li>
 <li>swap()
 : <a class="el" href="classjson_1_1object.html#a8692afe50c8c183e21c5241a6f06a9b7">json::object</a>
@@ -350,6 +407,9 @@ $(function() {
 
 
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
+<li>~Carrinho()
+: <a class="el" href="class_carrinho.html#a6f5d7928a240f1f2cf1e571db5868abc">Carrinho</a>
+</li>
 <li>~EstoqueAdm()
 : <a class="el" href="class_estoque_adm.html#a0a5fe91aa9214f311b27d8e75a1fc95a">EstoqueAdm</a>
 </li>

@@ -13,15 +13,15 @@ void EstoqueCliente::listarEstoque()
     }
 
     std::cout<< "+----+------+-----------+-----+-------+"<<std::endl;
-    std::cout<< "| NUMERO | NOME | DESCRICAO | QTD | PRECO |"<<std::endl;
+    std::cout<< "| SKU | NOME | DESCRICAO | QTD | PRECO |"<<std::endl;
 
-    int controle = 0;
+    int controle = 1;
 
     // lista o this->estoque usando foreach
     for ( auto dados: this->estoque )
     {
         std::cout <<"+-----------------------------------------------------+"<<std::endl;
-        std::cout << " | " << controle;
+        std::cout << "| " << controle;
         std::cout << " | " << dados.second.getNome();
         std::cout << " | " << dados.second.getDescricao();
         std::cout << " | " << std::setprecision(2) << std::fixed << dados.second.getQtd();
@@ -29,6 +29,27 @@ void EstoqueCliente::listarEstoque()
         controle++;
     }
     std::cout<<"+-----------------------------------------------------+"<<std::endl;	
+}
+
+/**
+ * @brief Busca um produto por sku
+ * 
+ * @param sku 
+ * @return Produto* 
+ */
+Produto* EstoqueCliente::buscarPorSku(int sku)
+{
+    int controle = 1;
+    for ( auto dados: this->estoque )
+    {
+        if(sku == controle)
+        {
+            return buscar(dados.second.getId());
+        }
+        controle++;
+    }
+
+    return nullptr;
 }
 
 /**

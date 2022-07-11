@@ -137,3 +137,14 @@ std::map<int, Produto>* EstoqueBase::getEstoque(){
  * 
  */
 EstoqueBase::~EstoqueBase(){}
+
+/**
+ * @brief Busca um produto base por SKU
+ * 
+ * @param sku 
+ * @return Produto* 
+ */
+Produto* EstoqueBase::buscarPorSku(int sku)
+{
+    return nullptr;
+}

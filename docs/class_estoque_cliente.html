@@ -20,7 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="103675273?s=200&v=4"/></td>
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Ecommerce C++
    &#160;<span id="projectnumber">1.0</span>
@@ -95,6 +95,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_estoque_cliente.html#a4d9bcc1ecff7cdf9731b96102e485687">~EstoqueCliente</a> ()</td></tr>
 <tr class="memdesc:a4d9bcc1ecff7cdf9731b96102e485687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Estoque Cliente:: Estoque Cliente object. <br /></td></tr>
 <tr class="separator:a4d9bcc1ecff7cdf9731b96102e485687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6950ac3c0190200bd5aec0a86320d56f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_produto.html">Produto</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_estoque_cliente.html#a6950ac3c0190200bd5aec0a86320d56f">buscarPorSku</a> (int sku) override</td></tr>
+<tr class="memdesc:a6950ac3c0190200bd5aec0a86320d56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busca um produto por sku.  <a href="class_estoque_cliente.html#a6950ac3c0190200bd5aec0a86320d56f">Mais...</a><br /></td></tr>
+<tr class="separator:a6950ac3c0190200bd5aec0a86320d56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_estoque_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_estoque_base')"><img src="closed.png" alt="-"/>&#160;Membros públicos herdados de <a class="el" href="class_estoque_base.html">EstoqueBase</a></td></tr>
 <tr class="memitem:a46741675d1517aedbc4461826ba3e26f inherit pub_methods_class_estoque_base"><td class="memItemLeft" align="right" valign="top"><a id="a46741675d1517aedbc4461826ba3e26f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_estoque_base.html#a46741675d1517aedbc4461826ba3e26f">EstoqueBase</a> ()</td></tr>
@@ -124,6 +127,44 @@ Outros membros herdados</h2></td></tr>
 std::map&lt; int, <a class="el" href="class_produto.html">Produto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>estoque</b></td></tr>
 <tr class="separator:a61b12cef862859c632e6c3d39c0d21b8 inherit pro_attribs_class_estoque_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="a6950ac3c0190200bd5aec0a86320d56f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6950ac3c0190200bd5aec0a86320d56f">&#9670;&nbsp;</a></span>buscarPorSku()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_produto.html">Produto</a> * EstoqueCliente::buscarPorSku </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sku</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Busca um produto por sku. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sku</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Produto* </dd></dl>
+
+<p>Reimplementado de <a class="el" href="class_estoque_base.html#a18f52275b898e5736f96614845a08111">EstoqueBase</a>.</p>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/loja/estoque/<a class="el" href="estoque_cliente_8hpp_source.html">estoqueCliente.hpp</a></li>
 <li>src/loja/estoque/estoqueCliente.cpp</li>

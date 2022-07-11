@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ecommerce C++: Código-Fonte de include/loja/carrinho.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Ecommerce C++
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho Prático PDS2 | UFMG</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ddaff4d3cb27df433e0f4befab9ed00b.html">loja</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">carrinho.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _CARRINHO_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _CARRINHO_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;autoload.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_carrinho.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_carrinho.html">Carrinho</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        std::map&lt;int, double&gt; ids_produtos;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::string cpf;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_carrinho.html#a7191e8c8e3b79ee8f19900c12199309c">Carrinho</a>(std::string cpf);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_carrinho.html#a6f5d7928a240f1f2cf1e571db5868abc">~Carrinho</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_carrinho.html#a1c026f866b2c04b1a4b5661fa558a031">adicionarProduto</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">double</span> qtd);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_carrinho.html#a830c45f2b1dbed6a20a772fde50e72ef">qtdNoCarrinho</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_carrinho.html#aa60ccf7b9f9102b0c342fcc2df234fe4">removerProduto</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">double</span> qtd);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::map&lt;int, double&gt; <a class="code" href="class_carrinho.html#a056ef3ebba95d61525ce37693ad8a3a7">getCarrinho</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_carrinho_html"><div class="ttname"><a href="class_carrinho.html">Carrinho</a></div><div class="ttdef"><b>Definition:</b> carrinho.hpp:7</div></div>
+<div class="ttc" id="aclass_carrinho_html_a056ef3ebba95d61525ce37693ad8a3a7"><div class="ttname"><a href="class_carrinho.html#a056ef3ebba95d61525ce37693ad8a3a7">Carrinho::getCarrinho</a></div><div class="ttdeci">std::map&lt; int, double &gt; getCarrinho()</div><div class="ttdoc">Retorna os dados do carrinho.</div><div class="ttdef"><b>Definition:</b> carrinho.cpp:43</div></div>
+<div class="ttc" id="aclass_carrinho_html_a1c026f866b2c04b1a4b5661fa558a031"><div class="ttname"><a href="class_carrinho.html#a1c026f866b2c04b1a4b5661fa558a031">Carrinho::adicionarProduto</a></div><div class="ttdeci">void adicionarProduto(int id, double qtd)</div><div class="ttdoc">Adiciona o id de um produto no carrinho.</div><div class="ttdef"><b>Definition:</b> carrinho.cpp:24</div></div>
+<div class="ttc" id="aclass_carrinho_html_a6f5d7928a240f1f2cf1e571db5868abc"><div class="ttname"><a href="class_carrinho.html#a6f5d7928a240f1f2cf1e571db5868abc">Carrinho::~Carrinho</a></div><div class="ttdeci">~Carrinho()</div><div class="ttdoc">Destroy the Carrinho:: Carrinho object.</div><div class="ttdef"><b>Definition:</b> carrinho.cpp:17</div></div>
+<div class="ttc" id="aclass_carrinho_html_a7191e8c8e3b79ee8f19900c12199309c"><div class="ttname"><a href="class_carrinho.html#a7191e8c8e3b79ee8f19900c12199309c">Carrinho::Carrinho</a></div><div class="ttdeci">Carrinho(std::string cpf)</div><div class="ttdoc">Construct a new Carrinho:: Carrinho object.</div><div class="ttdef"><b>Definition:</b> carrinho.cpp:8</div></div>
+<div class="ttc" id="aclass_carrinho_html_a830c45f2b1dbed6a20a772fde50e72ef"><div class="ttname"><a href="class_carrinho.html#a830c45f2b1dbed6a20a772fde50e72ef">Carrinho::qtdNoCarrinho</a></div><div class="ttdeci">double qtdNoCarrinho(int id)</div><div class="ttdoc">Retorna a quantidade de um produto no carrinho.</div><div class="ttdef"><b>Definition:</b> carrinho.cpp:54</div></div>
+<div class="ttc" id="aclass_carrinho_html_aa60ccf7b9f9102b0c342fcc2df234fe4"><div class="ttname"><a href="class_carrinho.html#aa60ccf7b9f9102b0c342fcc2df234fe4">Carrinho::removerProduto</a></div><div class="ttdeci">void removerProduto(int id, double qtd)</div><div class="ttdoc">Remove um produto do carrinho.</div><div class="ttdef"><b>Definition:</b> carrinho.cpp:74</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

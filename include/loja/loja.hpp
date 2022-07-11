@@ -8,13 +8,19 @@ class Loja
 	protected:
 		Usuario* usuarioLogado;
 		EstoqueBase* estoque;
+		Carrinho *carrinho;
 	public:
-		Loja(Usuario* usuarioLogado, EstoqueBase* estoque);
+		Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho);
 		Loja();
 		~Loja();
 		void mostrarLoja();
-		void adicionarProduto();
+		void adicionarProdutoCarrinho();
+		void adicionarProdutoEstoque();
+		void removerProdutoEstoque();
+		void removerProdutosNoCarrinho();
+		void listarProdutosNoCarrinho();
 		void opcoesAdm();
+		void opcoesUsuario();
 };
 
 #endif

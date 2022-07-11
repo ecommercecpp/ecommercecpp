@@ -257,7 +257,10 @@ bool Usuario::cadastro()
  * @brief  Realiza o logout do usuario
  * 
  */
-void Usuario::logout(){};
+void Usuario::logout()
+{
+    this->autenticado = false;
+};
 
 /**
  * @brief   Retorna o tipo do usuario
