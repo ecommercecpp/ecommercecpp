@@ -109,11 +109,21 @@ void Produto::setQtd(double qtd)
     this->qtd = qtd;
 }
 
+/**
+ * @brief   Seta o preco
+ * 
+ * @param preco 
+ */
 void Produto::setPreco(double preco)
 {
     this->preco = preco;
 }
 
+/**
+ * @brief   Retorna o preco
+ * 
+ * @return double 
+ */
 double Produto::getPreco()
 {
     return this->preco;

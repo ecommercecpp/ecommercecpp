@@ -52,6 +52,10 @@ void Loja::mostrarLoja()
 	}
 }
 
+/**
+ * @brief Remove um produto do carrinho
+ * 
+ */
 void Loja::removerProdutosNoCarrinho()
 {
 	std::cout << std::endl << "Remover Produto do carrinho:" << std::endl;
@@ -83,6 +87,10 @@ void Loja::removerProdutosNoCarrinho()
 	opcoesUsuario();
 }
 
+/**
+ * @brief Lista os produtos do carrinho
+ * 
+ */
 void Loja::listarProdutosNoCarrinho()
 {
 	std::map<int, double> idsDoCarrinho = carrinho->getCarrinho();
@@ -109,6 +117,10 @@ void Loja::listarProdutosNoCarrinho()
 	std::cout<<"+-----------------------------------------------------+"<<std::endl;
 }
 
+/**
+ * @brief Adiciona um produto ao carrinho
+ * 
+ */
 void Loja::adicionarProdutoCarrinho()
 {
 	std::cout << "Digite os SKUs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
@@ -137,6 +149,10 @@ void Loja::adicionarProdutoCarrinho()
 	}
 }
 
+/**
+ * @brief Mostra as opcoes do usuario
+ * 
+ */
 void Loja::opcoesUsuario()
 {
 	std::cout << std::endl << "Opcoes:" << std::endl;
@@ -175,6 +191,10 @@ void Loja::opcoesUsuario()
 	opcoesUsuario();
 }
 
+/**
+ * @brief Mostra as opcoes do administrador
+ * 
+ */
 void Loja::opcoesAdm()
 {
 	std::cout << std::endl << "Opcoes de administrador:" << std::endl;
@@ -209,6 +229,10 @@ void Loja::opcoesAdm()
 	opcoesAdm();
 }
 
+/**
+ * @brief Remove um produto do estoque
+ * 
+ */
 void Loja::removerProdutoEstoque()
 {
 	std::cout << std::endl << "Remover Produto:" << std::endl;
@@ -231,6 +255,10 @@ void Loja::removerProdutoEstoque()
 	opcoesAdm();
 }
 
+/**
+ * @brief Adicionar um produto no estoque
+ * 
+ */
 void Loja::adicionarProdutoEstoque()
 {
 	std::cout << std::endl << "Adicionar ou atualizar Produto:" << std::endl;
