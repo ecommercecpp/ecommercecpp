@@ -9,7 +9,7 @@
 
 <br/>
 
-> O EcommerceCPP possui uma política de qualidade de código, onde garantimos que todos os códigos são testados, seguros e corretos. Status:  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ecommercecpp_ecommercecpp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ecommercecpp_ecommercecpp)
+> O EcommerceCPP possui uma política de qualidade de código, onde garantimos que todos os códigos são testados, seguros e corretos. Status:           [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ecommercecpp_ecommercecpp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ecommercecpp_ecommercecpp)
 
 ## Começando 🚀
 
