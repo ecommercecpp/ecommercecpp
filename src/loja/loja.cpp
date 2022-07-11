@@ -34,11 +34,8 @@ Loja::~Loja()
  */
 void Loja::mostrarLoja()
 {
-	std::cout << std::endl << "Loja" << std::endl << std::endl;
-
-	usuarioLogado->setTipo(true);
+	std::cout << std::endl << "Loja" << std::endl << std::endl << std::endl;
 	
-	std::cout << "Estoque: " << std::endl;
 	estoque->listarEstoque();
 
 	// caso o usuario seja administrador

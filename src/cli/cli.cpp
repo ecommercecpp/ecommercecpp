@@ -43,24 +43,26 @@ CLI::CLI(int argc, char *argv[])
  */
 void CLI::mostrarLoja()
 {
-	std::cout << "Mostrar loja" << std::endl;
-	// cria uma loja com o usuario logado, obs: obrigatorio testar se o usuario logado existe e se está autenticado
+	std::cout	<< std::endl << std::endl << "Nossa loja:" << std::endl;
 	
-
-	// apenas pra testar, cria um usuario fake
-	Usuario* usuarioLogado = new Usuario(
-		"nome",
-		"12312312312",
-		"email",
-		Endereco("rua", "123", "complemento", "123", "bairro", "cidade", "estado"),
-		"senha"
-	);
-
-	// verifica o tipo do cliente, se é adm ou nao e cria um estoque de acordo com o tipo
-
-	// apenas pra testar, cria um estoque fake
-	EstoqueAdm* estoque = new EstoqueAdm();
-	Loja loja(usuarioLogado, estoque);
+	// verifica se o usuario está autenticado
+	if (getUsuario() == nullptr || getUsuario()->estaAutenticado() == false)
+	{
+		mostrarOpcoesMenuInicial();
+		lerOpcoesMenuInicial();
+	}
+	
+	EstoqueBase *estoque;
+	if(getUsuario()->ehAdministrador())
+	{
+		// converte o estoque para o tipo de estoque EstoqueAdm
+		estoque = dynamic_cast<EstoqueAdm*>(new EstoqueAdm());
+	}
+	else
+	{
+		estoque = dynamic_cast<EstoqueCliente*>(new EstoqueCliente());
+	}
+	Loja loja(getUsuario(), estoque);
 	loja.mostrarLoja();
 }
 
@@ -352,6 +354,7 @@ bool CLI::login()
 			
 			if(usuario.login())
 			{
+				setUsuario(&usuario);
 				return true;
 			}
 			else
@@ -368,4 +371,12 @@ bool CLI::login()
 
 	return false;
 }
-   
+Usuario* CLI::getUsuario()
+{
+	return usuario;
+}
+
+void CLI::setUsuario(Usuario* usuario)
+{
+	this->usuario = usuario;
+}

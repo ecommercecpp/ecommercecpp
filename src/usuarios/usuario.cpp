@@ -163,7 +163,30 @@ bool Usuario::login()
             throw UsuarioSenhaInvalidaException();
         }
 
-        this->autenticado = true;
+        // preenche todos os dados do usuario
+        for(auto it = dados.begin(); it != dados.end(); ++it)
+        {
+            const json::value &v = *it;
+        
+            if (v["cpf"].as_string() == this->cpf)
+            {
+                this->nome = v["nome"].as_string();
+                this->cpf = v["cpf"].as_string();
+                this->email = v["email"].as_string();
+                this->senha = v["senha"].as_string();
+                this->autenticado = true;
+                this->tipo = (v["tipo"].as_string() == "false") ? false : true;
+                Endereco endereco;
+                endereco.setRua(v["endereco"]["rua"].as_string());
+                endereco.setNumero(v["endereco"]["numero"].as_string());
+                endereco.setBairro(v["endereco"]["bairro"].as_string());
+                endereco.setCidade(v["endereco"]["cidade"].as_string());
+                endereco.setEstado(v["endereco"]["estado"].as_string());
+                endereco.setCep(v["endereco"]["cep"].as_string());
+                this->endereco = endereco;
+            }
+        }
+        
         return true;
     }
 
@@ -195,8 +218,9 @@ bool Usuario::cadastro()
         }
     }
 
+    // converte tipo de bool para string
     auto jsonArray = json::object{
-        {"tipo", tipo},
+        {"tipo", (this->tipo) ? "true" : "false"},
         {"nome", nome},
         {"cpf", cpf},
         {"email", email},

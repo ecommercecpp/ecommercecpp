@@ -42,8 +42,12 @@ EstoqueBase::EstoqueBase()
  */
 void EstoqueBase::adicionar(Produto produto, bool adicionarNoArquivo)
 {
-    // insere o estoque no array e no arquivo
-    estoque.insert(std::pair<int, Produto>(produto.getId(), produto));
+    // verifica se o produto ja existe usando o método buscar
+    if(buscar(produto.getId()) != nullptr)
+    {
+        // se já existe, apaga o produto antigo usando remover
+        remover(produto.getId());
+    }
 
     if(adicionarNoArquivo)
     {
@@ -66,6 +70,9 @@ void EstoqueBase::adicionar(Produto produto, bool adicionarNoArquivo)
         file << stringify(json);
         file.close();
     }
+
+    // insere o estoque no array e no arquivo
+    estoque.insert(std::pair<int, Produto>(produto.getId(), produto));
 }
 
 /**
@@ -73,8 +80,30 @@ void EstoqueBase::adicionar(Produto produto, bool adicionarNoArquivo)
  *
  * @param  int id
  */
-void EstoqueBase::remover(int id){
+void EstoqueBase::remover(int id)
+{
+    // remove do objeto
     estoque.erase(id);
+    // remove do arquivo json
+    std::ifstream filer("./data/estoque.json");
+    json::value json = json::parse(filer);
+    json::array &a = as_array(json);
+    filer.close();
+
+    // cria um array temporario para remover o produto
+    json::array temp;
+    for(auto it = a.begin(); it != a.end(); ++it)
+    {
+        const json::value &v = *it;
+
+        if (v["id"].as_string() != std::to_string(id))
+        {
+            temp.push_back(v);
+        }
+    }
+    std::ofstream file("./data/estoque.json");
+    file << stringify(temp);
+    file.close();
 }
 
 /**
@@ -84,8 +113,15 @@ void EstoqueBase::remover(int id){
  *
  * @return Produto*  
  */
-Produto* EstoqueBase::buscar(int id){
-    return &estoque.at(id);
+Produto* EstoqueBase::buscar(int id)
+{
+    // busca no objeto
+    auto it = estoque.find(id);
+    if(it != estoque.end())
+    {
+        return &it->second;
+    }
+    return nullptr;
 }
 
 /** @brief Retorna o estoque.
