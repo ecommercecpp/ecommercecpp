@@ -5,11 +5,13 @@
  * 
  * @param usuarioLogado 
  * @param estoque 
+ * @param carrinho 
  */
-Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque)
+Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho)
 {
 	this->usuarioLogado = usuarioLogado;
 	this->estoque = estoque;
+	this->carrinho = carrinho;
 }
 
 /**
@@ -26,6 +28,7 @@ Loja::~Loja()
 {
 	delete usuarioLogado;
 	delete estoque;
+	delete carrinho;
 }
 
 /**
@@ -45,8 +48,58 @@ void Loja::mostrarLoja()
 	}
 	else
 	{
-		std::cout << "Digite os IDs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
+		opcoesUsuario();
 	}
+}
+
+void Loja::adicionarProdutoCarrinho()
+{
+	std::cout << "Digite os IDs dos produtos para adicionar ao carrinho e digite 0 para sair" << std::endl;
+	int id;
+	std::cin >> id;
+	while (id != 0)
+	{
+		Produto *produto = estoque->buscar(id);
+		if (produto != nullptr)
+		{
+			carrinho->adicionarProduto(id);
+		}
+		else
+		{
+			std::cout << "Produto nao encontrado" << std::endl;
+		}
+		std::cin >> id;
+	}
+}
+
+void Loja::opcoesUsuario()
+{
+	std::cout << std::endl << "Opcoes:" << std::endl;
+	std::cout << "1. Adicionar produto no carrinho" << std::endl;
+	std::cout << "3. Listar estoque novamente" << std::endl;
+	std::cout << "4. Sair" << std::endl << std::endl;
+
+	int opcao;
+	std::cin >> opcao;
+
+	switch (opcao)
+	{
+		case 1:
+			adicionarProdutoCarrinho();
+			break;
+		case 3:
+			estoque->listarEstoque();
+			break;
+		case 4:
+			usuarioLogado->logout();
+			return;
+			break;
+		default:
+			opcoesUsuario();
+			break;
+	}
+
+	mostrarLoja();
 }
 
 void Loja::opcoesAdm()
@@ -63,10 +116,10 @@ void Loja::opcoesAdm()
 	switch (opcao)
 	{
 		case 1:
-			adicionarProduto();
+			adicionarProdutoEstoque();
 			break;
 		case 2:
-			removerProduto();
+			removerProdutoEstoque();
 			break;
 		case 3:
 			estoque->listarEstoque();
@@ -83,7 +136,7 @@ void Loja::opcoesAdm()
 	mostrarLoja();
 }
 
-void Loja::removerProduto()
+void Loja::removerProdutoEstoque()
 {
 	std::cout << std::endl << "Remover Produto:" << std::endl;
 
@@ -105,7 +158,7 @@ void Loja::removerProduto()
 	opcoesAdm();
 }
 
-void Loja::adicionarProduto()
+void Loja::adicionarProdutoEstoque()
 {
 	std::cout << std::endl << "Adicionar ou atualizar Produto:" << std::endl;
 

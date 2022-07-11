@@ -64,7 +64,7 @@ void CLI::mostrarLoja()
 		estoque = dynamic_cast<EstoqueCliente*>(new EstoqueCliente());
 	}
 
-	Loja loja(getUsuario(), estoque);
+	Loja loja(getUsuario(), estoque, new Carrinho(getUsuario()->getCpf()));
 	loja.mostrarLoja();
 
 	mostrarLoja();

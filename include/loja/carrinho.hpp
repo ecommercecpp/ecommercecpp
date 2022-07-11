@@ -6,11 +6,13 @@
 class Carrinho
 {
 	protected:
-		std::vector<Produto*> produtos;
+		std::vector<int> ids_produtos;
+		std::string cpf;
 	public:
-		Carrinho();
+		Carrinho(std::string cpf);
 		~Carrinho();
-		void adicionarProduto(Produto* produto);
+		void adicionarProduto(int id);
+		std::vector<int> getCarrinho();
 };
 
 #endif
