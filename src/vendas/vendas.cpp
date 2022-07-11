@@ -8,7 +8,33 @@ int Vendas::controleId = 1;
  */
 Vendas::Vendas()
 {
+	std::ifstream filer("./data/vendas.json");
+    json::value json = json::parse(filer);
+	const json::array &dados = as_array(json);
+	for(auto it = dados.begin(); it != dados.end(); ++it)
+	{
+		const json::value &v = *it;
+		int id = std::stoi(v["id"].as_string());
+		std::string cpf = v["cpf"].as_string();
+		std::vector<Produto*> produtos;
 
+		// para cada item do array de "produtos"
+		const json::array &produtosJson = as_array(v["produtos"]);
+		for(auto it2 = produtosJson.begin(); it2 != produtosJson.end(); ++it2)
+		{
+			const json::value &v2 = *it2;
+
+			int id = std::stoi(v2["id"].as_string());
+			std::string nome = v2["nome"].as_string();
+			std::string descricao = v2["descricao"].as_string();
+			double preco = std::stod(v2["preco"].as_string());
+			double qtd = std::stod(v2["qtd"].as_string());
+			produtos.push_back(new Produto(id, nome, descricao, qtd, preco));
+		}
+
+		this->vendas[id][cpf] = produtos;
+		controleId = id + 1;
+	}
 }
 
 /**

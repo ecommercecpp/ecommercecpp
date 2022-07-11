@@ -23,6 +23,7 @@ class Loja
 		void opcoesAdm();
 		void opcoesUsuario();
 		void finalizarCompra();
+		void listarCompras();
 };
 
 #endif

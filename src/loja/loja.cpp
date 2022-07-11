@@ -33,6 +33,15 @@ Loja::~Loja()
 	delete vendas;
 }
 
+void Loja::listarCompras()
+{
+	std::cout << "Listar Compras" << std::endl;
+}
+
+/**
+ * @brief Finaliza a compra do carrinho
+ * 
+ */
 void Loja::finalizarCompra()
 {
 	listarProdutosNoCarrinho();
@@ -227,31 +236,43 @@ void Loja::opcoesAdm()
 	std::cout << "1. Adicionar ou atualizar algum produto no estoque" << std::endl;
 	std::cout << "2. Remover algum produto no estoque" << std::endl;
 	std::cout << "3. Listar estoque novamente" << std::endl;
-	std::cout << "4. Sair" << std::endl << std::endl;
+	std::cout << "4. Listar compras" << std::endl;
+	std::cout << "5. Sair" << std::endl << std::endl;
 
-	int opcao;
+	std::string opcao;
 	std::cin >> opcao;
 
-	switch (opcao)
+	// verifica se opção é um número de 1 a 5, caso contrário, volta para o menu de administrador
+	if (opcao.size() > 1 || opcao.size() == 0 || opcao[0] < '1' || opcao[0] > '5')
 	{
-		case 1:
-			adicionarProdutoEstoque();
-			break;
-		case 2:
-			removerProdutoEstoque();
-			break;
-		case 3:
-			estoque->listarEstoque();
-			break;
-		case 4:
-			usuarioLogado->logout();
-			return;
-			break;
-		default:
-			opcoesAdm();
-			break;
+		opcoesAdm();
 	}
-
+	else
+	{
+		switch (opcao[0])
+		{
+			case '1':
+				adicionarProdutoEstoque();
+				break;
+			case '2':
+				removerProdutoEstoque();
+				break;
+			case '3':
+				estoque->listarEstoque();
+				break;
+			case '4':
+				listarCompras();
+				break;
+			case '5':
+				usuarioLogado->logout();
+				return;
+				break;
+			default:
+				opcoesAdm();
+				break;
+		}
+	}
+	
 	opcoesAdm();
 }
 
@@ -277,8 +298,6 @@ void Loja::removerProdutoEstoque()
 			estoque->remover(id);
 		}
 	}
-
-	opcoesAdm();
 }
 
 /**
@@ -337,6 +356,4 @@ void Loja::adicionarProdutoEstoque()
 
 		estoque->adicionar(produto, true);
 	}
-
-	opcoesAdm();
 }
