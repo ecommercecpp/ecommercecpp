@@ -104,6 +104,7 @@ void CLI::lerOpcoesMenuInicial()
 	}
 	else if(opcao == "3")
 	{
+		exit(0);
 		return;
 	}
 	else
