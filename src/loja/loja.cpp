@@ -52,8 +52,10 @@ void Loja::mostrarLoja()
 void Loja::opcoesAdm()
 {
 	std::cout << std::endl << "Opcoes de administrador:" << std::endl;
-	std::cout << "1. Adicionar ou atualizar algum produto" << std::endl;
-	std::cout << "3. Sair" << std::endl << std::endl;
+	std::cout << "1. Adicionar ou atualizar algum produto no estoque" << std::endl;
+	std::cout << "2. Remover algum produto no estoque" << std::endl;
+	std::cout << "3. Listar estoque novamente" << std::endl;
+	std::cout << "4. Sair" << std::endl << std::endl;
 
 	int opcao;
 	std::cin >> opcao;
@@ -63,13 +65,44 @@ void Loja::opcoesAdm()
 		case 1:
 			adicionarProduto();
 			break;
+		case 2:
+			removerProduto();
+			break;
 		case 3:
+			estoque->listarEstoque();
+			break;
+		case 4:
+			usuarioLogado->logout();
+			return;
 			break;
 		default:
+			opcoesAdm();
 			break;
 	}
 
 	mostrarLoja();
+}
+
+void Loja::removerProduto()
+{
+	std::cout << std::endl << "Remover Produto:" << std::endl;
+
+	std::string comando;
+
+	while (comando != "sair")
+	{
+		std::cout << "Digite o ID do produto que deseja remover ou sair:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+		{
+			int id = std::stoi(comando);
+			estoque->remover(id);
+		}
+	}
+
+	opcoesAdm();
 }
 
 void Loja::adicionarProduto()
@@ -123,7 +156,7 @@ void Loja::adicionarProduto()
 		Produto produto(idInt, nome, descricao, quantidadeDouble, precoDouble);
 
 		estoque->adicionar(produto, true);
-
-		opcoesAdm();
 	}
+
+	opcoesAdm();
 }

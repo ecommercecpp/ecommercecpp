@@ -14,6 +14,7 @@ class Loja
 		~Loja();
 		void mostrarLoja();
 		void adicionarProduto();
+		void removerProduto();
 		void opcoesAdm();
 };
 

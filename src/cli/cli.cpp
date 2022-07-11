@@ -43,14 +43,15 @@ CLI::CLI(int argc, char *argv[])
  */
 void CLI::mostrarLoja()
 {
-	std::cout	<< std::endl << std::endl << "Nossa loja:" << std::endl;
-	
 	// verifica se o usuario está autenticado
 	if (getUsuario()->estaAutenticado() == false)
 	{
+		titulo();
 		mostrarOpcoesMenuInicial();
 		lerOpcoesMenuInicial();
 	}
+
+	std::cout	<< std::endl << std::endl << "Nossa loja:" << std::endl;
 	
 	EstoqueBase *estoque;
 	if(getUsuario()->ehAdministrador())
@@ -65,6 +66,8 @@ void CLI::mostrarLoja()
 
 	Loja loja(getUsuario(), estoque);
 	loja.mostrarLoja();
+
+	mostrarLoja();
 }
 
 /**
