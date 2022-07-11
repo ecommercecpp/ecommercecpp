@@ -175,7 +175,15 @@ bool Usuario::login()
                 this->email = v["email"].as_string();
                 this->senha = v["senha"].as_string();
                 this->autenticado = true;
-                this->tipo = (v["tipo"].as_string() == "false") ? false : true;
+                if(v["tipo"].as_string() == "false")
+                {
+                    this->tipo = false;
+                }
+                else
+                {
+                    this->tipo = true;
+                }
+
                 Endereco endereco;
                 endereco.setRua(v["endereco"]["rua"].as_string());
                 endereco.setNumero(v["endereco"]["numero"].as_string());

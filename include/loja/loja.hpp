@@ -13,6 +13,8 @@ class Loja
 		Loja();
 		~Loja();
 		void mostrarLoja();
+		void adicionarProduto();
+		void opcoesAdm();
 };
 
 #endif
