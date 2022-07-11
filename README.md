@@ -55,7 +55,7 @@ Para começar a utilizar, após a instalação, basta rodar:
 - Para Windows:
 
 ```sh
-  main.exe
+  ./main.exe
 ```
 
 ## ☕ User Stories
