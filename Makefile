@@ -35,7 +35,7 @@ clean:
 	$(RM) -r $(OBJDIR)/* $(BINDIR)/* coverage/* *.gcda *.gcno
 
 check:
-	./$(TARGET) --help
+	./$(BINDIR)/$(TARGET) --help
 
 distcheck:
 	$(RM) -r $(BUILDDIR)/*
