@@ -93,8 +93,8 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:a22e96f07931553899bf09d865a50d8d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a22e96f07931553899bf09d865a50d8d0">getTipo</a> ()</td></tr>
 <tr class="memdesc:a22e96f07931553899bf09d865a50d8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tipo do usuario.  <a href="class_usuario.html#a22e96f07931553899bf09d865a50d8d0">Mais...</a><br /></td></tr>
 <tr class="separator:a22e96f07931553899bf09d865a50d8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e03fe894f5c77c22fe718e510bd99e"><td class="memItemLeft" align="right" valign="top"><a id="a09e03fe894f5c77c22fe718e510bd99e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTipo</b> (bool tipo)</td></tr>
+<tr class="memitem:a09e03fe894f5c77c22fe718e510bd99e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a09e03fe894f5c77c22fe718e510bd99e">setTipo</a> (bool tipo)</td></tr>
+<tr class="memdesc:a09e03fe894f5c77c22fe718e510bd99e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seta o tipo do usuario.  <a href="class_usuario.html#a09e03fe894f5c77c22fe718e510bd99e">Mais...</a><br /></td></tr>
 <tr class="separator:a09e03fe894f5c77c22fe718e510bd99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a6a430d055449a8e9d6c06253a272e"><td class="memItemLeft" align="right" valign="top"><a id="ab6a6a430d055449a8e9d6c06253a272e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#ab6a6a430d055449a8e9d6c06253a272e">setNome</a> (std::string nome)</td></tr>
@@ -140,6 +140,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#abeead7be2671f6a836f592fcf21ef611">logout</a> ()</td></tr>
 <tr class="memdesc:abeead7be2671f6a836f592fcf21ef611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza o logout do usuario. <br /></td></tr>
 <tr class="separator:abeead7be2671f6a836f592fcf21ef611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b246c59d9fec2fc428a753ea1cf454"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_usuario.html">Usuario</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_usuario.html#a28b246c59d9fec2fc428a753ea1cf454">buscarUsuario</a> (std::string cpf)</td></tr>
+<tr class="memdesc:a28b246c59d9fec2fc428a753ea1cf454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busca um usuário por CPF.  <a href="class_usuario.html#a28b246c59d9fec2fc428a753ea1cf454">Mais...</a><br /></td></tr>
+<tr class="separator:a28b246c59d9fec2fc428a753ea1cf454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
@@ -166,6 +169,33 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>senha</b></td>
 <tr class="separator:a5f324af32e988e55160d5f3651b5d2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentação dos métodos</h2>
+<a id="a28b246c59d9fec2fc428a753ea1cf454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b246c59d9fec2fc428a753ea1cf454">&#9670;&nbsp;</a></span>buscarUsuario()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_usuario.html">Usuario</a> * Usuario::buscarUsuario </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>cpf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Busca um usuário por CPF. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpf</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Usuario* </dd></dl>
+
+</div>
+</div>
 <a id="ad30a146aab0c8a4700924a896c952ad2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad30a146aab0c8a4700924a896c952ad2">&#9670;&nbsp;</a></span>cadastro()</h2>
 
@@ -373,6 +403,32 @@ false </dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>true </dd>
 <dd>
 false </dd></dl>
+
+</div>
+</div>
+<a id="a09e03fe894f5c77c22fe718e510bd99e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e03fe894f5c77c22fe718e510bd99e">&#9670;&nbsp;</a></span>setTipo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Usuario::setTipo </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>tipo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Seta o tipo do usuario. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tipo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
