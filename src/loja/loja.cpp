@@ -33,9 +33,13 @@ Loja::~Loja()
 	delete vendas;
 }
 
+/**
+ * @brief Lista as vendas realizadas
+ * 
+ */
 void Loja::listarVendas()
 {
-	std::cout << "Listar Vendas" << std::endl;
+	std::cout << std::endl << "Vendas" << std::endl;
 	vendas->listarVendas();
 }
 
