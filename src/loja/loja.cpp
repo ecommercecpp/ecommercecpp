@@ -33,9 +33,10 @@ Loja::~Loja()
 	delete vendas;
 }
 
-void Loja::listarCompras()
+void Loja::listarVendas()
 {
-	std::cout << "Listar Compras" << std::endl;
+	std::cout << "Listar Vendas" << std::endl;
+	vendas->listarVendas();
 }
 
 /**
@@ -261,7 +262,7 @@ void Loja::opcoesAdm()
 				estoque->listarEstoque();
 				break;
 			case '4':
-				listarCompras();
+				listarVendas();
 				break;
 			case '5':
 				usuarioLogado->logout();

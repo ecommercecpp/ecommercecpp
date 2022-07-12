@@ -43,7 +43,19 @@ Vendas::Vendas()
  */
 Vendas::~Vendas()
 {
-	
+	// para cada id
+	for(auto it = this->vendas.begin(); it != this->vendas.end(); ++it)
+	{
+		// para cada cpf
+		for(auto it2 = it->second.begin(); it2 != it->second.end(); ++it2)
+		{
+			// para cada produto
+			for(auto it3 = it2->second.begin(); it3 != it2->second.end(); ++it3)
+			{
+				delete *it3;
+			}
+		}
+	}
 }
 
 /**
@@ -160,4 +172,57 @@ void Vendas::adicionarVenda(std::map<int, double> dadosCarrinho, EstoqueBase *es
 	gerarJsonVenda(controleId, cpf);
 	atualizaEstoque(controleId, cpf, estoque);
 	controleId++;
+}
+
+double Vendas::valorVenda(int controleId, std::string cpf)
+{
+	std::ifstream filer("./data/vendas.json");
+	json::value json = json::parse(filer);
+	filer.close();
+	const json::array &dados = as_array(json);
+	for(auto it = dados.begin(); it != dados.end(); ++it)
+	{
+		const json::value &v = *it;
+		if(std::stoi(v["id"].as_string()) == controleId && v["cpf"].as_string() == cpf)
+		{
+			return std::stod(v["valor"].as_string());
+		}
+	}
+
+	return 0;
+}
+
+std::string Vendas::dataVenda(int controleId, std::string cpf)
+{
+	std::ifstream filer("./data/vendas.json");
+	json::value json = json::parse(filer);
+	filer.close();
+	const json::array &dados = as_array(json);
+	for(auto it = dados.begin(); it != dados.end(); ++it)
+	{
+		const json::value &v = *it;
+		if(std::stoi(v["id"].as_string()) == controleId && v["cpf"].as_string() == cpf)
+		{
+			return v["data"].as_string();
+		}
+	}
+
+	return "";
+}
+
+void Vendas::listarVendas()
+{
+	// exibe: id, cpf, data, valor, quantidade de produtos
+	for(auto venda: vendas)
+	{
+		for(auto produto: venda.second)
+		{
+			std::cout << "Venda: " << venda.first << std::endl;
+			std::cout << "CPF: " << produto.first << std::endl;
+			std::cout << "Data: " << dataVenda(venda.first, produto.first) << std::endl;
+			std::cout << "Valor: " << valorVenda(venda.first, produto.first) << std::endl;
+			std::cout << "Produtos: " << produto.second.size() << std::endl;
+			std::cout << std::endl;
+		}
+	}
 }

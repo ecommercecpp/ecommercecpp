@@ -15,6 +15,9 @@ class Vendas
 		void gerarJsonVenda(int controleId, std::string cpf);
 		std::string dataAtual();
 		void atualizaEstoque(int controleId, std::string cpf, EstoqueBase *estoque);
+		void listarVendas();
+		std::string dataVenda(int controleId, std::string cpf);
+		double valorVenda(int controleId, std::string cpf);
 };
 
 #endif
