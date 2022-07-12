@@ -18,6 +18,7 @@ class Vendas
 		void listarVendas();
 		std::string dataVenda(int controleId, std::string cpf);
 		double valorVenda(int controleId, std::string cpf);
+		void gerarNotaFiscal(int id);
 };
 
 #endif

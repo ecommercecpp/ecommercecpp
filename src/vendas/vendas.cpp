@@ -230,3 +230,18 @@ void Vendas::listarVendas()
 
 	std::cout << "+-----------------------------------------------+"<< std::endl;
 }
+
+void Vendas::gerarNotaFiscal(int id)
+{
+	// verifica se tem uma venda com o id informado
+	if(vendas.find(id) == vendas.end())
+	{
+		std::cout << "Venda não encontrada" << std::endl;
+		return;
+	}
+	else
+	{
+		NotaFiscal notaFiscal(vendas[id]);
+		notaFiscal.gerarNotaFiscal();
+	}
+}

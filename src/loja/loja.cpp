@@ -58,7 +58,20 @@ void Loja::listarVendas()
  */
 void Loja::gerarNotaFiscal()
 {
-	std::cout << " Nota fiscal " << std::endl;
+	std::string comando, idVenda;
+	
+	while (comando != "sair")
+	{
+		std::cout << "Digite o ID da venda que deseja gerar a nota fiscal:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			idVenda = comando;
+
+		int id = std::stoi(idVenda);
+		vendas->gerarNotaFiscal(id);
+	}
 }
 
 /**
