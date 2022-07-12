@@ -7,6 +7,9 @@ export/*
 # build
 build/*
 
+# bin
+bin/*
+
 # Prerequisites
 *.d
 
