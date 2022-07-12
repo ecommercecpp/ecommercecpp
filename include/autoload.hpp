@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 
 // include third_party
 #include "../third_party/json.hpp"

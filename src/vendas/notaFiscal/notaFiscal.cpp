@@ -32,37 +32,48 @@ NotaFiscal::~NotaFiscal()
  */
 void NotaFiscal::gerarNotaFiscal()
 {
-	std::cout << std::endl << "Nota Fiscal" << std::endl;
+	std::ofstream fw("./notafiscal.txt", std::ofstream::out);
+
+	if (!fw.is_open())
+	{
+		std::cout << "Erro ao abrir arquivo de nota fiscal!" << std::endl;
+		return;
+	}
+
+	fw << "Nota Fiscal" << std::endl;
+
 	for (auto cpf: venda)
 	{
 		Usuario* usuario = new Usuario();
 		usuario = usuario->buscarUsuario(cpf.first);
 
 		// Dados do cliente
-		std::cout << "+-----------------------------------------------------+"<< std::endl;
-		std::cout << "|                       CLIENTE                       |"<< std::endl;
-		std::cout << "+-----------------------------------------------------+"<< std::endl;
-		std::cout << "| NOME: " << usuario->getNome() << " |" << std::endl;
-		std::cout << "| CPF: " << usuario->getCpf() << " |" << std::endl;
-		std::cout << "| E-MAIL: " << usuario->getEmail() << " |" << std::endl;
-		std::cout << "+-----------------------------------------------------+"<< std::endl;
-		std::cout << "|                       ENDERECO                      |" << std::endl;
-		std::cout << "+-----------------------------------------------------+"<< std::endl;
-		std::cout << "| RUA: " << usuario->getEndereco().getRua() << " |" << std::endl;
-		std::cout << "| NUMERO: " << usuario->getEndereco().getNumero() << " |" << std::endl;
-		std::cout << "| BAIRRO: " << usuario->getEndereco().getBairro() << " |" << std::endl;
-		std::cout << "| CIDADE: " << usuario->getEndereco().getCidade() << " |" << std::endl;
-		std::cout << "| ESTADO: " << usuario->getEndereco().getEstado() << " |" << std::endl;
-		std::cout << "| CEP: " << usuario->getEndereco().getCep() << " |" << std::endl;
-		std::cout << "+-----------------------------------------------------+"<< std::endl;
-		std::cout << "|                       PRODUTOS                      |" << std::endl;
-		std::cout << "+-----------------------------------------------------+"<< std::endl;
+		fw  << "+-----------------------------------------------------+"<< std::endl;
+		fw  << "|                       CLIENTE                       |"<< std::endl;
+		fw  << "+-----------------------------------------------------+"<< std::endl;
+		fw  << "| NOME: " << usuario->getNome() << " |" << std::endl;
+		fw  << "| CPF: " << usuario->getCpf() << " |" << std::endl;
+		fw  << "| E-MAIL: " << usuario->getEmail() << " |" << std::endl;
+		fw  << "+-----------------------------------------------------+"<< std::endl;
+		fw  << "|                       ENDERECO                      |" << std::endl;
+		fw  << "+-----------------------------------------------------+"<< std::endl;
+		fw  << "| RUA: " << usuario->getEndereco().getRua() << " |" << std::endl;
+		fw  << "| NUMERO: " << usuario->getEndereco().getNumero() << " |" << std::endl;
+		fw  << "| BAIRRO: " << usuario->getEndereco().getBairro() << " |" << std::endl;
+		fw  << "| CIDADE: " << usuario->getEndereco().getCidade() << " |" << std::endl;
+		fw  << "| ESTADO: " << usuario->getEndereco().getEstado() << " |" << std::endl;
+		fw  << "| CEP: " << usuario->getEndereco().getCep() << " |" << std::endl;
+		fw  << "+-----------------------------------------------------+"<< std::endl;
+		fw  << "|                       PRODUTOS                      |" << std::endl;
+		fw  << "+-----------------------------------------------------+"<< std::endl;
 		for (auto produto : cpf.second)
 		{
-			std::cout << "| NOME: " << produto->getNome() << " |" << std::endl;
-			std::cout << "| PRECO: " << produto->getPreco() << " |" << std::endl;
-			std::cout << "| QUANTIDADE: " << produto->getQtd() << " |" << std::endl;
-			std::cout << "+-----------------------------------------------------+"<< std::endl;
+			fw  << "| NOME: " << produto->getNome() << " |" << std::endl;
+			fw  << "| PRECO: " << produto->getPreco() << " |" << std::endl;
+			fw  << "| QUANTIDADE: " << produto->getQtd() << " |" << std::endl;
+			fw  << "+-----------------------------------------------------+"<< std::endl;
 		}
 	}
+
+	fw.close();
 }

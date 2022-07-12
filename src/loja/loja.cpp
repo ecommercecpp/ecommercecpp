@@ -62,7 +62,7 @@ void Loja::gerarNotaFiscal()
 	
 	while (comando != "sair")
 	{
-		std::cout << "Digite o ID da venda que deseja gerar a nota fiscal:" << std::endl;
+		std::cout << "Digite o ID da venda que deseja gerar a nota fiscal ou sair:" << std::endl;
 		std::cin >> comando;
 		if (comando == "sair")
 			break;
