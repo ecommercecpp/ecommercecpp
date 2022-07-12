@@ -16,6 +16,29 @@
 
 > O EcommerceCPP possui uma política de qualidade de código, onde garantimos que todos os códigos são testados, seguros e corretos. Status:           [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ecommercecpp_ecommercecpp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ecommercecpp_ecommercecpp)
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Sumário</summary>
+  <ol>
+    <li>
+      <a href="#ecommercecpp">O Projeto</a>
+    </li>
+    <li>
+      <a href="#começando-">Começando 🚀</a>
+      <ul>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
+      </ul>
+    </li>
+    <li><a href="#como-utilizar-o-ecommercecpp">Como utilizar o EcommerceCPP</a></li>
+    <li><a href="#contruibuindo">Contruibuindo</a></li>
+    <li><a href="#-user-stories">☕ User Stories</a></li>
+    <li><a href="#-colaboradores">🤝 Colaboradores</a></li>
+    <li><a href="#-links-úteis">🔗 Links Úteis</a></li>
+  </ol>
+</details>
+
+
 ## Começando 🚀
 
 Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
