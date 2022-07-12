@@ -212,17 +212,21 @@ std::string Vendas::dataVenda(int controleId, std::string cpf)
 
 void Vendas::listarVendas()
 {
+	std::cout << "+----+-----+------+-------------+---------------+"<< std::endl;
+    std::cout << "| ID | CPF | DATA | VALOR TOTAL | QTD. PRODUTOS |"<< std::endl;
+	std::cout << "+-----------------------------------------------+"<< std::endl;
 	// exibe: id, cpf, data, valor, quantidade de produtos
 	for(auto venda: vendas)
 	{
 		for(auto produto: venda.second)
 		{
-			std::cout << "Venda: " << venda.first << std::endl;
-			std::cout << "CPF: " << produto.first << std::endl;
-			std::cout << "Data: " << dataVenda(venda.first, produto.first) << std::endl;
-			std::cout << "Valor: " << valorVenda(venda.first, produto.first) << std::endl;
-			std::cout << "Produtos: " << produto.second.size() << std::endl;
-			std::cout << std::endl;
+			std::cout << "| " << venda.first;
+			std::cout << "| " << produto.first;
+			std::cout << "| " << dataVenda(venda.first, produto.first);
+			std::cout << "| " << valorVenda(venda.first, produto.first);
+			std::cout << "| " << produto.second.size() << " |" << std::endl;
 		}
 	}
+
+	std::cout << "+-----------------------------------------------+"<< std::endl;
 }
