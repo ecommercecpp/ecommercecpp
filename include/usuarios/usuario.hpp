@@ -32,5 +32,6 @@ class Usuario{
         bool login();
         bool cadastro();
         void logout();
+        Usuario* buscarUsuario(std::string cpf);
 };
 #endif

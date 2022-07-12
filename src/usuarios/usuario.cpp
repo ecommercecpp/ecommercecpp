@@ -273,7 +273,59 @@ bool Usuario::getTipo()
     return this->tipo;
 }
 
+/**
+ * @brief  Seta o tipo do usuario
+ * 
+ * @param tipo 
+ */
 void Usuario::setTipo(bool tipo)
 {
     this->tipo = tipo;
+}
+
+
+
+Usuario* Usuario::buscarUsuario(std::string cpf)
+{
+    std::ifstream filer("./data/usuarios.json");
+    json::value json = json::parse(filer);
+    filer.close();
+    
+    const json::array &dados = as_array(json);
+    if (dados.size() > 0)
+    {
+        for(auto it = dados.begin(); it != dados.end(); ++it)
+        {
+            const json::value &v = *it;
+
+            if (v["cpf"].as_string() == cpf)
+            {
+                Usuario *usuario = new Usuario();
+                usuario->nome = v["nome"].as_string();
+                usuario->cpf = v["cpf"].as_string();
+                usuario->email = v["email"].as_string();
+                usuario->senha = v["senha"].as_string();
+                usuario->autenticado = true;
+                if(v["tipo"].as_string() == "false")
+                {
+                    usuario->tipo = false;
+                }
+                else
+                {
+                    usuario->tipo = true;
+                }
+
+                Endereco endereco;
+                endereco.setRua(v["endereco"]["rua"].as_string());
+                endereco.setNumero(v["endereco"]["numero"].as_string());
+                endereco.setBairro(v["endereco"]["bairro"].as_string());
+                endereco.setCidade(v["endereco"]["cidade"].as_string());
+                endereco.setEstado(v["endereco"]["estado"].as_string());
+                endereco.setCep(v["endereco"]["cep"].as_string());
+                usuario->endereco = endereco;
+                return usuario;
+            }
+        }
+    }
+    return nullptr;
 }
