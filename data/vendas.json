@@ -1,1 +1,1 @@
-[{"id":1,"cpf":"12312312312","data":"11/07/2022","valor":966.000000,"produtos":[{"id":42,"nome":"Produto 42","descricao":"Produto legal que é o numero 42","preco":483.000000,"qtd":2.000000}]}]
+[{"id":1,"cpf":"12312312312","data":"11/07/2022","valor":966.000000,"produtos":[{"id":42,"nome":"Produto 42","descricao":"Produto legal que é o numero 42","preco":483.000000,"qtd":2.000000}]},{"id":2,"cpf":"12341234123","data":"12/07/2022","valor":943.000000,"produtos":[{"id":41,"nome":"Produto 41","descricao":"Produto legal que é o numero 41","preco":471.500000,"qtd":2.000000}]}]
