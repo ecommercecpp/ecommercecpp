@@ -84,6 +84,11 @@ void NotaFiscal::gerarNotaFiscal()
 	std::cout << "Nota fiscal gerada com sucesso em	" << nomeArquivo << std::endl;
 }
 
+/**
+ * @brief Gera um uuid unico pra nota fiscal
+ * 
+ * @return uuids::uuid 
+ */
 uuids::uuid NotaFiscal::gerarId()
 {
 	std::random_device rd;

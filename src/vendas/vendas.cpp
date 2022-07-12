@@ -174,6 +174,13 @@ void Vendas::adicionarVenda(std::map<int, double> dadosCarrinho, EstoqueBase *es
 	controleId++;
 }
 
+/**
+ * @brief Retorna o valor da venda
+ * 
+ * @param controleId 
+ * @param cpf 
+ * @return double 
+ */
 double Vendas::valorVenda(int controleId, std::string cpf)
 {
 	std::ifstream filer("./data/vendas.json");
@@ -192,6 +199,13 @@ double Vendas::valorVenda(int controleId, std::string cpf)
 	return 0;
 }
 
+/**
+ * @brief Retorna a data da venda
+ * 
+ * @param controleId 
+ * @param cpf 
+ * @return std::string 
+ */
 std::string Vendas::dataVenda(int controleId, std::string cpf)
 {
 	std::ifstream filer("./data/vendas.json");
@@ -210,6 +224,10 @@ std::string Vendas::dataVenda(int controleId, std::string cpf)
 	return "";
 }
 
+/**
+ * @brief Lista as vendas
+ * 
+ */
 void Vendas::listarVendas()
 {
 	std::cout << "+----+-----+------+-------------+---------------+"<< std::endl;
@@ -231,6 +249,11 @@ void Vendas::listarVendas()
 	std::cout << "+-----------------------------------------------+"<< std::endl;
 }
 
+/**
+ * @brief Gera uma nota fiscal pra venda
+ * 
+ * @param id 
+ */
 void Vendas::gerarNotaFiscal(int id)
 {
 	// verifica se tem uma venda com o id informado

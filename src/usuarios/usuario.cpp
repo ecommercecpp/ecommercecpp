@@ -283,8 +283,12 @@ void Usuario::setTipo(bool tipo)
     this->tipo = tipo;
 }
 
-
-
+/**
+ * @brief Busca um usuário por CPF
+ * 
+ * @param cpf 
+ * @return Usuario* 
+ */
 Usuario* Usuario::buscarUsuario(std::string cpf)
 {
     std::ifstream filer("./data/usuarios.json");
