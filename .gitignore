@@ -1,6 +1,9 @@
 # vscode
 .vscode/*
 
+#exportacoes
+export/*
+
 # build
 build/*
 

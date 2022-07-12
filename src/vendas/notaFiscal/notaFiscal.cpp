@@ -32,7 +32,10 @@ NotaFiscal::~NotaFiscal()
  */
 void NotaFiscal::gerarNotaFiscal()
 {
-	std::string nomeArquivo = uuids::to_string(gerarId()) + ".txt";
+	std::string nomeArquivo = "./export/" + uuids::to_string(gerarId()) + ".txt";
+
+	std::cout << std::endl << "Gerando nota fiscal em " << nomeArquivo << std::endl << std::endl;
+
 	std::ofstream fw(nomeArquivo, std::ofstream::out);
 
 	if (!fw.is_open())
@@ -77,6 +80,8 @@ void NotaFiscal::gerarNotaFiscal()
 	}
 
 	fw.close();
+
+	std::cout << "Nota fiscal gerada com sucesso em	" << nomeArquivo << std::endl;
 }
 
 uuids::uuid NotaFiscal::gerarId()
