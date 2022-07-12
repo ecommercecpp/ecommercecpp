@@ -24,6 +24,7 @@ class Loja
 		void opcoesUsuario();
 		void finalizarCompra();
 		void listarVendas();
+		void gerarNotaFiscal();
 };
 
 #endif

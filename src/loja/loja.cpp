@@ -41,6 +41,24 @@ void Loja::listarVendas()
 {
 	std::cout << std::endl << "Vendas" << std::endl;
 	vendas->listarVendas();
+
+	std::cout << std::endl << "Deseja gerar alguma nota fiscal? (s/n)" << std::endl;
+	std::string opcao;
+	std::cin >> opcao;
+	std::transform(opcao.begin(), opcao.end(), opcao.begin(), ::tolower);
+	if (opcao == "s")
+	{
+		gerarNotaFiscal();
+	}
+}
+
+/**
+ * @brief 	Gera uma nota fiscal para a venda
+ * 
+ */
+void Loja::gerarNotaFiscal()
+{
+	std::cout << " Nota fiscal " << std::endl;
 }
 
 /**
