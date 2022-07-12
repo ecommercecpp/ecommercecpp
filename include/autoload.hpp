@@ -10,8 +10,8 @@
 #include <fstream>
 
 // include third_party
-#include "../third_party/json.hpp"
-#include "../third_party/uuid.hpp"
+#include "../third_party/json"
+#include "../third_party/uuid"
 
 // exceptions
 #include "./exceptions/exceptions.hpp"

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mostrarloja_78',['mostrarLoja',['../class_c_l_i.html#adbe2b8d3ece717da4d3e5e0991ff3320',1,'CLI::mostrarLoja()'],['../class_loja.html#adf94b686d63e8755ab4df0f2572ed761',1,'Loja::mostrarLoja()']]],
-  ['mostraropcoesmenuinicial_79',['mostrarOpcoesMenuInicial',['../class_c_l_i.html#a5aa34d6a77eedc95e9b2593703e87132',1,'CLI']]]
+  ['opcoesadm_61',['opcoesAdm',['../class_loja.html#a1449549ee73f6032b6fada26da036caa',1,'Loja']]],
+  ['opcoesusuario_62',['opcoesUsuario',['../class_loja.html#a22119305e06515c46d7e29639d062600',1,'Loja']]]
 ];
