@@ -4,6 +4,7 @@ TSTDIR := tests
 OBJDIR := build
 BINDIR := bin
 
+TARGET := main
 MAIN := program/main.cpp
 TESTER := program/tester.cpp
 
