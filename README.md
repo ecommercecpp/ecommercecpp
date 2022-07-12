@@ -2,10 +2,13 @@
 
 > O EcommerceCPP é uma abstração de um sistema de e-commerce.
 
-![Tamanho](https://img.shields.io/github/repo-size/ecommercecpp/ecommercecpp?style=for-the-badge)
-![Linguagens](https://img.shields.io/github/languages/count/ecommercecpp/ecommercecpp?style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/ecommercecpp/ecommercecpp?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues/ecommercecpp/ecommercecpp?style=for-the-badge)
+[![Contributors][contributors-shield]][contributors-url]
+[![Tamanho][tamanho-shield]][tamanho-url]
+[![Linguagens][linguagens-shield]][linguagens-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 <br/>
 
@@ -140,3 +143,18 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 - [Parser Json](https://github.com/eteran/cpp-json)
 - [UUID](https://github.com/mariusbancila/stduuid)
 - [GLS](https://github.com/microsoft/GSL)
+
+[linguagens-shield]: https://img.shields.io/github/languages/count/ecommercecpp/ecommercecpp?style=for-the-badge
+[linguagens-url]: https://github.com/ecommercecpp/ecommercecpp/
+[tamanho-shield]: https://img.shields.io/github/repo-size/ecommercecpp/ecommercecpp?style=for-the-badge
+[tamanho-url]: https://github.com/ecommercecpp/ecommercecpp/
+[contributors-shield]: https://img.shields.io/github/contributors/ecommercecpp/ecommercecpp.svg?style=for-the-badge
+[contributors-url]: https://github.com/ecommercecpp/ecommercecpp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ecommercecpp/ecommercecpp.svg?style=for-the-badge
+[forks-url]: https://github.com/ecommercecpp/ecommercecpp/network/members
+[stars-shield]: https://img.shields.io/github/stars/ecommercecpp/ecommercecpp.svg?style=for-the-badge
+[stars-url]: https://github.com/ecommercecpp/ecommercecpp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ecommercecpp/ecommercecpp.svg?style=for-the-badge
+[issues-url]: https://github.com/ecommercecpp/ecommercecpp/issues
+[license-shield]: https://img.shields.io/github/license/ecommercecpp/ecommercecpp.svg?style=for-the-badge
+[license-url]: https://github.com/ecommercecpp/ecommercecpp/blob/master/LICENSE.txt
