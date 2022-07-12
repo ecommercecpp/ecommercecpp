@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 # EcommerceCPP
 
 > O EcommerceCPP é uma abstração de um sistema de e-commerce.
@@ -20,11 +22,13 @@ Para começar a utilizar o repositório, você precisa cumprir todos os requisit
 
 ### Pré-requisitos
 
-- Ter um compilador c++ instalado.
-- Ter o mingw na versão 11.2.0
-- Ter o cmake instalado.
-- Ter o git instalado.
-- Estar em um ambiente linux
+* Ter um compilador c++ instalado.
+* Ter o mingw na versão 11.2.0 e/ou c++ na versão 17 ou superior.
+* Ter o cmake instalado.
+* Ter o git instalado.
+* Estar em um ambiente linux e/ou derivado.
+
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
 ### Instalação
 
@@ -45,6 +49,7 @@ Para começar a utilizar o repositório, você precisa cumprir todos os requisit
     ```sh
     make test
     ```
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
 ## Como utilizar o EcommerceCPP
 
@@ -60,6 +65,23 @@ Para começar a utilizar, após a instalação, basta rodar:
 ```sh
   ./main.exe
 ```
+
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+
+## Contruibuindo
+
+As contribuições são o que tornam a comunidade de código aberto um lugar incrível para aprender, inspirar e criar. Quaisquer contribuições que você fizer são **muito apreciadas**.
+
+Se você tiver uma sugestão para melhorar o projeto, por favor, faça um fork do repositório e crie um pull request. Você também pode simplesmente abrir um issue com a tag "melhoria".
+Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
+
+1. Dê um fork no projeto
+2. Cria sua branch de melhoria (`git checkout -b feature/MelhoriaIncrivel`)
+3. Faça um commit de suas mudanças (`git commit -m 'feat: adicionado uma melhoria incrível'`)
+4. Faça um push para sua branch (`git push origin feature/MelhoriaIncrivel`)
+5. Abra um pull request.
+
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
 ## ☕ User Stories
     
@@ -87,6 +109,9 @@ Como Administrador, quero ver em vendas os produtos ( e suas variações ) selec
 ### Emissão de nota fiscal | [@srgoogle23](https://github.com/srgoogle23)
 
 Como administrador, quero a possibilidade de, após a venda ser efetivada, antes de realizar o envio para o cliente, conseguir emitir uma nota fiscal para o cliente, com os dados dos produtos inclusos na compra, dados de pagamento, dados do cliente e dados de entrega para o cliente, mesclando tudo em uma nota fiscal informativa para o cliente, de modo que consiga anexar isso ao pedido como documentação, para eventuais questionamentos.
+
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
