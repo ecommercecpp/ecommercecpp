@@ -221,10 +221,10 @@ void Vendas::listarVendas()
 		for(auto produto: venda.second)
 		{
 			std::cout << "| " << venda.first;
-			std::cout << "| " << produto.first;
-			std::cout << "| " << dataVenda(venda.first, produto.first);
-			std::cout << "| " << valorVenda(venda.first, produto.first);
-			std::cout << "| " << produto.second.size() << " |" << std::endl;
+			std::cout << " | " << produto.first;
+			std::cout << " | " << dataVenda(venda.first, produto.first);
+			std::cout << " | " << valorVenda(venda.first, produto.first);
+			std::cout << " | " << produto.second.size() << " |" << std::endl;
 		}
 	}
 
