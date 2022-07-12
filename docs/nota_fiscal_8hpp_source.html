@@ -72,7 +72,30 @@ $(function() {
 <div class="title">notaFiscal.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _NOTA_FISCAL_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _NOTA_FISCAL_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;autoload.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_nota_fiscal.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_nota_fiscal.html">NotaFiscal</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        std::map&lt;std::string, std::vector&lt;Produto*&gt;&gt; venda;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_nota_fiscal.html#ac4f15bec78a4dc586eac08dc35c52239">NotaFiscal</a>(std::map&lt;std::string, std::vector&lt;Produto*&gt;&gt;);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_nota_fiscal.html#a0f433ad8771c89f5417620baa3af539d">~NotaFiscal</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_nota_fiscal.html#a23dd88f7c03572f1177a6ef2c4f25556">gerarNotaFiscal</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classuuids_1_1uuid.html">uuids::uuid</a> <a class="code" href="class_nota_fiscal.html#afb9c4ddf876c16bba5135ff9589924d0">gerarId</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_nota_fiscal_html"><div class="ttname"><a href="class_nota_fiscal.html">NotaFiscal</a></div><div class="ttdef"><b>Definition:</b> notaFiscal.hpp:7</div></div>
+<div class="ttc" id="aclass_nota_fiscal_html_a0f433ad8771c89f5417620baa3af539d"><div class="ttname"><a href="class_nota_fiscal.html#a0f433ad8771c89f5417620baa3af539d">NotaFiscal::~NotaFiscal</a></div><div class="ttdeci">~NotaFiscal()</div><div class="ttdoc">Destroy the Nota Fiscal:: Nota Fiscal object.</div><div class="ttdef"><b>Definition:</b> notaFiscal.cpp:18</div></div>
+<div class="ttc" id="aclass_nota_fiscal_html_a23dd88f7c03572f1177a6ef2c4f25556"><div class="ttname"><a href="class_nota_fiscal.html#a23dd88f7c03572f1177a6ef2c4f25556">NotaFiscal::gerarNotaFiscal</a></div><div class="ttdeci">void gerarNotaFiscal()</div><div class="ttdoc">Gera uma nota fiscal para a venda.</div><div class="ttdef"><b>Definition:</b> notaFiscal.cpp:33</div></div>
+<div class="ttc" id="aclass_nota_fiscal_html_ac4f15bec78a4dc586eac08dc35c52239"><div class="ttname"><a href="class_nota_fiscal.html#ac4f15bec78a4dc586eac08dc35c52239">NotaFiscal::NotaFiscal</a></div><div class="ttdeci">NotaFiscal(std::map&lt; std::string, std::vector&lt; Produto * &gt;&gt;)</div><div class="ttdoc">Construct a new Nota Fiscal:: Nota Fiscal object.</div><div class="ttdef"><b>Definition:</b> notaFiscal.cpp:9</div></div>
+<div class="ttc" id="aclass_nota_fiscal_html_afb9c4ddf876c16bba5135ff9589924d0"><div class="ttname"><a href="class_nota_fiscal.html#afb9c4ddf876c16bba5135ff9589924d0">NotaFiscal::gerarId</a></div><div class="ttdeci">uuids::uuid gerarId()</div><div class="ttdoc">Gera um uuid unico pra nota fiscal.</div><div class="ttdef"><b>Definition:</b> notaFiscal.cpp:92</div></div>
+<div class="ttc" id="aclassuuids_1_1uuid_html"><div class="ttname"><a href="classuuids_1_1uuid.html">uuids::uuid</a></div><div class="ttdef"><b>Definition:</b> uuid.hpp:389</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

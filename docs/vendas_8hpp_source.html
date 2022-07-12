@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ecommerce C++: Código-Fonte de include/vendas/vendas.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Ecommerce C++
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho Prático PDS2 | UFMG</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c355d163a8a9d0e7405ad3c866375251.html">vendas</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">vendas.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _VENDAS_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _VENDAS_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;autoload.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_vendas.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vendas.html">Vendas</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        std::map&lt;int, std::map&lt;std::string, std::vector&lt;Produto*&gt;&gt;&gt; vendas;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> controleId;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_vendas.html#ae4ca0a57a52e233731ebe32ad5fc12e6">Vendas</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_vendas.html#adeda585d7804f46f7f93358687b49c3f">~Vendas</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vendas.html#a0cfa0878ed393e2aada2d5156dbf8121">adicionarVenda</a>(std::map&lt;int, double&gt; dadosCarrinho, <a class="code" href="class_estoque_base.html">EstoqueBase</a> *estoque, std::string cpf);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vendas.html#a9a436a60bb7746e653045175b42c4fe9">gerarJsonVenda</a>(<span class="keywordtype">int</span> controleId, std::string cpf);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::string <a class="code" href="class_vendas.html#ac3cdd5ec5e2a31e083665ca857ef5ecf">dataAtual</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vendas.html#a358b60674a396f7344fa56a731a007d3">atualizaEstoque</a>(<span class="keywordtype">int</span> controleId, std::string cpf, <a class="code" href="class_estoque_base.html">EstoqueBase</a> *estoque);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vendas.html#ac947404324505be6b6c13b9fa2974ffb">listarVendas</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::string <a class="code" href="class_vendas.html#a561754fbee7f86602df708f073cc8402">dataVenda</a>(<span class="keywordtype">int</span> controleId, std::string cpf);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vendas.html#aaffaacf29b5df417ebc396a4d71f2f8d">valorVenda</a>(<span class="keywordtype">int</span> controleId, std::string cpf);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vendas.html#a69c5834cd292b8a20f5dff2d13bf4bd2">gerarNotaFiscal</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_estoque_base_html"><div class="ttname"><a href="class_estoque_base.html">EstoqueBase</a></div><div class="ttdef"><b>Definition:</b> estoqueBase.hpp:6</div></div>
+<div class="ttc" id="aclass_vendas_html"><div class="ttname"><a href="class_vendas.html">Vendas</a></div><div class="ttdef"><b>Definition:</b> vendas.hpp:7</div></div>
+<div class="ttc" id="aclass_vendas_html_a0cfa0878ed393e2aada2d5156dbf8121"><div class="ttname"><a href="class_vendas.html#a0cfa0878ed393e2aada2d5156dbf8121">Vendas::adicionarVenda</a></div><div class="ttdeci">void adicionarVenda(std::map&lt; int, double &gt; dadosCarrinho, EstoqueBase *estoque, std::string cpf)</div><div class="ttdoc">Adiciona a venda no array.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:157</div></div>
+<div class="ttc" id="aclass_vendas_html_a358b60674a396f7344fa56a731a007d3"><div class="ttname"><a href="class_vendas.html#a358b60674a396f7344fa56a731a007d3">Vendas::atualizaEstoque</a></div><div class="ttdeci">void atualizaEstoque(int controleId, std::string cpf, EstoqueBase *estoque)</div><div class="ttdoc">Atualiza o estoque de um produto vendido.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:68</div></div>
+<div class="ttc" id="aclass_vendas_html_a561754fbee7f86602df708f073cc8402"><div class="ttname"><a href="class_vendas.html#a561754fbee7f86602df708f073cc8402">Vendas::dataVenda</a></div><div class="ttdeci">std::string dataVenda(int controleId, std::string cpf)</div><div class="ttdoc">Retorna a data da venda.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:209</div></div>
+<div class="ttc" id="aclass_vendas_html_a69c5834cd292b8a20f5dff2d13bf4bd2"><div class="ttname"><a href="class_vendas.html#a69c5834cd292b8a20f5dff2d13bf4bd2">Vendas::gerarNotaFiscal</a></div><div class="ttdeci">void gerarNotaFiscal(int id)</div><div class="ttdoc">Gera uma nota fiscal pra venda.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:257</div></div>
+<div class="ttc" id="aclass_vendas_html_a9a436a60bb7746e653045175b42c4fe9"><div class="ttname"><a href="class_vendas.html#a9a436a60bb7746e653045175b42c4fe9">Vendas::gerarJsonVenda</a></div><div class="ttdeci">void gerarJsonVenda(int controleId, std::string cpf)</div><div class="ttdoc">Grava o json de venda.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:105</div></div>
+<div class="ttc" id="aclass_vendas_html_aaffaacf29b5df417ebc396a4d71f2f8d"><div class="ttname"><a href="class_vendas.html#aaffaacf29b5df417ebc396a4d71f2f8d">Vendas::valorVenda</a></div><div class="ttdeci">double valorVenda(int controleId, std::string cpf)</div><div class="ttdoc">Retorna o valor da venda.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:184</div></div>
+<div class="ttc" id="aclass_vendas_html_ac3cdd5ec5e2a31e083665ca857ef5ecf"><div class="ttname"><a href="class_vendas.html#ac3cdd5ec5e2a31e083665ca857ef5ecf">Vendas::dataAtual</a></div><div class="ttdeci">std::string dataAtual()</div><div class="ttdoc">Retorna a data atual da venda em d/m/Y.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:90</div></div>
+<div class="ttc" id="aclass_vendas_html_ac947404324505be6b6c13b9fa2974ffb"><div class="ttname"><a href="class_vendas.html#ac947404324505be6b6c13b9fa2974ffb">Vendas::listarVendas</a></div><div class="ttdeci">void listarVendas()</div><div class="ttdoc">Lista as vendas.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:231</div></div>
+<div class="ttc" id="aclass_vendas_html_adeda585d7804f46f7f93358687b49c3f"><div class="ttname"><a href="class_vendas.html#adeda585d7804f46f7f93358687b49c3f">Vendas::~Vendas</a></div><div class="ttdeci">~Vendas()</div><div class="ttdoc">Destroy the Vendas:: Vendas object.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:44</div></div>
+<div class="ttc" id="aclass_vendas_html_ae4ca0a57a52e233731ebe32ad5fc12e6"><div class="ttname"><a href="class_vendas.html#ae4ca0a57a52e233731ebe32ad5fc12e6">Vendas::Vendas</a></div><div class="ttdeci">Vendas()</div><div class="ttdoc">Construct a new Vendas:: Vendas object.</div><div class="ttdef"><b>Definition:</b> vendas.cpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

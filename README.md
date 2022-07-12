@@ -138,3 +138,5 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 - [Histórias de usuários com exemplos e um template](https://www.atlassian.com/br/agile/project-management/user-stories)
 - [Parser Json](https://github.com/eteran/cpp-json)
+- [UUID](https://github.com/mariusbancila/stduuid)
+- [GLS](https://github.com/microsoft/GSL)

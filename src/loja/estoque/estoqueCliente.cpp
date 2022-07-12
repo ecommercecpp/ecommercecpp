@@ -20,6 +20,8 @@ void EstoqueCliente::listarEstoque()
     // lista o this->estoque usando foreach
     for ( auto dados: this->estoque )
     {
+        if(dados.second.getQtd() <= 0) continue;
+
         std::cout <<"+-----------------------------------------------------+"<<std::endl;
         std::cout << "| " << controle;
         std::cout << " | " << dados.second.getNome();

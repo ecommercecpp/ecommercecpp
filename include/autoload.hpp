@@ -7,9 +7,11 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 
 // include third_party
 #include "../third_party/json.hpp"
+#include "../third_party/uuid.hpp"
 
 // exceptions
 #include "./exceptions/exceptions.hpp"
@@ -22,16 +24,14 @@
 #include "./produtos/atributos/atributos.hpp"
 #include "./produtos/produto.hpp"
 
-// include de vendas
-#include "./vendas/venda.hpp"
-#include "./vendas/notaFiscal/notaFiscal.hpp"
-
 // include da loja
 #include "./loja/estoque/base/estoqueBase.hpp"
 #include "./loja/estoque/estoqueAdm.hpp"
 #include "./loja/estoque/estoqueCliente.hpp"
 #include "./loja/carrinho.hpp"
+#include "./vendas/vendas.hpp"
 #include "./loja/loja.hpp"
+#include "./vendas/notaFiscal/notaFiscal.hpp"
 
 //include de testes
 #include "./unitTest/unitTest.hpp"

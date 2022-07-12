@@ -10,6 +10,7 @@ class EstoqueBase {
 		EstoqueBase();
 		void adicionar(Produto produto, bool adicionarNoArquivo);
 		void remover(int id);
+		void removerQtd(int id, double qtd);
 		Produto* buscar(int id);
 		virtual Produto* buscarPorSku(int sku);
 		std::map<int, Produto>* getEstoque();

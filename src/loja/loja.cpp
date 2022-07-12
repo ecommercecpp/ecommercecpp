@@ -7,11 +7,12 @@
  * @param estoque 
  * @param carrinho 
  */
-Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho)
+Loja::Loja(Usuario* usuarioLogado, EstoqueBase* estoque, Carrinho *carrinho, Vendas* vendas)
 {
 	this->usuarioLogado = usuarioLogado;
 	this->estoque = estoque;
 	this->carrinho = carrinho;
+	this->vendas = vendas;
 }
 
 /**
@@ -29,6 +30,72 @@ Loja::~Loja()
 	delete usuarioLogado;
 	delete estoque;
 	delete carrinho;
+	delete vendas;
+}
+
+/**
+ * @brief Lista as vendas realizadas
+ * 
+ */
+void Loja::listarVendas()
+{
+	std::cout << std::endl << "Vendas" << std::endl;
+	vendas->listarVendas();
+
+	std::cout << std::endl << "Deseja gerar alguma nota fiscal? (s/n)" << std::endl;
+	std::string opcao;
+	std::cin >> opcao;
+	std::transform(opcao.begin(), opcao.end(), opcao.begin(), ::tolower);
+	if (opcao == "s")
+	{
+		gerarNotaFiscal();
+	}
+}
+
+/**
+ * @brief 	Gera uma nota fiscal para a venda
+ * 
+ */
+void Loja::gerarNotaFiscal()
+{
+	std::string comando, idVenda;
+	
+	while (comando != "sair")
+	{
+		std::cout << "Digite o ID da venda que deseja gerar a nota fiscal ou sair:" << std::endl;
+		std::cin >> comando;
+		if (comando == "sair")
+			break;
+		else
+			idVenda = comando;
+
+		int id = std::stoi(idVenda);
+		vendas->gerarNotaFiscal(id);
+	}
+}
+
+/**
+ * @brief Finaliza a compra do carrinho
+ * 
+ */
+void Loja::finalizarCompra()
+{
+	listarProdutosNoCarrinho();
+
+	std::cout << std::endl << std::endl << "Deseja finalizar a compra com os itens do carrinho? (s/n)" << std::endl;
+	std::string opcao;
+	std::cin >> opcao;
+	std::transform(opcao.begin(), opcao.end(), opcao.begin(), ::tolower);
+	if (opcao == "s")
+	{
+		vendas->adicionarVenda(carrinho->getCarrinho(), estoque, usuarioLogado->getCpf());
+		std::cout << std::endl << "Compra finalizada com sucesso!" << std::endl;
+		carrinho->limparCarrinho();
+	}
+	else
+	{
+		std::cout << std::endl << "Compra cancelada! Voltando a menu..." << std::endl;
+	}
 }
 
 /**
@@ -160,7 +227,8 @@ void Loja::opcoesUsuario()
 	std::cout << "2. Listar produtos no carrinho" << std::endl;
 	std::cout << "3. Remover produtos no carrinho" << std::endl;
 	std::cout << "4. Listar estoque novamente" << std::endl;
-	std::cout << "5. Sair" << std::endl << std::endl;
+	std::cout << "5. Finalizar compra" << std::endl;
+	std::cout << "6. Sair" << std::endl << std::endl;
 
 	int opcao;
 	std::cin >> opcao;
@@ -180,6 +248,9 @@ void Loja::opcoesUsuario()
 			estoque->listarEstoque();
 			break;
 		case 5:
+			finalizarCompra();
+			break;
+		case 6:
 			usuarioLogado->logout();
 			return;
 			break;
@@ -201,31 +272,43 @@ void Loja::opcoesAdm()
 	std::cout << "1. Adicionar ou atualizar algum produto no estoque" << std::endl;
 	std::cout << "2. Remover algum produto no estoque" << std::endl;
 	std::cout << "3. Listar estoque novamente" << std::endl;
-	std::cout << "4. Sair" << std::endl << std::endl;
+	std::cout << "4. Listar compras" << std::endl;
+	std::cout << "5. Sair" << std::endl << std::endl;
 
-	int opcao;
+	std::string opcao;
 	std::cin >> opcao;
 
-	switch (opcao)
+	// verifica se opção é um número de 1 a 5, caso contrário, volta para o menu de administrador
+	if (opcao.size() > 1 || opcao.size() == 0 || opcao[0] < '1' || opcao[0] > '5')
 	{
-		case 1:
-			adicionarProdutoEstoque();
-			break;
-		case 2:
-			removerProdutoEstoque();
-			break;
-		case 3:
-			estoque->listarEstoque();
-			break;
-		case 4:
-			usuarioLogado->logout();
-			return;
-			break;
-		default:
-			opcoesAdm();
-			break;
+		opcoesAdm();
 	}
-
+	else
+	{
+		switch (opcao[0])
+		{
+			case '1':
+				adicionarProdutoEstoque();
+				break;
+			case '2':
+				removerProdutoEstoque();
+				break;
+			case '3':
+				estoque->listarEstoque();
+				break;
+			case '4':
+				listarVendas();
+				break;
+			case '5':
+				usuarioLogado->logout();
+				return;
+				break;
+			default:
+				opcoesAdm();
+				break;
+		}
+	}
+	
 	opcoesAdm();
 }
 
@@ -251,8 +334,6 @@ void Loja::removerProdutoEstoque()
 			estoque->remover(id);
 		}
 	}
-
-	opcoesAdm();
 }
 
 /**
@@ -311,6 +392,4 @@ void Loja::adicionarProdutoEstoque()
 
 		estoque->adicionar(produto, true);
 	}
-
-	opcoesAdm();
 }

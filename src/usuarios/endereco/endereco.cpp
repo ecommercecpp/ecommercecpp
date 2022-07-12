@@ -177,7 +177,3 @@ void Endereco::setEstado(std::string estado)
 {
 	this->estado = estado;
 }
-
-
-
-

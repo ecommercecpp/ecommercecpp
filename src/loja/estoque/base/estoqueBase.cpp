@@ -76,6 +76,24 @@ void EstoqueBase::adicionar(Produto produto, bool adicionarNoArquivo)
 }
 
 /**
+ * @brief Remove uma quantidade de itens em estoque de um produto
+ * 
+ * @param id 
+ * @param qtd 
+ */
+void EstoqueBase::removerQtd(int id, double qtd)
+{
+    auto it = estoque.find(id);
+    if(it != estoque.end())
+    {
+        it->second.setQtd(qtd);
+
+        // atualiza o arquivo com o novo estoque
+        adicionar(it->second, true);
+    }
+}
+
+/**
  * @brief Remove um produto do estoque.
  *
  * @param  int id

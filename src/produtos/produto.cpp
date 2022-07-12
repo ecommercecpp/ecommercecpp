@@ -30,6 +30,12 @@ Produto::Produto()
 }
 
 /**
+ * @brief Destroy the Produto:: Produto object
+ * 
+ */
+Produto::~Produto(){}
+
+/**
  * @brief Retorna o id
  * 
  * @return unsigned int 

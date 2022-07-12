@@ -8,6 +8,7 @@ class Produto {
     public:
         Produto(unsigned int id, std::string nome, std::string descricao, double qtd, double preco);
         Produto();
+        ~Produto();
         unsigned int getId();
         std::string getNome();
         std::string getDescricao();
