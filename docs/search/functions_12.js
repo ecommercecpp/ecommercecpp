@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['usuario_311',['Usuario',['../class_usuario.html#ac7de3a2a6d716683c4102e07aaf5402f',1,'Usuario::Usuario(std::string nome, std::string cpf, std::string email, Endereco endereco, std::string senha)'],['../class_usuario.html#aa85a5371a098dfba5449140d9b8a472f',1,'Usuario::Usuario()']]]
+  ['valorvenda_218',['valorVenda',['../class_vendas.html#aaffaacf29b5df417ebc396a4d71f2f8d',1,'Vendas']]],
+  ['vendas_219',['Vendas',['../class_vendas.html#ae4ca0a57a52e233731ebe32ad5fc12e6',1,'Vendas']]]
 ];

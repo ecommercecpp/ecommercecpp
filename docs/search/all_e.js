@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['parser_88',['parser',['../classjson_1_1parser.html',1,'json']]],
-  ['pass_89',['pass',['../class_unit_test.html#a678aec989d895eaee2d35d99adc790ac',1,'UnitTest']]],
-  ['produto_90',['Produto',['../class_produto.html',1,'Produto'],['../class_produto.html#a63bdaae4111416b797df402fe904558b',1,'Produto::Produto(unsigned int id, std::string nome, std::string descricao, double qtd, double preco)'],['../class_produto.html#adcd5834a1f04cc42fef88bf60217b8f4',1,'Produto::Produto()']]],
-  ['ptr_91',['ptr',['../classjson_1_1ptr.html',1,'json']]]
+  ['remover_66',['remover',['../class_estoque_base.html#a5796be6aa90ff3ff38d9f008ae54319e',1,'EstoqueBase']]],
+  ['removerproduto_67',['removerProduto',['../class_carrinho.html#aa60ccf7b9f9102b0c342fcc2df234fe4',1,'Carrinho']]],
+  ['removerprodutoestoque_68',['removerProdutoEstoque',['../class_loja.html#ab7ff5d4bffc2029c811f08404fa29ab0',1,'Loja']]],
+  ['removerprodutosnocarrinho_69',['removerProdutosNoCarrinho',['../class_loja.html#a40d713fa0fe4ef82325f320a9693973a',1,'Loja']]],
+  ['removerqtd_70',['removerQtd',['../class_estoque_base.html#aa2a9cea4b608032d95d08a41b422b025',1,'EstoqueBase']]],
+  ['run_71',['run',['../class_unit_test_atributos.html#a8187a584795c23ee9f11cf8b8e6394b7',1,'UnitTestAtributos::run()'],['../class_unit_test_endereco.html#ad9da76c333b328e5a02eab9cf1345703',1,'UnitTestEndereco::run()'],['../class_unit_test_estoque_base.html#a631cec8cae7c3f63ec53915622f8ad0d',1,'UnitTestEstoqueBase::run()'],['../class_unit_test_produtos.html#ac4eae9154850ebdc8be8fb39fd4ce37c',1,'UnitTestProdutos::run()'],['../class_unit_test_usuario.html#ac2a3b1b60b38e49a853d25ff0e7db84c',1,'UnitTestUsuario::run()']]]
 ];

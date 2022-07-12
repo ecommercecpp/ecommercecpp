@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['test_308',['test',['../class_c_l_i.html#af5d64c0688b9886f37c2d5cecd83d602',1,'CLI']]],
-  ['throwerror_309',['throwError',['../class_unit_test.html#ae4943f6f31fc6b4af39fed598feb1bdf',1,'UnitTest']]],
-  ['titulo_310',['titulo',['../class_c_l_i.html#a1df407997f9535013f1b92a23ada1a4e',1,'CLI']]]
+  ['usuario_217',['Usuario',['../class_usuario.html#ac7de3a2a6d716683c4102e07aaf5402f',1,'Usuario::Usuario(std::string nome, std::string cpf, std::string email, Endereco endereco, std::string senha)'],['../class_usuario.html#aa85a5371a098dfba5449140d9b8a472f',1,'Usuario::Usuario()']]]
 ];
