@@ -32,7 +32,8 @@ NotaFiscal::~NotaFiscal()
  */
 void NotaFiscal::gerarNotaFiscal()
 {
-	std::ofstream fw("./notafiscal.txt", std::ofstream::out);
+	std::string nomeArquivo = uuids::to_string(gerarId()) + ".txt";
+	std::ofstream fw(nomeArquivo, std::ofstream::out);
 
 	if (!fw.is_open())
 	{
@@ -76,4 +77,22 @@ void NotaFiscal::gerarNotaFiscal()
 	}
 
 	fw.close();
+}
+
+uuids::uuid NotaFiscal::gerarId()
+{
+	std::random_device rd;
+	auto seed_data = std::array<int, 6> {};
+	std::generate(std::begin(seed_data), std::end(seed_data), std::ref(rd));
+	std::seed_seq seq(std::begin(seed_data), std::end(seed_data));
+	std::ranlux48_base generator(seq);
+
+	uuids::basic_uuid_random_generator<std::ranlux48_base> gen(&generator);
+	uuids::uuid const id = gen();
+	assert(!id.is_nil());
+	assert(id.as_bytes().size() == 16);
+	assert(id.version() == uuids::uuid_version::random_number_based);
+	assert(id.variant() == uuids::uuid_variant::rfc);
+
+	return id;
 }

@@ -11,6 +11,7 @@
 
 // include third_party
 #include "../third_party/json.hpp"
+#include "../third_party/uuid.hpp"
 
 // exceptions
 #include "./exceptions/exceptions.hpp"

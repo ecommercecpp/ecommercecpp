@@ -11,6 +11,7 @@ class NotaFiscal
 		NotaFiscal(std::map<std::string, std::vector<Produto*>>);
 		~NotaFiscal();
 		void gerarNotaFiscal();
+		uuids::uuid gerarId();
 };
 
 #endif
