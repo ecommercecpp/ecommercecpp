@@ -41,6 +41,8 @@
 
 ## Começando 🚀
 
+> [![Documentação Doxygen][documentacao-shield]][documentacao-url]
+
 Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
 
 ### Pré-requisitos
@@ -192,6 +194,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 - [UUID](https://github.com/mariusbancila/stduuid)
 - [GLS](https://github.com/microsoft/GSL)
 
+[documentacao-shield]: https://img.shields.io/badge/Documentação%20Doxygen-clique%20aqui-blue
+[documentacao-url]: https://ecommercecpp.github.io/ecommercecpp/annotated.html
 [linguagens-shield]: https://img.shields.io/github/languages/count/ecommercecpp/ecommercecpp?style=for-the-badge
 [linguagens-url]: https://github.com/ecommercecpp/ecommercecpp/
 [tamanho-shield]: https://img.shields.io/github/repo-size/ecommercecpp/ecommercecpp?style=for-the-badge
