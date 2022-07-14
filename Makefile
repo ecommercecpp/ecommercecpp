@@ -38,8 +38,9 @@ check:
 	./$(BINDIR)/$(TARGET) --help
 
 distcheck:
-	$(RM) -r $(BUILDDIR)/*
-
+	$(RM) -r $(OBJDIR)/*
+	$(RM) -r $(BINDIR)/*
+	
 test:
 	./$(BINDIR)/$(TARGET) --test endereco && echo "OK" || exit "Erro!";
 	./$(BINDIR)/$(TARGET) --test usuario && echo "OK" || exit "Erro!";
