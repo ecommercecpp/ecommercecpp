@@ -121,11 +121,11 @@ void CLI::lerOpcoesMenuInicial()
 void CLI::mostrarOpcoesMenuInicial()
 {
 	std::cout << "Escolha uma opcao: " << std::endl;
-	std::cout <<"+-----------------+"<<std::endl;
-	std::cout << "| " << "1 - Cadastrar |" << std::endl;
+	std::cout << "+-----------------+"<<std::endl;
+	std::cout << "| " << "1 - Cadastrar   |" << std::endl;
 	std::cout << "| " << "2 - Fazer Login |" << std::endl;
-	std::cout << "| " << "3 - Sair |" << std::endl;
-	std::cout <<"+-----------------+"<<std::endl;
+	std::cout << "| " << "3 - Sair        |" << std::endl;
+	std::cout << "+-----------------+"<<std::endl;
 }
 
 /**

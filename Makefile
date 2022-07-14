@@ -23,7 +23,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 main: $(OBJECTS)
 	@mkdir -p $(BINDIR)
 	$(CC) $(CFLAGS) $(INC) $(MAIN) $^ -o $(BINDIR)/main
-	$(BINDIR)/main
 
 tests: $(OBJECTS)
 	@mkdir -p $(BINDIR)
