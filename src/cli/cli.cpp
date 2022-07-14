@@ -120,10 +120,12 @@ void CLI::lerOpcoesMenuInicial()
  */
 void CLI::mostrarOpcoesMenuInicial()
 {
-	std::cout << "Escolha uma opção: " << std::endl;
-	std::cout << "1 - Cadastrar" << std::endl;
-	std::cout << "2 - Fazer Login" << std::endl;
-	std::cout << "3 - Sair" << std::endl;
+	std::cout << "Escolha uma opcao: " << std::endl;
+	std::cout << "+-----------------+"<<std::endl;
+	std::cout << "| " << "1 - Cadastrar   |" << std::endl;
+	std::cout << "| " << "2 - Fazer Login |" << std::endl;
+	std::cout << "| " << "3 - Sair        |" << std::endl;
+	std::cout << "+-----------------+"<<std::endl;
 }
 
 /**
@@ -140,6 +142,8 @@ void CLI::titulo()
  |______\___\___/|_| |_| |_|_| |_| |_|\___|_|  \___\___|  \_____|          
                                                                            
                                                                            )" << std::endl;
+
+	//std::cout << R"( )" << std::endl;
 }
 
 /**

@@ -4,7 +4,7 @@
 TEST_CASE("Testa o login corretamente")
 {
 	Usuario usuario = Usuario();
-	usuario.setCpf("12312312312");
+	usuario.setCpf("12341234123");
 	usuario.setSenha("senha");
 	CHECK(usuario.login());
 }
@@ -20,7 +20,7 @@ TEST_CASE("Testa o login com usuário que não existe")
 TEST_CASE("Testa o login com senha invalida")
 {
 	Usuario usuario = Usuario();
-	usuario.setCpf("12312312312");
+	usuario.setCpf("12341234123");
 	usuario.setSenha("123");
 	CHECK_THROWS_AS(usuario.login(), UsuarioSenhaInvalidaException);
 }
@@ -47,6 +47,6 @@ TEST_CASE("Testa o cadastro com usuário existente")
 	endereco.setCidade("cidade");
 	endereco.setEstado("estado");
 	endereco.setCep("12312312");
-	Usuario usuario = Usuario("nome", "12312312312", "email", endereco, "senha");
+	Usuario usuario = Usuario("nome", "12341234123", "email", endereco, "senha");
 	CHECK_THROWS_AS(usuario.cadastro(), UsuarioExistenteException);
 }
